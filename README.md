@@ -6,3 +6,5 @@ Future repo for an untitled Alien project.
 - [ ] Wireframe
 - [ ] Mock
 - [ ] Build
+
+- [ ] Build hero this week
