@@ -1,7 +1,7 @@
 # Weyland Yutani (Placeholder)
 Future repo for an untitled Alien project.
 
-- [ ] Look for inspiration
+- [X] Look for inspiration
 - [ ] Grab image assets
 - [ ] Wireframe
 - [ ] Mock
