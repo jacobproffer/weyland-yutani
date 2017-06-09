@@ -1,0 +1,9 @@
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+img {
+	max-width: 100%;
+}

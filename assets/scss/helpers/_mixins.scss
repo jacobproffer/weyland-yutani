@@ -1,0 +1,249 @@
+/* Box Model
+  ========================================================================== */
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+/* Usage */
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+
+
+/* CSS3 Manipulation
+  ========================================================================== */
+
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin bw() {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+@mixin transform($args) {
+	-webkit-transform: #{$args};
+	-moz-transform: #{$args};
+	-ms-transform: #{$args};
+	transform: #{$args};
+}
+
+@mixin css3-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-khtml-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+
+@mixin gradient-horizontal($fromColor:#0090cd, $toColor:#dd5cf1) {
+
+	background: $fromColor; // Old browsers
+	background: -moz-linear-gradient(left, $fromColor 0%, $toColor 100%); // FF3.6+
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,$fromColor), color-stop(100%,$toColor)); // Chrome,Safari4+
+	background: -webkit-linear-gradient(left, $fromColor 0%,$toColor 100%); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(left, $fromColor 0%,$toColor 100%); // Opera 11.10+
+	background: -ms-linear-gradient(left, $fromColor 0%,$toColor 100%); // IE10+
+	background: linear-gradient(to right, $fromColor 0%,$toColor 100%); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$fromColor}', endColorstr='#{$toColor}',GradientType=1 ); // IE6-9
+
+}
+
+@mixin gradient-vertical($fromColor:#0090cd, $toColor:#dd5cf1) {
+
+	background: $fromColor; // Old browsers
+	background: -moz-linear-gradient(top, $fromColor 0%, $toColor 100%); // FF3.6+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$fromColor), color-stop(100%,$toColor)); // Chrome,Safari4+
+	background: -webkit-linear-gradient(top, $fromColor 0%,$toColor 100%); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(top, $fromColor 0%,$toColor 100%); // Opera 11.10+
+	background: -ms-linear-gradient(top, $fromColor 0%,$toColor 100%); // IE10+
+	background: linear-gradient(to bottom, $fromColor 0%,$toColor 100%); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$fromColor}', endColorstr='#{$toColor}',GradientType=0 ); // IE6-9
+
+}
+
+@mixin background-cover($url) {
+  background: url($url) no-repeat center center fixed;
+  background-size: cover;
+}
+
+@mixin blur-text($amount: 3px, $color: rgba(0, 0, 0, 0.5)) {
+	color: transparent;
+	text-shadow: 0 0 $amount $color;
+}
+
+
+
+/* Absolute Positioning
+  ========================================================================== */
+
+@mixin absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	position: absolute;
+}
+
+
+
+/* Grid
+  ========================================================================== */
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+
+/* Vertical-align
+  ========================================================================== */
+
+@mixin vertical-align {
+	position: absolute;
+	top: 50%;
+	@include transform( translateY(-50%) );
+}
+@mixin horizontal-align {
+	position: absolute;
+	left: 50%;
+	@include transform( translateX(-50%) );
+}
+
+
+
+/* Transitions & Animation
+  ========================================================================== */
+
+@mixin ease($property:all, $speed:0.3s, $timing: $easeOutQuint) {
+	-webkit-transition: $property $speed $timing;
+	-moz-transition: $property $speed $timing;
+	-ms-transition: $property $speed $timing;
+	-o-transition: $property $speed $timing;
+	transition: $property $speed $timing;
+}
+
+@mixin transition($args) {
+	-webkit-transition: #{$args};
+	-moz-transition: #{$args};
+	-ms-transition: #{$args};
+	-o-transition: #{$args};
+	transition: #{$args};
+}
+
+@mixin transition-delay($delay) {
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}
+	@-ms-keyframes $animation-name {
+		@content;
+	}
+	@-o-keyframes $animation-name {
+		@content;
+	}
+	@keyframes $animation-name {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
+}
+
+@mixin animation-delay($delay) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+@mixin appearanceNone {
+
+	@include css3-prefix(appearance, none)
+
+}
+
+
+
+/* Breakpoints
+  ========================================================================== */
+
+@mixin screen-above($screen-size) {
+  @media screen and (min-width: $screen-size) {
+    @content;
+  }
+}
+
+@mixin screen-below($screen-size) {
+  @media screen and (max-width: ($screen-size - 1px)) {
+    @content;
+  }
+}
+
+@mixin screen-between($min-screen-size, $max-screen-size) {
+  @media screen and (min-width: $min-screen-size) and (max-width: ($max-screen-size - 1px)) {
+    @content;
+  }
+}
+
+
+
+/* Typography
+  ========================================================================== */
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+@mixin line-height($heightValue: 12 ){
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: (0.125 * $heightValue) + rem;
+}
