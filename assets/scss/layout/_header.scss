@@ -1,149 +1,193 @@
+.hero {
+  position: relative;
+	padding: 358px 0;
+	background-image: url('../img/weyland-hero.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+  text-align: center;
+  overflow: hidden;
+  outline: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  .container {
+    margin: 0;
+  }
+	h1,
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+  h1 {
+    color: white;
+    opacity: 1;
+    position: relative;
+    line-height: 1.5;
+  }
+  h3 {
+    color: white;
+    display: block;
+    z-index: 8;
+    position: relative;
+    padding-top: 0;
+  }
+}
+
 .main-header {
-	padding: 2rem 0;
+	padding: 25px 0;
+  position: fixed;
+  background: transparent;
+  width: 100%;
+  height: 100px;
+  overflow-y: visible;
+  z-index: 9;
+  @include transition(all 300ms ease-in-out);
+  will-change:transform;
+  &.unpinned {
+    transform: translateY(- 100px);
+  }
+  &.pinned {
+    transform: translateY(0);
+    background: rgba(23, 23, 23, .95);
+  }
+}
+
+.open {
+  height: 100%;
+  background: $black;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0;
 }
 
 .logo {
 	display: inline-block;
-	h1 {
-		display: inline-block;
-		margin-top: 0;
-		margin-bottom: 0;
-		line-height: 1;
-	}
+	text-align: left;
 }
 
+
 .main-nav {
-	@include transition( all 0.2s ease-out);
-	display: block;
-	opacity: 0;
-	// width: 100%;
-	height: 0;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-	li {
-		cursor: pointer;
-		text-align: center;
-		vertical-align: middle;
-		border-bottom: 1px solid black;
-		a {
-			font-size: 0.8375em;
-			text-transform: uppercase;
-			text-decoration: none;
-			display: block;
-			padding: 10px 16px;
-			margin: 0 16px;
-			transition: color 300ms ease-in-out;
-			&:hover {
-				color: darken(black, 20);
-			}
-		}
-		&:nth-last-child(3) {
-			margin-left: 0;
-			@include screen-above($iPadMini) {
-				margin-left: 20px;
-			}
-		}
-		&:nth-last-child(-n + 3) {
-			border-bottom: none;
-		}
-		@include screen-above($iPadMini) {
-			border-bottom: 0;
-			display: inline-block;
-		}
-	}
-	@include screen-above($iPadMini) {
-		opacity: 1;
-		background: none;
-		display: block;
-		height: inherit;
-		float: right;
-		position: relative;
-	}
-	&.nav-open {
-		opacity: 1;
-		height: inherit;
-	}
+  @include transition( all 0.2s ease-out);
+  will-change:transform;
+  display: block;
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  z-index: 9;
+  li {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px 65px 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid $white;
+    a {
+      cursor: pointer;
+      font-size: 0.8375em;
+      font-weight: bold;
+      color: $white;
+      text-decoration: none;
+      display: block;
+      letter-spacing: 3px;
+      transition: color 300ms ease-in-out;
+      &:hover {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+      @include screen-above(1025px) {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    @include screen-below(1025px) {
+      padding: 20px 32px;
+      margin: 0 16px;
+    }
+    @include screen-above(1025px) {
+      border-bottom: 0;
+      display: inline-block;
+    }
+  }
+  @include screen-above(1025px) {
+    margin: 0;
+    border-bottom: none;
+    opacity: 1;
+    background: none;
+    display: block;
+    height: inherit;
+    float: right;
+    position: relative;
+  }
+  &.nav-open {
+    opacity: 1;
+    height: inherit;
+  }
 }
 
 .hamburger {
-	display: block;
-	position: absolute;
-	width: 30px;
-	height: 20px;
-	top: 40px;
-	right: 5%;
-	background: none;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 0;
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-	@include screen-above($iPadMini) {
-		display: none;
-	}
-	span {
-		height: 2px;
-		position: absolute;
-		background: black;
-		left: 0;
-		right: 0;
-		@include transition( all 0.1s ease-out);
-		&:first-of-type {
-			top: 0;
-		}
-		&:last-of-type {
-			bottom: 0;
-		}
-		&:nth-child(2) {
-			top: 50%;
-			margin-top: -1px;
-			background: none;
-			&:before,
-			&:after {
-				content: "";
-				background: black;
-				height: 2px;
-				width: 100%;
-				position: absolute;
-				left: 0;
-				right: 0;
-				@include transition( all 0.2s ease-out);
-			}
-		}
-	}
-	&.navOpen,
-	&.close {
-		display: block;
-		div {
-			opacity: 1;
-			@include transform( rotate(90deg) scale(1.5));
-		}
-		span:nth-child(2) {
-			background: none;
-			&:before {
-				opacity: 1;
-				height: 1px;
-				@include transform( rotate(-45deg));
-			}
-			&:after {
-				opacity: 1;
-				height: 1px;
-				@include transform( rotate(45deg));
-			}
-		}
-		span:first-of-type {
-			opacity: 0;
-			top: 50%;
-		}
-		span:last-of-type {
-			opacity: 0;
-			top: 50%;
-			bottom: auto;
-		}
-	}
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: 30px;
+  right: 35px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+  @include screen-above(1024px) {
+    display: none;
+  }
+  span {
+    @include transition(color 300ms ease-in-out);
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    &:active {
+      color: red;
+    }
+  }
+  &.navOpen,
+  &.close {
+    display: block;
+    div {
+      opacity: 1;
+      @include transform( rotate(90deg) scale(1.5));
+    }
+    span:nth-child(2) {
+      background: none;
+      &:before {
+        opacity: 1;
+        height: 1px;
+        @include transform( rotate(-45deg));
+      }
+      &:after {
+        opacity: 1;
+        height: 1px;
+        @include transform( rotate(45deg));
+      }
+    }
+    span:first-of-type {
+      // opacity: 0;
+      top: 50%;
+    }
+    span:last-of-type {
+      // opacity: 0;
+      top: 50%;
+      bottom: auto;
+    }
+  }
 }
