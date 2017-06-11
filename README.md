@@ -9,3 +9,4 @@ Future repo for an untitled Alien project.
 
 - [ ] Convert to PHP
 - [ ] Build hero this week
+- [ ] Decide if hero should be slider
