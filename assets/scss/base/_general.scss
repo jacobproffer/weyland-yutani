@@ -4,6 +4,9 @@
   @include box-sizing(border-box);
 }
 
+::-moz-selection { background: $yellow; }
+::selection { background: $yellow;}
+
 img {
 	max-width: 100%;
 }
