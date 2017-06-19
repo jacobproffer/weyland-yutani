@@ -77,11 +77,10 @@
 .logo {
   display: inline-block;
   margin: 0;
-}
-
-.logo {
-	display: inline-block;
-	text-align: left;
+  @include transition(opacity 300ms ease-in-out);
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 
