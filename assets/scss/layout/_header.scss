@@ -51,7 +51,7 @@
 }
 
 .main-header {
-	padding: 25px 0;
+	padding: 33px 0;
   position: fixed;
   background: transparent;
   width: 100%;
@@ -98,14 +98,13 @@
   li {
     list-style-type: none;
     text-align: center;
-    padding: 10px 65px 10px 0;
+    padding: 10px 32px 10px 0;
     margin: 0;
     text-transform: uppercase;
     border-bottom: 1px solid $white;
     a {
       cursor: pointer;
-      font-size: 0.8375em;
-      font-weight: bold;
+      font-size: 0.875em;
       color: $white;
       text-decoration: none;
       display: block;
