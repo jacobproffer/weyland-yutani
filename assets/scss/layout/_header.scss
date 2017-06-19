@@ -109,7 +109,7 @@
       text-decoration: none;
       display: block;
       letter-spacing: 3px;
-      transition: color 300ms ease-in-out;
+      @include transition(color 300ms ease-in-out);
       &:hover {
         color: rgba(255, 255, 255, 0.5);
       }
@@ -147,29 +147,31 @@
 }
 
 .hamburger {
+  color: white;
   display: block;
   position: absolute;
   width: 30px;
   height: 20px;
-  top: 30px;
-  right: 35px;
+  top: 33px;
+  right: 33px;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 0;
   text-transform: uppercase;
-  @include screen-above(1024px) {
+  @include transition(color 300ms ease-in-out);
+  @include screen-between(600px, 768px) {
+    right: 50px;
+  }
+  @include screen-between(768px, 1025px) {
+    right: 75px;
+  }
+  @include screen-above(1025px) {
     display: none;
   }
-  span {
-    @include transition(color 300ms ease-in-out);
-    &:hover {
-      color: rgba(255, 255, 255, 0.6);
-    }
-    &:active {
-      color: red;
-    }
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
   }
   &.navOpen,
   &.close {
@@ -177,28 +179,6 @@
     div {
       opacity: 1;
       @include transform( rotate(90deg) scale(1.5));
-    }
-    span:nth-child(2) {
-      background: none;
-      &:before {
-        opacity: 1;
-        height: 1px;
-        @include transform( rotate(-45deg));
-      }
-      &:after {
-        opacity: 1;
-        height: 1px;
-        @include transform( rotate(45deg));
-      }
-    }
-    span:first-of-type {
-      // opacity: 0;
-      top: 50%;
-    }
-    span:last-of-type {
-      // opacity: 0;
-      top: 50%;
-      bottom: auto;
     }
   }
 }
