@@ -22,8 +22,12 @@
 	h3 {
 		margin-top: 0;
 		margin-bottom: 0;
-    letter-spacing: 0.4em;
-    margin: 0em -0.4em 0em 0;
+    letter-spacing: 0.2em;
+    margin: 0em -0.2em 0em 0;
+    @include screen-above(768px) {
+      letter-spacing: 0.4em;
+      margin: 0em -0.4em 0em 0;
+    }
 	}
   h1 {
     color: white;

@@ -9,7 +9,3 @@ h2 {
 h3 {
   @include font-size($h3-font-sizes);
 }
-
-h4 {
-  @include font-size($h4-font-sizes);
-}
