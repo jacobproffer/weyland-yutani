@@ -34,7 +34,10 @@
     opacity: 1;
     position: relative;
     line-height: 1.5;
-    padding-top: 328px;
+    padding-top: 164px;
+    @include screen-above(768px) {
+      padding-top: 328px;
+    }
   }
   h3 {
     color: white;
@@ -42,7 +45,10 @@
     display: block;
     z-index: 8;
     position: relative;
-    padding-bottom: 328px;
+    padding-bottom: 112px;
+    @include screen-above(768px) {
+      padding-bottom: 220px;
+    }
   }
   &:before {
     position: absolute;
@@ -215,6 +221,7 @@
 }
 
 [class^='operation-item'] {
+  padding: 43px 30px;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -243,16 +250,19 @@
       margin: 0em -0.2em 0em 0;
     }
   }
-  @include screen-between(768px, 1300px) {
-    padding: 43px 30px;
-  }
   @include screen-above(1300px) {
     padding: 43px 58px;
   }
 }
 
 .operation-item-span1 {
-  @include screen-between(768px, 1281px) {
+  @include screen-between(768px, 1025px) {
+    -webkit-flex: 0 1 40%;
+    -ms-flex: 0 1 40%;
+    flex: 0 1 40%;
+    max-width: 40%;
+  }
+  @include screen-between(1025px, 1281px) {
     -webkit-flex: 0 1 25%;
     -ms-flex: 0 1 25%;
     flex: 0 1 25%;
@@ -267,11 +277,14 @@
 }
 
 .operation-item-span2 {
+  @include screen-below(768px) {
+    border-right: 1px solid rgba(255, 255, 255, .10);
+  }
   @include screen-between(768px, 1025px) {
-    -webkit-flex: 0 1 75%;
-    -ms-flex: 0 1 75%;
-    flex: 0 1 75%;
-    max-width: 75%;
+    -webkit-flex: 0 1 60%;
+    -ms-flex: 0 1 60%;
+    flex: 0 1 60%;
+    max-width: 60%;
   }
   @include screen-between(1025px, 1281px) {
     -webkit-flex: 0 1 50%;
@@ -304,7 +317,7 @@
   display: block;
   color: $black;
   text-decoration: none;
-  @include transition(all 300ms ease-in-out);
+  @include transition(opacity 300ms ease-in-out);
   &:hover {
     opacity: .5;
   }
