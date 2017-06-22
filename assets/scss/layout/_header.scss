@@ -150,15 +150,15 @@
           background-color: $yellow;
         }
       }
+      @include screen-below(1025px) {
+        padding: 32px 0;
+        margin: 0;
+      }
     }
     &:last-child {
       a {
         margin: 0;
       }
-    }
-    @include screen-below(1025px) {
-      padding: 20px 32px;
-      margin: 0 16px;
     }
     @include screen-above(1025px) {
       border-bottom: none;
