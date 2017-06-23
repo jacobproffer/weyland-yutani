@@ -1,21 +1,15 @@
 var hamburger = $('.hamburger');
 var mainNavigation = $('.main-nav');
-var headerHeight = $('.main-header').outerHeight();
+var mainHeader = $('.main-header');
+var headerHeight = mainHeader.outerHeight();
 
 hamburger.click(function() {
 	mainNavigation.toggleClass('nav-open');
 	$(this).toggleClass('navOpen');
-	$('.main-header').toggleClass('open');
-	if ($('.main-header').hasClass('open')) {
-		$('.main-header').removeClass('unpinned');
-	}
+	mainHeader.toggleClass('open');
 });
 
-// if ($('.main-header').hasClass('open')) {
-// 	console.log('scrolled');
-// }
-
-$('.main-header').headroom({
+mainHeader.headroom({
   offset    : headerHeight,
   tolerance   : { up:10, down:10 },
   classes : {
@@ -25,7 +19,12 @@ $('.main-header').headroom({
     bottom   : "onBottom",
     notTop   : "scrolled"
   },
+	onUnpin : function() {
+		if ( mainHeader.hasClass('open') ) {
+			mainHeader.removeClass('unpinned');
+		}
+	},
   onTop : function() {
-    $('.main-header').removeClass('pinned');
+    mainHeader.removeClass('pinned');
   }
 });
