@@ -1,4 +1,5 @@
 var hamburger = $('.hamburger');
+var body = $('body');
 var mainNavigation = $('.main-nav');
 var mainHeader = $('.main-header');
 var headerHeight = mainHeader.outerHeight();
@@ -7,6 +8,7 @@ hamburger.click(function() {
 	mainNavigation.toggleClass('nav-open');
 	$(this).toggleClass('navOpen');
 	mainHeader.toggleClass('open');
+	body.toggleClass('body-modal-open');
 });
 
 mainHeader.headroom({
