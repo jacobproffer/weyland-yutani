@@ -1,9 +1,11 @@
-# Weyland Yutani (Placeholder)
+# Weyland Yutani
 
-- [X] Look for inspiration
-- [ ] Mock
-- [ ] Build
+- [X] Mock hero and navigation
+- [ ] Mock sections
 
-- [ ] Convert to PHP
 - [X] Build hero
-- [ ] GH Pages Test
+- [X] Build navigation
+
+- [ ] Browser test
+- [ ] Responsive test
+- [ ] Performance test
