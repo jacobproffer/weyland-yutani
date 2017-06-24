@@ -11,6 +11,14 @@ hamburger.click(function() {
 	htmlBody.toggleClass('body-modal-open');
 });
 
+$('a[href*="#"]').click(function() {
+  if ( mainHeader.hasClass('open') ) {
+    mainNavigation.removeClass('nav-open');
+    mainHeader.removeClass('open');
+    hamburger.removeClass('navOpen');
+  }
+});
+
 mainHeader.headroom({
   offset    : headerHeight,
   tolerance   : { up:10, down:10 },
