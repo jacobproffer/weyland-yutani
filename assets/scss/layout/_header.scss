@@ -62,11 +62,6 @@
   }
 }
 
-.logo {
-  width: 134px;
-  height: 34px;
-}
-
 .main-header {
 	padding: 33px 0;
   position: fixed;
@@ -101,8 +96,19 @@
   &:hover {
     opacity: 0.5;
   }
+  svg {
+    width: 134px;
+    height: 34px;
+  }
 }
 
+.st0 {
+  fill:#FFD302;
+}
+
+.st1 {
+  fill:#C8C8C8;
+}
 
 .main-nav {
   will-change:transform;
