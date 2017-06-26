@@ -51,6 +51,7 @@
 }
 
 .main-header {
+  pointer-events: auto;
 	padding: 33px 0;
   position: fixed;
   background: transparent;
@@ -186,6 +187,7 @@
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   // width: 100%;
+  pointer-events: none;
   // height: 100%;
 }
 
