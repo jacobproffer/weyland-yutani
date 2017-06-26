@@ -89,7 +89,10 @@
 }
 
 .mission-statement-flex-image {
-  background-color: $yellow;
+  background-image: url('../img/mission-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   @include ratio(6, 4);
   @include screen-above(1400px) {
     -webkit-flex: 0 1 55%;
