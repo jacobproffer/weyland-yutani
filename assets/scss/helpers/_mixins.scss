@@ -247,3 +247,24 @@
     line-height: $heightValue + px; //fallback for old browsers
     line-height: (0.125 * $heightValue) + rem;
 }
+
+
+
+//IMAGE RATIO :BEFORE ELEMENT WITH ABSOLUTE POSITIONING 3/4 RATIO
+// Constrain a box to a given aspect ratio
+@mixin ratio($width:1, $height:1) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content, > .inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
