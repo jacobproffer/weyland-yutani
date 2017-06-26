@@ -17,3 +17,34 @@ h4 {
 h5 {
   @include font-size($h5-font-sizes);
 }
+
+p {
+  @include font-size($p-font-sizes);
+  line-height: 2;
+  @include screen-above(768px) {
+    letter-spacing: 0.15em;
+    margin-right: -0.15em;
+    margin-left: 0;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.2em;
+  margin: 0em -0.2em 0em 0;
+  @include screen-above(768px) {
+    letter-spacing: 0.4em;
+    margin: 0em -0.4em 0em 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}

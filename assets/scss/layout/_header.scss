@@ -13,22 +13,10 @@
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  text-transform: uppercase;
   z-index: 1;
   .container {
     margin: 0;
   }
-	h1,
-	h3 {
-		margin-top: 0;
-		margin-bottom: 0;
-    letter-spacing: 0.2em;
-    margin: 0em -0.2em 0em 0;
-    @include screen-above(768px) {
-      letter-spacing: 0.4em;
-      margin: 0em -0.4em 0em 0;
-    }
-	}
   h1 {
     color: white;
     opacity: 1;
@@ -281,7 +269,7 @@
     letter-spacing: 0.15em;
     margin: 0em -0.15em 0em 0;
     span {
-      color: #c8c8c8;
+      color: $gray;
     }
     @include screen-above(768px) {
       letter-spacing: 0.2em;
