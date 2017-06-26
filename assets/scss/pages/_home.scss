@@ -43,7 +43,7 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  @include screen-between(1025px, 1400px) {
+  @include screen-above(1025px) {
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
@@ -68,23 +68,14 @@
   @include screen-below(1025px) {
     margin-bottom: 50px;
   }
-  @include screen-above(1400px) {
-    -webkit-flex: 0 1 45%;
-    -ms-flex: 0 1 45%;
-    flex: 0 1 45%;
-    max-width: 45%;
-  }
 }
 
 .mission-statement-text-wrapper {
   @include screen-below(1025px) {
     text-align: center;
   }
-  @include screen-between(1025px, 1400px) {
-    padding-right: 50px;
-  }
-  @include screen-above(1400px) {
-    padding-right: 86px;
+  @include screen-above(1025px) {
+    padding-right: 80px;
   }
 }
 
@@ -94,10 +85,4 @@
   background-size: cover;
   background-position: center;
   @include ratio(6, 4);
-  @include screen-above(1400px) {
-    -webkit-flex: 0 1 55%;
-    -ms-flex: 0 1 55%;
-    flex: 0 1 55%;
-    max-width: 55%;
-  }
 }
