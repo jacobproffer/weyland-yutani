@@ -16,6 +16,7 @@ $('a[href*="#"]').click(function() {
     mainNavigation.removeClass('nav-open');
     mainHeader.removeClass('open');
     hamburger.removeClass('navOpen');
+		htmlBody.removeClass('body-modal-open');
   }
 });
 
