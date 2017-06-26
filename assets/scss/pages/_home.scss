@@ -4,7 +4,7 @@
   text-align: center;
   p {
     color: $gray;
-    @include screen-above(768px) {
+    @include screen-above(505px) {
       max-width: 505px;
       margin-left: auto;
       margin-right: auto;
