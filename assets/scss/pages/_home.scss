@@ -9,10 +9,10 @@
   p {
     color: $gray;
   }
-  @include screen-between(1025px, 1281px) {
-    padding: 72px 0 172px;
+  @include screen-between(768px, 1025px) {
+    padding: 144px 0;
   }
-  @include screen-above(1281px) {
+  @include screen-above(1025px) {
     padding: 144px 0 244px;
   }
 }
@@ -38,6 +38,13 @@
     width: 600px;
     height: 600px;
   }
+}
+
+.test {
+  background: url('../img/ground-texture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .mission-statement-wrapper {
@@ -109,7 +116,7 @@
     text-align: center;
   }
   @include screen-above(1025px) {
-    padding-right: 80px;
+    padding-right: 70px;
   }
 }
 
