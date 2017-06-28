@@ -12,7 +12,7 @@
     padding: 144px 0;
   }
   @include screen-above(1025px) {
-    padding: 144px 0 244px;
+    padding: 144px 0 212px;
   }
 }
 
@@ -119,4 +119,15 @@
   background-size: cover;
   background-position: center;
   @include ratio(6, 4);
+}
+
+.technology {
+  text-align: center;
+  padding: 0 0 72px;
+  @include screen-between(768px, 1025px) {
+    padding: 0 0 144px;
+  }
+  @include screen-above(1025px) {
+    padding: 0 0 157px;
+  }
 }
