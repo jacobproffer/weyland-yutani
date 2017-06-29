@@ -171,6 +171,9 @@
       margin-top: 75px;
     }
   }
+  p {
+    margin-bottom: 0;
+  }
   @include screen-below(1025px) {
     margin-bottom: 50px;
   }
