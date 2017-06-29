@@ -7,6 +7,7 @@ h2 {
 }
 
 h3 {
+  font-weight: 400;
   @include font-size($h3-font-sizes);
 }
 
