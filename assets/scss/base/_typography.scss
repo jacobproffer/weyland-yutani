@@ -41,6 +41,19 @@ h3 {
   }
 }
 
+h4,
+h5 {
+  letter-spacing: 0.15em;
+  margin: 0em -0.15em 0em 0;
+  span {
+    color: $gray;
+  }
+  @include screen-above(768px) {
+    letter-spacing: 0.2em;
+    margin: 0em -0.2em 0em 0;
+  }
+}
+
 h1,
 h2,
 h3,
