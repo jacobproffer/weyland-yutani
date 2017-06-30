@@ -9,6 +9,8 @@
 - [ ] Build sections
 - [ ] Build footer
 
+- [ ] Add modal fix
+
 - [ ] Browser test
 - [ ] Responsive test
 - [ ] Performance test
