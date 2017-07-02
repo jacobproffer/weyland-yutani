@@ -103,6 +103,7 @@
   li {
     position: relative;
     list-style-type: none;
+    pointer-events: auto;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(255, 255, 255, .10);
