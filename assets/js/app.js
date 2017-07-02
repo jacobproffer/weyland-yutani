@@ -8,6 +8,7 @@ hamburger.click(function() {
   mainNav.toggleClass('nav-open');
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
+	body.addClass('body-modal-open');
 	body.addClass('disable-scrolling');
 });
 
@@ -15,6 +16,7 @@ $('a[href*="#"]').click(function() {
 	$('.main-nav').removeClass('nav-open');
 	$('.main-header').removeClass('open');
 	$('.hamburger').removeClass('navOpen');
+	body.removeClass('body-modal-open');
 	body.removeClass('disable-scrolling');
 });
 
