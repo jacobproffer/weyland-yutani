@@ -1,4 +1,4 @@
-var body = $('body');
+var body = $('html, body');
 var hamburger = $('.hamburger');
 var mainNav = $('.main-nav');
 var mainHeader = $('.main-header');
