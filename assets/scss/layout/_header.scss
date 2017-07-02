@@ -103,12 +103,10 @@
   li {
     position: relative;
     list-style-type: none;
-    pointer-events: all;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(255, 255, 255, .10);
     a {
-      pointer-events: all;
       position: relative;
       cursor: pointer;
       padding: 10px 0 38px 0;
@@ -157,9 +155,6 @@
       border-bottom: none;
       display: inline-block;
     }
-  }
-  @include screen-below(1025px) {
-    pointer-events: none;
   }
   @include screen-above(1025px) {
     border-bottom: 1px solid rgba(255, 255, 255, .10);
