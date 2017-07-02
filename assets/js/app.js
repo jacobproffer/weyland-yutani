@@ -1,15 +1,15 @@
 var body = $('body');
 var hamburger = $('.hamburger');
-var mainNavigation = $('.main-nav');
+var mainNav = $('.main-nav');
 var mainHeader = $('.main-header');
 var headerHeight = mainHeader.outerHeight();
 
 hamburger.click(function() {
-	mainNavigation.toggleClass('nav-open');
-	$(this).toggleClass('navOpen');
-	mainHeader.toggleClass('open');
-	body.toggleClass('body-modal-open');
-	if ( mainNavigation.hasClass('nav-open')) {
+	mainNav.toggleClass('nav-open');
+  $(this).toggleClass('navOpen');
+  mainHeader.toggleClass('open');
+  body.toggleClass('body-modal-open');
+  if ( mainNav.hasClass('nav-open')) {
     body.bind('touchmove', function(e) {
       if (!$(e.target).parents().hasClass('nav-open')) {
         e.preventDefault();
