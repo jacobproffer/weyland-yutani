@@ -21,9 +21,11 @@ hamburger.click(function() {
 });
 
 $('a[href*="#"]').click(function() {
-	mainNav.removeClass('nav-open');
-	mainHeader.removeClass('open');
-	hamburger.removeClass('navOpen');
+  if ( $('.main-header').hasClass('open') ) {
+    $('.main-nav').removeClass('nav-open');
+    $('.main-header').removeClass('open');
+    $('.hamburger').removeClass('navOpen');
+  }
 });
 
 mainHeader.headroom({
