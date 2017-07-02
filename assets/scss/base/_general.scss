@@ -18,7 +18,7 @@ body {
   font-size: 16px;
   font-family: 'Source Sans Pro', sans-serif;
   @include screen-below(1025px) {
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
   }
 }
 
