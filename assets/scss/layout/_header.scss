@@ -93,6 +93,7 @@
 }
 
 .main-nav {
+  pointer-events: auto;
   will-change:transform;
   display: block;
   opacity: 0;
