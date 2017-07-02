@@ -24,7 +24,6 @@ $('a[href*="#"]').click(function() {
 	mainNav.removeClass('nav-open');
 	mainHeader.removeClass('open');
 	hamburger.removeClass('navOpen');
-	body.removeClass('body-modal-open');
 });
 
 mainHeader.headroom({
