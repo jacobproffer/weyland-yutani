@@ -93,7 +93,6 @@
 }
 
 .main-nav {
-  pointer-events: auto;
   will-change:transform;
   display: block;
   opacity: 0;
@@ -156,6 +155,9 @@
       border-bottom: none;
       display: inline-block;
     }
+  }
+  @include screen-below(1025px) {
+    pointer-events: none;
   }
   @include screen-above(1025px) {
     border-bottom: 1px solid rgba(255, 255, 255, .10);

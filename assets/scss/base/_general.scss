@@ -17,9 +17,6 @@ body {
   background-color: #0e0e11;
   font-size: 16px;
   font-family: 'Source Sans Pro', sans-serif;
-  @include screen-below(1025px) {
-    pointer-events: none;
-  }
 }
 
 h1,
