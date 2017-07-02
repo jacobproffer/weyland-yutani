@@ -1,4 +1,4 @@
-var htmlBody = $('html, body');
+var body = $('body');
 var hamburger = $('.hamburger');
 var mainNavigation = $('.main-nav');
 var mainHeader = $('.main-header');
@@ -8,7 +8,16 @@ hamburger.click(function() {
 	mainNavigation.toggleClass('nav-open');
 	$(this).toggleClass('navOpen');
 	mainHeader.toggleClass('open');
-	htmlBody.toggleClass('body-modal-open');
+	body.toggleClass('body-modal-open');
+	if ( mainNavigation.hasClass('nav-open')) {
+    body.bind('touchmove', function(e) {
+      if (!$(e.target).parents().hasClass('nav-open')) {
+        e.preventDefault();
+      }
+    });
+  } else {
+    body.unbind('touchmove');
+  }
 });
 
 $('a[href*="#"]').click(function() {
@@ -16,7 +25,7 @@ $('a[href*="#"]').click(function() {
     mainNavigation.removeClass('nav-open');
     mainHeader.removeClass('open');
     hamburger.removeClass('navOpen');
-		htmlBody.removeClass('body-modal-open');
+		body.removeClass('body-modal-open');
   }
 });
 
