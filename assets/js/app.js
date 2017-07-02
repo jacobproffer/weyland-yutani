@@ -21,12 +21,10 @@ hamburger.click(function() {
 });
 
 $('a[href*="#"]').click(function() {
-  if ( $('.main-header').hasClass('open') ) {
-    $('.main-nav').removeClass('nav-open');
-    $('.main-header').removeClass('open');
-    $('.hamburger').removeClass('navOpen');
-		body.removeClass('body-modal-open');
-  }
+	mainNav.removeClass('nav-open');
+	mainHeader.removeClass('open');
+	hamburger.removeClass('navOpen');
+	body.removeClass('body-modal-open');
 });
 
 mainHeader.headroom({
