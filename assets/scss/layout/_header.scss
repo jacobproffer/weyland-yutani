@@ -156,6 +156,9 @@
       display: inline-block;
     }
   }
+  @include screen-below(1025px) {
+    -webkit-overflow-scrolling: touch;
+  }
   @include screen-above(1025px) {
     border-bottom: 1px solid rgba(255, 255, 255, .10);
     opacity: 1;
