@@ -12,12 +12,10 @@ hamburger.click(function() {
 });
 
 $('a[href*="#"]').click(function() {
-  if ( $('.main-header').hasClass('open') ) {
-    $('.main-nav').removeClass('nav-open');
-    $('.main-header').removeClass('open');
-    $('.hamburger').removeClass('navOpen');
-		body.removeClass('disable-scrolling');
-  }
+	$('.main-nav').removeClass('nav-open');
+	$('.main-header').removeClass('open');
+	$('.hamburger').removeClass('navOpen');
+	body.removeClass('disable-scrolling');
 });
 
 mainHeader.headroom({
