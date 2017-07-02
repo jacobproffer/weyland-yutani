@@ -25,7 +25,9 @@ $('a[href*="#"]').click(function() {
     $('.main-nav').removeClass('nav-open');
     $('.main-header').removeClass('open');
     $('.hamburger').removeClass('navOpen');
-		body.unbind('touchmove');
+		if ( ! mainNav.hasClass('nav-open') ) {
+			body.unbind('touchmove');
+		}
   }
 });
 
