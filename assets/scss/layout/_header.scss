@@ -64,9 +64,6 @@
     transform: translateY(0);
     background: rgba(0, 0, 0, .90);
   }
-  @include screen-below(1025px) {
-    -webkit-overflow-scrolling: touch;
-  }
 }
 
 .open {
