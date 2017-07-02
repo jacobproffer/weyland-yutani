@@ -8,8 +8,8 @@ hamburger.click(function() {
   mainNav.toggleClass('nav-open');
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
-	body.addClass('body-modal-open');
-	body.addClass('disable-scrolling');
+	body.toggleClass('body-modal-open');
+	body.toggleClass('disable-scrolling');
 });
 
 $('a[href*="#"]').click(function() {
