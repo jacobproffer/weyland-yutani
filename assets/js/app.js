@@ -5,7 +5,7 @@ var mainHeader = $('.main-header');
 var headerHeight = mainHeader.outerHeight();
 
 hamburger.click(function() {
-	mainNav.toggleClass('nav-open');
+  mainNav.toggleClass('nav-open');
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
   body.toggleClass('body-modal-open');
@@ -21,10 +21,10 @@ hamburger.click(function() {
 });
 
 $('a[href*="#"]').click(function() {
-  if ( mainHeader.hasClass('open') ) {
-    mainNavigation.removeClass('nav-open');
-    mainHeader.removeClass('open');
-    hamburger.removeClass('navOpen');
+  if ( $('.main-header').hasClass('open') ) {
+    $('.main-nav').removeClass('nav-open');
+    $('.main-header').removeClass('open');
+    $('.hamburger').removeClass('navOpen');
   }
 });
 
