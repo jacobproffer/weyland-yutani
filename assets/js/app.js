@@ -9,9 +9,9 @@ hamburger.click(function() {
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
   body.toggleClass('body-modal-open');
-  if ( body.hasClass('body-modal-open')) {
+  if ( mainNav.hasClass('nav-open')) {
     body.bind('touchmove', function(e) {
-      if (!$(e.target).parents().hasClass('body-modal-open')) {
+      if (!$(e.target).parents().hasClass('nav-open')) {
         e.preventDefault();
       }
     });
