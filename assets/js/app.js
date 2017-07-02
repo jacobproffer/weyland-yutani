@@ -8,16 +8,7 @@ hamburger.click(function() {
   mainNav.toggleClass('nav-open');
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
-  body.toggleClass('body-modal-open');
-  if ( mainNav.hasClass('nav-open')) {
-    body.bind('touchmove', function(e) {
-      if (!$(e.target).parents().hasClass('nav-open')) {
-        e.preventDefault();
-      }
-    });
-  } else {
-    body.unbind('touchmove');
-  }
+	body.addClass('disable-scrolling');
 });
 
 $('a[href*="#"]').click(function() {
@@ -47,3 +38,23 @@ mainHeader.headroom({
     mainHeader.removeClass('pinned');
   }
 });
+
+// Test
+
+document.ontouchmove = function ( event ) {
+
+    var isTouchMoveAllowed = true, target = event.target;
+
+    while ( target !== null ) {
+        if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
+            isTouchMoveAllowed = false;
+            break;
+        }
+        target = target.parentNode;
+    }
+
+    if ( !isTouchMoveAllowed ) {
+        event.preventDefault();
+    }
+
+};
