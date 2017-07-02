@@ -103,11 +103,12 @@
   li {
     position: relative;
     list-style-type: none;
-    pointer-events: auto;
+    pointer-events: all;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(255, 255, 255, .10);
     a {
+      pointer-events: all;
       position: relative;
       cursor: pointer;
       padding: 10px 0 38px 0;
