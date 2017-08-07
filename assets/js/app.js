@@ -3,6 +3,7 @@ var hamburger = $('.hamburger');
 var mainNav = $('.main-nav');
 var mainHeader = $('.main-header');
 var headerHeight = mainHeader.outerHeight();
+var controller = new ScrollMagic.Controller();
 
 hamburger.click(function() {
   mainNav.toggleClass('nav-open');
@@ -59,3 +60,14 @@ document.ontouchmove = function ( event ) {
     }
 
 };
+
+// ScrollMagic
+
+new ScrollMagic.Scene({
+  triggerElement: '.mission-graphic',
+  offset: '-100',
+  reverse: true
+}).addTo(controller)
+.on('enter', function() {
+  $('.mission-graphic').addClass('animated hing fadeIn');
+});

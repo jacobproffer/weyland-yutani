@@ -14,6 +14,7 @@ var scripts = [
   '../assets/js/lib/jquery-3.2.1.min.js',
   '../assets/js/lib/headroom/headroom.min.js',
   '../assets/js/lib/headroom/jQuery.headroom.js',
+  '../assets/js/lib/scrollmagic/ScrollMagic.min.js',
   '../assets/js/app.js'
 ];
 
