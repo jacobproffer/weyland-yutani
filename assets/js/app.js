@@ -65,9 +65,16 @@ document.ontouchmove = function ( event ) {
 
 new ScrollMagic.Scene({
   triggerElement: '.mission-graphic',
-  offset: '-100',
-  reverse: true
+  offset: '-100'
 }).addTo(controller)
 .on('enter', function() {
-  $('.mission-graphic').addClass('animated hing fadeIn');
+  $('.mission-graphic').addClass('animated hinge fadeIn');
+});
+
+new ScrollMagic.Scene({
+  triggerElement: '.technology-svg',
+  offset: '-100',
+}).addTo(controller)
+.on('enter', function() {
+  $('.technology-svg').addClass('animated hinge fadeIn');
 });
