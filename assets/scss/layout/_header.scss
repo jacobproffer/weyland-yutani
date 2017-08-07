@@ -1,9 +1,5 @@
 .hero {
   position: relative;
-	background: url('../img/weyland-hero.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
   text-align: center;
   overflow: hidden;
   outline: none;
@@ -22,6 +18,7 @@
     position: relative;
     line-height: 1.5;
     padding-top: 164px;
+    z-index: 8;
     @include screen-above(768px) {
       padding-top: 270px;
     }
@@ -35,34 +32,30 @@
       padding-bottom: 220px;
     }
   }
-  &:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(33, 33, 33, .25);
-    z-index: -1;
-  }
+}
+
+.hero-background {
+  z-index: -1;
+  @include size(100%);
+  @include background-cover('../img/weyland-hero.jpg');
+  @include absolute(0, 0, 0, 0);
 }
 
 .main-header {
 	padding: 33px 0;
   position: fixed;
   background: transparent;
-  width: 100%;
-  height: 100px;
   overflow-y: visible;
+  will-change: transform;
   z-index: 9;
+  @include size(100%, 100px);
   @include transition(all 300ms ease-in-out);
-  will-change:transform;
   &.unpinned {
-    transform: translateY(- 100px);
+    @include transform(translateY(-100px));
   }
   &.pinned {
-    transform: translateY(0);
     background: rgba(0, 0, 0, .90);
+    @include transform(translateY(0));
   }
 }
 
@@ -79,17 +72,16 @@
     opacity: 0.5;
   }
   svg {
-    width: 134px;
-    height: 34px;
+    @include size(134px, 34px);
   }
 }
 
 .st0 {
-  fill:#FFD302;
+  fill: #FFD302;
 }
 
 .st1 {
-  fill:#C8C8C8;
+  fill: #C8C8C8;
 }
 
 .main-nav {

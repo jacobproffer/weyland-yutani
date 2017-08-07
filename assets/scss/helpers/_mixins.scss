@@ -82,7 +82,7 @@
 }
 
 @mixin background-cover($url) {
-  background: url($url) no-repeat center center fixed;
+  background: url($url) no-repeat center center;
   background-size: cover;
 }
 
