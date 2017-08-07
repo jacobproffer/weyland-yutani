@@ -6,6 +6,7 @@
 
 - [X] Build hero
 - [X] Build navigation
+- [ ] Fix navigation
 - [ ] Build sections
 - [ ] Build footer
 
