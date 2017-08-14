@@ -64,17 +64,17 @@ document.ontouchmove = function ( event ) {
 // ScrollMagic
 
 new ScrollMagic.Scene({
-  triggerElement: '.mission-graphic',
+  triggerElement: '.mission-circle',
   offset: '-100'
 }).addTo(controller)
 .on('enter', function() {
-  $('.mission-graphic').addClass('animated hinge fadeIn');
+  $('.mission-circle').addClass('animated hinge fadeIn');
 });
 
 new ScrollMagic.Scene({
-  triggerElement: '.technology-svg',
+  triggerElement: '.technology-circle',
   offset: '-100',
 }).addTo(controller)
 .on('enter', function() {
-  $('.technology-svg').addClass('animated hinge fadeIn');
+  $('.technology-circle').addClass('animated hinge fadeIn');
 });

@@ -15,7 +15,7 @@
 
 .mission-graphic {
   display: none;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -35,6 +35,14 @@
     width: 600px;
     height: 600px;
   }
+}
+
+.mission-circle {
+  opacity: 0;
+}
+
+.technology-circle {
+  opacity: 0;
 }
 
 .mission-statement-wrapper {
@@ -198,8 +206,4 @@
       margin-right: 0;
     }
   }
-}
-
-.technology-svg {
-  opacity: 0;
 }
