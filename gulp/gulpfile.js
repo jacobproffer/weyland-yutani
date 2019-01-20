@@ -1,90 +1,75 @@
-'use strict';
+"use strict";
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sassLint = require('gulp-sass-lint');
-var sourcemaps = require('gulp-sourcemaps');
-var rename = require('gulp-rename');
-var prefix = require('gulp-autoprefixer');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var htmlmin = require('gulp-htmlmin');
-var browserSync = require('browser-sync').create();
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var sassLint = require("gulp-sass-lint");
+var rename = require("gulp-rename");
+var prefix = require("gulp-autoprefixer");
+var uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
+var htmlmin = require("gulp-htmlmin");
+var browserSync = require("browser-sync").create();
 var scripts = [
-  '../assets/js/lib/headroom/headroom.min.js',
-  '../assets/js/lib/headroom/jQuery.headroom.js',
-  '../assets/js/lib/scrollmagic/ScrollMagic.min.js',
-  '../assets/js/app.js'
+  "../assets/js/lib/headroom/headroom.min.js",
+  "../assets/js/lib/headroom/jQuery.headroom.js",
+  "../assets/js/lib/scrollmagic/ScrollMagic.min.js",
+  "../assets/js/app.js"
 ];
 
-gulp.task('html', function() {
+gulp.task("html", function() {
   return gulp
-    .src('../*.html')
+    .src("../*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('../docs'));
+    .pipe(gulp.dest("../docs"));
 });
 
-// Linter
-gulp.task('sass-lint', function() {
+gulp.task("sass-lint", function() {
   return gulp
-    .src('../assets/scss/**/*.scss')
+    .src("../assets/**/*.scss")
     .pipe(
       sassLint({
-        configFile: '.scss-lint-config.yml'
+        configFile: ".scss-lint-config.yml"
       })
     )
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
 });
 
-// Configure CSS tasks.
-gulp.task('sass', gulp.series('sass-lint'), function() {
+gulp.task("sass", ["sass-lint"], function() {
   return gulp
-    .src('../assets/scss/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(prefix('last 2 versions'))
-    .pipe(rename({ suffix: '.min' }))
+    .src("../assets/scss/**/*.scss")
     .pipe(
-      sourcemaps.write('.', {
-        sourceRoot: '../../assets/scss',
-        includeContent: false
-      })
+      sass({
+        outputStyle: "compressed",
+        includePaths: ["node_modules/superior-scss/src"]
+      }).on("error", sass.logError)
     )
-    .pipe(gulp.dest('../docs/css'))
+    .pipe(prefix("last 2 versions"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("../docs/css"))
     .pipe(browserSync.stream());
 });
 
-// Configure JS.
-gulp.task('js', function() {
+gulp.task("js", function() {
   return gulp
     .src(scripts)
     .pipe(uglify())
-    .pipe(concat('app.js'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('../docs/js'))
+    .pipe(concat("app.js"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("../docs/js"))
     .pipe(browserSync.stream());
 });
 
-// Static Server + watching scss/html files
-gulp.task('browser-sync', function(done) {
+gulp.task("serve", ["sass", "js"], function() {
   browserSync.init({
-    server: '../docs/',
-    browser: 'google chrome'
+    server: "../docs",
+    browser: "Google Chrome"
   });
-  done();
+
+  gulp.watch("../*.html", ["html"]);
+  gulp.watch("../assets/scss/**/*.scss", ["sass"]);
+  gulp.watch("../assets/js/**/*.js", ["js"]);
+  gulp.watch("../*.html").on("change", browserSync.reload);
 });
 
-gulp.task(
-  'default',
-  gulp.series(
-    gulp.parallel('html', 'sass', 'js'),
-    'browser-sync',
-    function watcher(done) {
-      gulp.watch('../*.html', gulp.parallel('html'));
-      gulp.watch('../assets/scss/**/*.scss', gulp.parallel('sass'));
-      gulp.watch('../assets/js/**/*.js', gulp.parallel('js'));
-      gulp.watch('../*.html').on('change', browserSync.reload);
-    }
-  )
-);
+gulp.task("default", ["html", "sass", "js", "serve"]);
