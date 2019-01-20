@@ -7,8 +7,8 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
   @include font-size($h3-font-sizes);
+  font-weight: 400;
 }
 
 h4 {
@@ -22,6 +22,7 @@ h5 {
 p {
   @include font-size($p-font-sizes);
   line-height: 2;
+
   @include screen-above(768px) {
     letter-spacing: 0.15em;
     margin-right: -0.15em;
@@ -36,6 +37,7 @@ h3 {
   margin-bottom: 0;
   letter-spacing: 0.2em;
   margin: 0em -0.2em 0em 0;
+
   @include screen-above(768px) {
     letter-spacing: 0.4em;
     margin: 0em -0.4em 0em 0;
@@ -46,9 +48,11 @@ h4,
 h5 {
   letter-spacing: 0.15em;
   margin: 0em -0.15em 0em 0;
+
   span {
     color: $gray;
   }
+
   @include screen-above(768px) {
     letter-spacing: 0.2em;
     margin: 0em -0.2em 0em 0;

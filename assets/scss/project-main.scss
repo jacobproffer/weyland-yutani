@@ -17,6 +17,9 @@
 @import "layout/header";
 @import "layout/footer";
 
-// Pages
+// Components
 
-@import "pages/home";
+@import "components/hero";
+@import "components/mission";
+@import "components/technology";
+@import "components/careers";
