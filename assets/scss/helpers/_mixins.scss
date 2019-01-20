@@ -3,14 +3,14 @@
 }
 
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   @include box-sizing(border-box);
 }
 
 @mixin size($width, $height: $width) {
-	width: $width;
-	height: $height;
+  width: $width;
+  height: $height;
 }
 
 @mixin opacity($opacity) {
@@ -19,12 +19,8 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
-@mixin bw() {
-	filter: grayscale(100%);
-}
-
 @mixin transform($args) {
-	transform: #{$args};
+  transform: #{$args};
 }
 
 @mixin background-cover($url) {
@@ -32,44 +28,36 @@
   background-size: cover;
 }
 
-@mixin blur-text($amount: 3px, $color: rgba(0, 0, 0, 0.5)) {
-	color: transparent;
-	text-shadow: 0 0 $amount $color;
-}
-
-@mixin absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-	position: absolute;
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
 }
 
 @mixin clearfix {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin vertical-align {
-	position: absolute;
-	top: 50%;
-	@include transform( translateY(-50%) );
-}
-@mixin horizontal-align {
-	position: absolute;
-	left: 50%;
-	@include transform( translateX(-50%) );
+  @include transform(translateY(-50%));
+  position: absolute;
+  top: 50%;
 }
 
-@mixin ease($property:all, $speed:0.3s, $timing: $easeOutQuint) {
-	transition: $property $speed $timing;
+@mixin horizontal-align {
+  @include transform(translateX(-50%));
+  position: absolute;
+  left: 50%;
 }
 
 @mixin transition($args) {
-	transition: #{$args};
+  transition: #{$args};
 }
 
 @mixin screen-above($screen-size) {
@@ -94,8 +82,7 @@
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     @if $fs-breakpoint == null {
       font-size: $fs-font-size;
-    }
-    @else {
+    } @else {
       @media screen and (min-width: $fs-breakpoint) {
         font-size: $fs-font-size;
       }
@@ -103,20 +90,18 @@
   }
 }
 
-@mixin line-height($heightValue: 12 ){
-    line-height: $heightValue + px; //fallback for old browsers
-    line-height: (0.125 * $heightValue) + rem;
-}
-
-@mixin ratio($width:1, $height:1) {
+@mixin ratio($width: 1, $height: 1) {
   position: relative;
-  &:before {
+
+  &::before {
     display: block;
-    content: "";
+    content: '';
     width: 100%;
     padding-top: ($height / $width) * 100%;
   }
-  > .content, > .inside {
+
+  > .content,
+  > .inside {
     position: absolute;
     top: 0;
     left: 0;

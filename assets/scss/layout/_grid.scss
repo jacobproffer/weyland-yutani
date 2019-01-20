@@ -1,16 +1,16 @@
 .container {
-	width: 95%;
-	max-width: 1245px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0 2%;
+  width: 95%;
+  max-width: 1245px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2%;
 
-	@include screen-above(768px) {
-		padding: 0 2.5%;
-	}
-	
-	@include screen-above(1440px) {
-		width: 100%;
-		padding: 0;
-	}
+  @include screen-above(768px) {
+    padding: 0 2.5%;
+  }
+
+  @include screen-above(1440px) {
+    width: 100%;
+    padding: 0;
+  }
 }

@@ -1,12 +1,12 @@
 .hero {
   position: relative;
-  text-align: center;
-  overflow: hidden;
-  outline: none;
+  z-index: 1;
   display: flex;
+  overflow: hidden;
+  text-align: center;
+  outline: none;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 
   .container {
     margin: 0;
@@ -58,11 +58,11 @@
   flex: 0 1 100%;
   max-width: 100%;
   align-self: auto;
-  color: white;
+  color: $white;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, .10);
-  border-left: 1px solid rgba(255, 255, 255, .10);
-  border-bottom: 1px solid rgba(255, 255, 255, .10);
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-left: 1px solid rgba(255, 255, 255, .1);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
 
   h4,
   h5 {
@@ -97,7 +97,7 @@
 
 .operation-item-span2 {
   @include screen-below(768px) {
-    border-right: 1px solid rgba(255, 255, 255, .10);
+    border-right: 1px solid rgba(255, 255, 255, .1);
   }
 
   @include screen-between(768px, 1025px) {
