@@ -1,10 +1,9 @@
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   @include box-sizing(border-box);
 }
 
-::-moz-selection { background: $yellow; }
 ::selection { background: $yellow;}
 
 img,
@@ -13,10 +12,10 @@ svg {
 }
 
 body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
   color: $gray;
   background-color: $black;
-  font-size: 16px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1,

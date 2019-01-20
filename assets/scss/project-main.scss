@@ -1,22 +1,25 @@
 // Helpers
 
-@import "helpers/variables";
-@import "helpers/maps";
-@import "helpers/mixins";
+@import 'helpers/variables';
+@import 'helpers/maps';
+@import 'helpers/mixins';
 
 // Base
 
-@import "base/reset";
-@import "base/typography";
-@import "base/general";
-@import "base/animation";
+@import 'general/reset';
+@import 'general/typography';
+@import 'general/global';
+@import 'general/animation';
 
 // Layout
 
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
 
-// Pages
+// Components
 
-@import "pages/home";
+@import 'components/hero';
+@import 'components/mission';
+@import 'components/technology';
+@import 'components/careers';

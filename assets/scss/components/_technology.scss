@@ -1,0 +1,69 @@
+.technology {
+  text-align: center;
+  padding: 0 0 72px;
+
+  @include screen-between(768px, 1025px) {
+    padding: 0 0 144px;
+  }
+
+  @include screen-above(1025px) {
+    padding: 0 0 157px;
+  }
+}
+
+.technology-wrapper {
+  margin-top: 68px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-start;
+}
+
+[class^='technology-item'] {
+  order: 0;
+  flex: 0 1 100%;
+  max-width: 100%;
+  align-self: auto;
+
+  h4 {
+    margin-top: 32px;
+
+    @include screen-between(1025px, 1281px) {
+      margin-top: 50px;
+    }
+
+    @include screen-above(1281px) {
+      margin-top: 75px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @include screen-below(1025px) {
+    margin-bottom: 50px;
+  }
+
+  @include screen-between(1025px, 1281px) {
+    flex: 0 1 calc(33.333% - 50px);
+    max-width: calc(33.333% - 50px);
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include screen-above(1281px) {
+    flex: 0 1 calc(33.333% - 65px);
+    max-width: calc(33.333% - 65px);
+    margin-right: 65px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

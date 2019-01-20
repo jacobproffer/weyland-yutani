@@ -1,0 +1,144 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    margin: 0;
+  }
+
+  h1 {
+    opacity: 1;
+    position: relative;
+    line-height: 1.5;
+    padding-top: 164px;
+    z-index: 8;
+
+    @include screen-above(768px) {
+      padding-top: 270px;
+    }
+  }
+
+  h3 {
+    display: block;
+    z-index: 8;
+    position: relative;
+    padding-bottom: 112px;
+
+    @include screen-above(768px) {
+      padding-bottom: 220px;
+    }
+  }
+}
+
+.hero-background {
+  @include size(100%);
+  @include background-cover('../img/weyland-hero.jpg');
+  @include absolute(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.operation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: stretch;
+}
+
+[class^='operation-item'] {
+  padding: 43px 30px;
+  order: 0;
+  flex: 0 1 100%;
+  max-width: 100%;
+  align-self: auto;
+  color: $white;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-left: 1px solid rgba(255, 255, 255, .1);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+  h4,
+  h5 {
+    font-weight: 400;
+
+    span {
+      color: $gray;
+    }
+  }
+
+  @include screen-above(1300px) {
+    padding: 43px 58px;
+  }
+}
+
+.operation-item-span1 {
+  @include screen-between(768px, 1025px) {
+    flex: 0 1 40%;
+    max-width: 40%;
+  }
+
+  @include screen-between(1025px, 1281px) {
+    flex: 0 1 25%;
+    max-width: 25%;
+  }
+
+  @include screen-above(1281px) {
+    flex: 0 1 21.333%;
+    max-width: 21.333%;
+  }
+}
+
+.operation-item-span2 {
+  @include screen-below(768px) {
+    border-right: 1px solid rgba(255, 255, 255, .1);
+  }
+
+  @include screen-between(768px, 1025px) {
+    flex: 0 1 60%;
+    max-width: 60%;
+  }
+
+  @include screen-between(1025px, 1281px) {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+
+  @include screen-above(1281px) {
+    flex: 0 1 36%;
+    max-width: 36%;
+  }
+}
+
+.operation-founded {
+  @include screen-below(1025px) {
+    display: none;
+  }
+}
+
+.operation-colonist {
+  @include screen-below(1281px) {
+    display: none;
+  }
+}
+
+.operation-cta {
+  @include transition(opacity 300ms ease-in-out);
+  background: $yellow;
+  display: block;
+  text-decoration: none;
+
+  h4 {
+    color: $black;
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+}
