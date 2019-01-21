@@ -11,7 +11,6 @@ var htmlmin = require("gulp-htmlmin");
 var browserSync = require("browser-sync").create();
 var scripts = [
   "../assets/js/lib/headroom/headroom.min.js",
-  "../assets/js/lib/headroom/jQuery.headroom.js",
   "../assets/js/lib/scrollmagic/ScrollMagic.min.js",
   "../assets/js/app.js"
 ];

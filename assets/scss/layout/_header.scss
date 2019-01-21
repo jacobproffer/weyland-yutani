@@ -54,6 +54,7 @@
   height: 0;
   padding: 0;
   margin: 0;
+  pointer-events: none;
   z-index: 9;
 
   li {
@@ -126,11 +127,13 @@
     height: inherit;
     float: right;
     position: relative;
+    pointer-events: all;
   }
 
   &.nav-open {
     opacity: 1;
     height: inherit;
+    pointer-events: all;
   }
 }
 
