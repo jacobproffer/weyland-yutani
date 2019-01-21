@@ -45,6 +45,18 @@
   &__grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    @include screen-below(1280px) {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    @include screen-below(1024px) {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    @include screen-below(768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__grid-item {
@@ -72,13 +84,13 @@
     }
 
     &--operation-founded {
-      @include screen-below(1025px) {
+      @include screen-below(1024px) {
         display: none;
       }
     }
 
     &--operation-colonist {
-      @include screen-below(1281px) {
+      @include screen-below(1280px) {
         display: none;
       }
     }

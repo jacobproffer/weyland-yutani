@@ -3,33 +3,37 @@
   padding: 0 0 72px;
 
   &__grid {
-    margin-top: 68px;
+    margin-top: 32px;
     display: grid;
-    grid-gap: 95px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-    @include screen-below(1440px) {
-      grid-gap: 71px;
-    }
-
-    @include screen-below(1280px) {
-      grid-gap: 48px;
-    }
+    grid-gap: 48px;
+    grid-template-columns: repeat(3, 1fr);
 
     @include screen-below(1024px) {
       grid-template-columns: 1fr;
     }
+
+    @include screen-between(1280px, 1440px) {
+      margin-top: 50px;
+      grid-gap: 71px;
+    }
+
+    @include screen-above(1440px) {
+      margin-top: 68px;
+      grid-gap: 95px;
+    }
   }
 
   &__grid-item {
+    overflow: hidden;
+
     h4 {
       margin-top: 32px;
 
-      @include screen-between(1025px, 1281px) {
+      @include screen-between(1280px, 1440px) {
         margin-top: 50px;
       }
 
-      @include screen-above(1281px) {
+      @include screen-above(1440px) {
         margin-top: 75px;
       }
     }
@@ -37,18 +41,14 @@
     p {
       margin-bottom: 0;
     }
-
-    @include screen-below(1025px) {
-      margin-bottom: 50px;
-    }
   }
 
-  @include screen-between(768px, 1025px) {
+  @include screen-between(1280px, 1440px) {
+    padding: 0 0 108px;
+  }
+
+  @include screen-above(1440px) {
     padding: 0 0 144px;
-  }
-
-  @include screen-above(1025px) {
-    padding: 0 0 157px;
   }
 
   &__circle {

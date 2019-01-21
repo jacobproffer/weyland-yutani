@@ -14,21 +14,21 @@
     transform: translate(-50%, -50%);
     z-index: -1;
 
-    @include screen-between(1025px, 1281px) {
+    @include screen-between(1024px, 1280px) {
       top: 40%;
       left: 50%;
       width: 500px;
       height: 500px;
     }
 
-    @include screen-above(1025px) {
+    @include screen-above(1024px) {
       display: block;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
-    @include screen-above(1281px) {
+    @include screen-above(1280px) {
       width: 600px;
       height: 600px;
     }
@@ -44,11 +44,11 @@
       margin-bottom: 61px;
     }
 
-    @include screen-above(1025px) {
+    @include screen-above(1024px) {
       margin-bottom: 122px;
     }
 
-    @include screen-above(1281px) {
+    @include screen-above(1280px) {
       margin-bottom: 160px;
     }
   }
@@ -56,8 +56,16 @@
   &__grid {
     position: relative;
     display: grid;
-    grid-gap: 100px;
+    grid-gap: 50px;
     grid-template-columns: repeat(2, 1fr);
+
+    @include screen-between(1280px, 1440px) {
+      grid-gap: 75px;
+    }
+
+    @include screen-below(1440px) {
+      grid-gap: 100px;
+    }
   }
 
   &__grid-item {
@@ -71,11 +79,11 @@
     opacity: 0;
   }
 
-  @include screen-between(768px, 1025px) {
-    padding: 144px 0;
+  @include screen-between(1280px, 1440px) {
+    padding: 108px 0;
   }
 
-  @include screen-above(1025px) {
-    padding: 144px 0 212px;
+  @include screen-above(1440px) {
+    padding: 144px 0;
   }
 }

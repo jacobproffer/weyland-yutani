@@ -70,7 +70,7 @@
       }
     }
 
-    @include screen-above(1025px) {
+    @include screen-above(1024px) {
       border-bottom: 0;
       display: inline-block;
     }
@@ -113,13 +113,13 @@
       background-color: transparent;
     }
 
-    @include screen-below(1025px) {
+    @include screen-below(1024px) {
       padding: 32px 0;
       margin: 0;
     }
   }
 
-  @include screen-above(1025px) {
+  @include screen-above(1024px) {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     opacity: 1;
     background: none;
@@ -162,11 +162,11 @@
     right: 50px;
   }
 
-  @include screen-between(768px, 1025px) {
+  @include screen-between(768px, 1024px) {
     right: 75px;
   }
 
-  @include screen-above(1025px) {
+  @include screen-above(1024px) {
     display: none;
   }
 
