@@ -1,5 +1,5 @@
 .mission {
-  padding: 72px 0;
+  padding: 60px 0;
   text-align: center;
 
   .container {
@@ -41,7 +41,7 @@
       max-width: 505px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 61px;
+      margin-bottom: 32px;
     }
 
     @include screen-above(1024px) {
@@ -56,22 +56,34 @@
   &__grid {
     position: relative;
     display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 35px;
+    grid-template-columns: 1fr;
+
+    @include screen-above(1024px) {
+      grid-gap: 50px;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @include screen-between(1280px, 1440px) {
       grid-gap: 75px;
     }
 
-    @include screen-below(1440px) {
+    @include screen-above(1440px) {
       grid-gap: 100px;
     }
   }
 
   &__grid-item {
     &--text {
+      max-width: 505px;
+      margin: 0 auto;
       align-self: center;
-      text-align: left;
+      text-align: center;
+
+      @include screen-above(1024px) {
+        max-width: 100%;
+        text-align: left;
+      }
     }
   }
 
@@ -79,11 +91,15 @@
     opacity: 0;
   }
 
+  @include screen-between(1024px, 1280px) {
+    padding: 60px 0 138px;
+  }
+
   @include screen-between(1280px, 1440px) {
-    padding: 108px 0;
+    padding: 92px 0 212px;
   }
 
   @include screen-above(1440px) {
-    padding: 144px 0;
+    padding: 144px 0 228px;
   }
 }

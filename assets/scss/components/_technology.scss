@@ -40,6 +40,12 @@
 
     p {
       margin-bottom: 0;
+
+      @include screen-below(1024px) {
+        max-width: 505px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 
