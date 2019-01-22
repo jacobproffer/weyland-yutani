@@ -1,0 +1,16 @@
+.button {
+  @include transition(background-color 300ms ease-in-out);
+  @include font-size($h4-font-sizes);
+  display: block;
+  color: $black;
+  background-color: $yellow;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .15em;
+  margin: 0 -.15em 0 0;
+
+  &:hover {
+    background-color: darken($yellow, 20%);
+  }
+}

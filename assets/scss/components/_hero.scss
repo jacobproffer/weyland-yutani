@@ -68,7 +68,6 @@
     border-left: 1px solid rgba(255, 255, 255, .1);
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 
-    h4,
     h5 {
       font-weight: 400;
 
@@ -96,18 +95,7 @@
     }
 
     &--operation-cta {
-      @include transition(opacity 300ms ease-in-out);
-      background: $yellow;
-      display: block;
-      text-decoration: none;
-
-      h4 {
-        color: $black;
-      }
-
-      &:hover {
-        opacity: .5;
-      }
+      color: $black;
     }
 
     @include screen-above(1300px) {
