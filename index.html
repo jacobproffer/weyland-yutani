@@ -19,123 +19,167 @@
   </head>
   <body>
 
-    <header class="main-header">
+    <div class="main-header">
     	<nav>
         <div class="container">
+
       		<a class="logo" href="index.html">
             <svg xmlns="http://www.w3.org/2000/svg" id="Logo" viewBox="0 0 305.2 78.4">
               <path d="M0 0v7.2l71 71h33.8l47.7-47.7 47.9 47.9H234l71.2-71.2V0h-43.4l-47.7 47.6-48-47.6h-26.9l-48 47.7L43.5 0z" class="st0"/>
               <path d="M67.5 0v7.2L91.2 31l23.6-23.6-7.4-7.4zm170.3 0v7.2L214.1 31 190.5 7.4l7.4-7.4zM128.5 71.8v6.6h48.2v-6.6l-24.2-24.3z" class="st1"/>
             </svg>
-      		</a>
+          </a>
+          
       		<div class="hamburger">
       			MENU
-      		</div>
+          </div>
+          
       		<ul class="main-nav">
       			<li><a href="#mission">Our Mission</a></li>
             <li><a href="#technology">Our Technology</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Contact</a></li>
-      		</ul>
+          </ul>
+          
         </div>
     	</nav>
-    </header>
+    </div>
 
     <section class="hero">
       <div class="container">
-        <h1>Weyland-Yutani Corp</h1>
-        <h3>Building Better Worlds</h3>
-        <div class="operation">
-          <div class="operation-item-span2">
+
+        <header>
+          <h1>Weyland-Yutani Corp</h1>
+          <h3>Building Better Worlds</h3>
+        </header>
+
+        <div class="hero__grid">
+          <div class="hero__grid-item hero__grid-item--span2">
             <h4>Current Operation: <span>Acheron</span></h4>
           </div>
-          <div class="operation-item-span1 operation-founded">
+          <div class="hero__grid-item hero__grid-item--operation-founded">
             <h5>Founded: <span>2157</span></h5>
           </div>
-          <div class="operation-item-span1 operation-colonist">
-            <h5>Colonists: <span>158<span></h5>
+          <div class="hero__grid-item hero__grid-item--operation-colonist">
+            <h5>Colonists: <span>158</span></h5>
           </div>
-          <a href="#" class="operation-item-span1 operation-cta">
-            <h4>Apply Today</h4>
+          <a class="button hero__grid-item hero__grid-item--operation-cta" href="#">
+            Apply Today
           </a>
         </div>
+
       </div>
-      <div class="hero-background animated hinge fadeIn"></div>
+      <div class="hero__background animated hinge fadeIn"></div>
     </section>
 
     <section class="mission" id="mission">
       <div class="container">
-        <h2>Our Mission</h2>
-        <p class="mission-statement-intro">The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
-        <div class="mission-statement-wrapper">
-          <div class="mission-statement-flex-text">
-            <div class="mission-statement-text-wrapper">
-              <p>As the largest company on the planet, we have taken it upon ourselves to constantly explore, expand and discover what lies beyond our own heavens. Every day, our biologists, military scientists, chemical engineers, geologists, mechanics and pilots work across our solar system to advance human interests and life. From Peter Weyland’s first commercially viable cybernetic android to the invention of the atmospheric processor, the Weyland-Yutani Corporation has continued to innovate and work towards the realization of a better world.</p>
-            </div>
+
+        <header>
+          <h2>Our Mission</h2>
+        </header>
+
+        <p class="mission__intro">The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
+
+        <div class="mission__grid">
+
+          <div class="mission__grid-item mission__grid-item--text">
+            <p>As the largest company on the planet, we have taken it upon ourselves to constantly explore, expand and discover what lies beyond our own heavens. Every day, our biologists, military scientists, chemical engineers, geologists, mechanics and pilots work across our solar system to advance human interests and life. From Peter Weyland’s first commercially viable cybernetic android to the invention of the atmospheric processor, the Weyland-Yutani Corporation has continued to innovate and work towards the realization of a better world.</p>
           </div>
-          <div class="mission-statement-flex-image"></div>
-          <svg class="mission-graphic" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+
+          <div class="mission__grid-item">
+            <img src="img/mission-image.jpg" alt="Image of a barren landscape.">
+          </div>
+
+          <svg class="mission__graphic" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
             <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%" x="125" y="125">
               <image width="362" height="362" xlink:href="img/ground-texture-small.jpg">
             </pattern>
             <circle cx="300" cy="300" r="175" style="fill:url(#pattern);" fill-opacity=".25"/>
-            <g class="mission-circle">
+            <g class="mission__circle">
               <circle cx="300" cy="300" r="223.5" stroke="#FFF" opacity=".1"/>
               <circle cx="300" cy="300" r="299.5" stroke="#FFF" opacity=".1"/>
             </g>
           </svg>
+
         </div>
+
       </div>
     </section>
 
     <section class="technology" id="technology">
       <div class="container">
-        <h2>Our Technology</h2>
-        <div class="technology-wrapper">
-          <div class="technology-item">
+
+        <header>
+          <h2>Our Technology</h2>
+        </header>
+
+        <div class="technology__grid">
+
+          <div class="technology__grid-item">
             <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
               <pattern id="tech1" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
                 <image width="275" height="275" xlink:href="img/loader-small.jpg">
               </pattern>
               <circle cx="175" cy="175" r="125" style="fill:url(#tech1);"/>
-              <g class="technology-circle">
+              <g class="technology__circle">
                 <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
               </g>
             </svg>
             <h4>Security</h4>
             <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
           </div>
-          <div class="technology-item">
+
+          <div class="technology__grid-item">
             <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
               <pattern id="tech3" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
                 <image width="275" height="275" xlink:href="img/ship-small.jpg">
               </pattern>
               <circle cx="175" cy="175" r="125" style="fill:url(#tech3);"/>
-              <g class="technology-circle">
+              <g class="technology__circle">
                 <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
               </g>
             </svg>
             <h4>Transportation</h4>
             <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
           </div>
-          <div class="technology-item">
+
+          <div class="technology__grid-item">
             <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
               <pattern id="tech2" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
                 <image width="275" height="275" xlink:href="img/processor-small.jpg">
               </pattern>
               <circle cx="175" cy="175" r="125" fill="#FFF" style="fill:url(#tech2);"/>
-              <g class="technology-circle">
+              <g class="technology__circle">
                 <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
               </g>
             </svg>
             <h4>Terraforming</h4>
             <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
           </div>
+          
         </div>
+
       </div>
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/app.min.js" charset="utf-8"></script>
+    <section class="careers">
+      <div class="container">
+
+        <header>
+          <h2>Careers</h2>
+        </header>
+
+        <div class="careers__row">
+          <div class="careers__job-title">
+            <span>Power Loader Operator</span>
+          </div>
+          <a class="button careers__button" href="#">Read More</a>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="js/app.min.js"></script>
   </body>
 </html>

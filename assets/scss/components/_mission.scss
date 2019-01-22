@@ -1,5 +1,5 @@
 .mission {
-  padding: 72px 0;
+  padding: 60px 0;
   text-align: center;
 
   .container {
@@ -7,113 +7,99 @@
     z-index: 1;
   }
 
-  @include screen-between(768px, 1025px) {
-    padding: 144px 0;
-  }
-
-  @include screen-above(1025px) {
-    padding: 144px 0 212px;
-  }
-}
-
-.mission-graphic {
-  display: none;
-  opacity: 1;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-
-  @include screen-between(1025px, 1281px) {
-    top: 40%;
-    left: 50%;
-    width: 500px;
-    height: 500px;
-  }
-
-  @include screen-above(1025px) {
-    display: block;
-    top: 50%;
-    left: 50%;
+  &__graphic {
+    display: none;
+    opacity: 1;
+    position: absolute;
     transform: translate(-50%, -50%);
+    z-index: -1;
+
+    @include screen-between(1024px, 1280px) {
+      top: 40%;
+      left: 50%;
+      width: 500px;
+      height: 500px;
+    }
+
+    @include screen-above(1024px) {
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include screen-above(1280px) {
+      width: 600px;
+      height: 600px;
+    }
   }
 
-  @include screen-above(1281px) {
-    width: 600px;
-    height: 600px;
-  }
-}
-
-.mission-circle {
-  opacity: 0;
-}
-
-.technology-circle {
-  opacity: 0;
-}
-
-.mission-statement-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-[class^='mission-statement-flex'] {
-  text-align: left;
-  order: 0;
-  flex: 0 1 100%;
-  max-width: 100%;
-  align-self: auto;
-
-  @include screen-above(1025px) {
-    flex: 0 1 50%;
-    max-width: 50%;
-  }
-}
-
-.mission-statement-intro {
-  text-align: center;
-
-  @include screen-above(505px) {
-    max-width: 505px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 61px;
-  }
-
-  @include screen-above(1025px) {
-    margin-bottom: 122px;
-  }
-
-  @include screen-above(1281px) {
-    margin-bottom: 160px;
-  }
-}
-
-.mission-statement-flex-text {
-  @include screen-below(1025px) {
-    margin-bottom: 50px;
-  }
-}
-
-.mission-statement-text-wrapper {
-  @include screen-below(1025px) {
+  &__intro {
     text-align: center;
+
+    @include screen-above(505px) {
+      max-width: 505px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 32px;
+    }
+
+    @include screen-above(1024px) {
+      margin-bottom: 122px;
+    }
+
+    @include screen-above(1280px) {
+      margin-bottom: 160px;
+    }
   }
 
-  @include screen-above(1025px) {
-    padding-right: 70px;
-  }
-}
+  &__grid {
+    position: relative;
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 1fr;
 
-.mission-statement-flex-image {
-  @include ratio(6, 4);
-  position: relative;
-  background-image: url('../img/mission-image.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    @include screen-above(1024px) {
+      grid-gap: 50px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include screen-between(1280px, 1440px) {
+      grid-gap: 75px;
+    }
+
+    @include screen-above(1440px) {
+      grid-gap: 100px;
+    }
+  }
+
+  &__grid-item {
+    &--text {
+      max-width: 505px;
+      margin: 0 auto;
+      align-self: center;
+      text-align: center;
+
+      @include screen-above(1024px) {
+        max-width: 100%;
+        text-align: left;
+      }
+    }
+  }
+
+  &__circle {
+    opacity: 0;
+  }
+
+  @include screen-between(1024px, 1280px) {
+    padding: 60px 0 138px;
+  }
+
+  @include screen-between(1280px, 1440px) {
+    padding: 92px 0 212px;
+  }
+
+  @include screen-above(1440px) {
+    padding: 129px 0 238px;
+  }
 }
