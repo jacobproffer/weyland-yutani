@@ -14,7 +14,7 @@
   "homepage": "https://github.com/jacobproffer/weyland-yutani",
   "devDependencies": {
     "browser-sync": "^2.26.5",
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
