@@ -24,11 +24,12 @@
     }
   }
 
-  h3 {
+  &__subheading {
     display: block;
     z-index: 8;
     position: relative;
     padding-bottom: 112px;
+    text-transform: uppercase;
 
     @include screen-above(768px) {
       padding-bottom: 220px;
@@ -67,28 +68,32 @@
     border-top: 1px solid rgba(255, 255, 255, .1);
     border-left: 1px solid rgba(255, 255, 255, .1);
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+    text-transform: uppercase;
+    overflow: hidden;
 
-    h5 {
-      font-weight: 400;
-
-      span {
-        color: $gray;
-      }
+    span {
+      color: $gray;
     }
 
     &--span2 {
+      @include font-size($h4-font-sizes);
+
       @include screen-below(768px) {
         border-right: 1px solid rgba(255, 255, 255, .1);
       }
     }
 
     &--operation-founded {
+      @include font-size($h5-font-sizes);
+
       @include screen-below(1024px) {
         display: none;
       }
     }
 
     &--operation-colonist {
+      @include font-size($h5-font-sizes);
+
       @include screen-below(1280px) {
         display: none;
       }

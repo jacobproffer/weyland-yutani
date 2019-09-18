@@ -9,8 +9,20 @@
   &__row {
     text-align: left;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr;
     grid-row-gap: 25px;
+
+    &:not(:first-of-type) {
+      margin-top: 24px;
+    }
+
+    @include screen-between(600px, 1024px) {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    @include screen-above(1024px) {
+      grid-template-columns: 4fr 1fr;
+    }
   }
 
   &__job-title,
@@ -19,9 +31,31 @@
   }
 
   &__job-title {
+    font-size: 1rem;
+    color: $white;
+    display: block;
+    line-height: 1;
+    text-transform: uppercase;
     border-top: 1px solid rgba(255, 255, 255, .1);
     border-left: 1px solid rgba(255, 255, 255, .1);
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+    span {
+      color: $gray;
+      margin-left: 8px;
+
+      @include screen-below(1024px) {
+        display: none;
+      }
+
+      @include screen-above(1024px) {
+        margin-left: 16px;
+      }
+    }
+
+    @include screen-below(1024px) {
+      text-align: center;
+    }
   }
 
   @include screen-between(1280px, 1440px) {

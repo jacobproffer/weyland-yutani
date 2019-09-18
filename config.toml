@@ -16,24 +16,13 @@ theme = "weyland-yutani"
 [menu]
 
   [[menu.main]]
-    identifier = "our-mission"
-    name = "Our Mission"
-    url = "#mission"
-    weight = 1
-
-  [[menu.main]]
-    identifier = "our-technology"
-    name = "Our Technology"
-    url = "#technology"
-    weight = 2
-
-  [[menu.main]]
     identifier = "careers"
     name = "Careers"
-    url = "/careers"
-    weight = 3
+    url = "/careers/"
+    weight = 1
 
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact"
+    weight = 2

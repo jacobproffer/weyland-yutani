@@ -5,18 +5,18 @@
 
     <header>
       <h1>Weyland-Yutani Corp</h1>
-      <h3>Building Better Worlds</h3>
+      <span class="hero__subheading h3 letter-spacing">Building Better Worlds</span>
     </header>
 
     <div class="hero__grid">
-      <div class="hero__grid-item hero__grid-item--span2">
-        <h4>Current Operation: <span>Acheron</span></h4>
+      <div class="hero__grid-item hero__grid-item--span2 letter-spacing">
+        Current Operation: <span>Acheron</span></h4>
       </div>
-      <div class="hero__grid-item hero__grid-item--operation-founded">
-        <h5>Founded: <span>2157</span></h5>
+      <div class="hero__grid-item hero__grid-item--operation-founded letter-spacing">
+        Founded: <span>2157</span>
       </div>
-      <div class="hero__grid-item hero__grid-item--operation-colonist">
-        <h5>Colonists: <span>158</span></h5>
+      <div class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
+        Colonists: <span>158</span>
       </div>
       <a class="button hero__grid-item hero__grid-item--operation-cta" href="#">
         Apply Today
@@ -46,16 +46,9 @@
         <img src="/images/mission-image.jpg" alt="Image of a barren landscape.">
       </div>
 
-      <svg class="mission__graphic" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
-        <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%" x="125" y="125">
-          <image width="362" height="362" xlink:href="{{ .Site.BaseURL }}/images/ground-texture-small.jpg">
-        </pattern>
-        <circle cx="300" cy="300" r="175" style="fill:url(#pattern);" fill-opacity=".25"/>
-        <g class="mission__circle">
-          <circle cx="300" cy="300" r="223.5" stroke="#FFF" opacity=".1"/>
-          <circle cx="300" cy="300" r="299.5" stroke="#FFF" opacity=".1"/>
-        </g>
-      </svg>
+      <div class="mission__graphic">
+        <img src="/images/ground-texture-small.jpg" alt="">
+      </div>
 
     </div>
 
@@ -125,14 +118,14 @@
       <h2>Careers</h2>
     </header>
 
-    <div class="careers__row">
+    <article class="careers__row">
       {{ range .Pages }}
-        <div class="careers__job-title">
-          <span>{{ .Title }}</span>
-        </div>
+        <header class="careers__job-title letter-spacing">
+          <h3>{{ .Title }}</h3>
+        </header>
         <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
       {{ end }}
-    </div>
+    </article>
 
   </div>
 </section>

@@ -7,11 +7,12 @@
       <h1>{{ .Title }}</h1>
     </header>
 
-    {{ range .Data.Pages }}
-      <article>
-        <header>
-          <h2>{{ .Params.title }}</h2>
+    {{ range .Pages }}
+      <article class="careers__row">
+        <header class="careers__job-title letter-spacing">
+          <h2 class="h3">{{ .Title }}</h2>
         </header>
+        <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
       </article>
     {{ end }}
 
