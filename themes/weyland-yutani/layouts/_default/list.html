@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <section class="list gray-background">
+    <div class="container container--wide container--white">
+
+      <header class="visually-hide">
+        <h1>Recent Articles</h1>
+      </header>
+
+      <div class="grid grid__four-column list__grid">
+
+        {{ range .Pages }}
+          
+          {{ .Title }}
+
+        {{ end }}
+
+      </div>
+      
+    </div>
+  </section>
+  
+{{ end }}

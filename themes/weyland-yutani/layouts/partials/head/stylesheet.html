@@ -1,0 +1,4 @@
+{{ $sass := resources.Get "scss/project-main.scss" }}
+{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice)) }}
+{{ $style := $sass | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">

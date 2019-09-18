@@ -1,0 +1,7 @@
+{{ $headroomJS := resources.Get "js/lib/headroom/headroom.min.js" }}
+{{ $scrollMagicJS := resources.Get "js/lib/scrollmagic/ScrollMagic.min.js" }}
+{{ $appJS := resources.Get "js/app.js" }}
+{{ $js := slice $headroomJS $scrollMagicJS $appJS | resources.Concat "js/bundled.js" }}
+{{ $minify := $js | resources.Minify }}
+<script src="{{ $minify.Permalink }}"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

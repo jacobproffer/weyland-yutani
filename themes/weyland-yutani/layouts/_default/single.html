@@ -1,0 +1,43 @@
+{{ define "main" -}}
+
+<div class="post gray-background">
+  <div class="container container--wide container--white">
+    <div class="post__container grid">
+
+
+      <aside class="post__aside">
+        {{ if .Params.asideText }}
+          <figure>
+            <img src="{{ .Params.asidePhoto }}" alt="This is some text." />
+            <figcaption>
+              <p>{{ .Params.asideText }}</p>
+            </figcaption>
+          </figure>
+        {{ end }}
+      </aside>
+
+      <article class="content">
+
+        <header>
+
+          {{ if isset .Params "title" }}
+            <h1>{{ .Title }}</h1>
+          {{ end }}
+
+          {{ if isset .Params "fictionaldate" }}
+            <time datetime="{{ .PublishDate.Format "2006-01-02" }}">
+              {{ .Params.fictionaldate }}
+            </time>
+          {{ end }}
+
+        </header>
+
+        {{ .Content }}
+
+      </article>
+
+    </div>
+  </div>
+</div>
+
+{{- end }}

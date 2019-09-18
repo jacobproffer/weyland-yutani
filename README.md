@@ -1,17 +1,3 @@
-# Weyland Yutani
+# Weyland-Yutani 2019
 
-- [X] Mock hero and navigation
-- [ ] Mock sections
-- [ ] Mock footer
-
-- [X] Build hero
-- [X] Build navigation
-- [ ] Fix navigation
-- [ ] Build sections
-- [ ] Build footer
-
-- [X] Add modal fix
-
-- [ ] Browser test
-- [ ] Responsive test
-- [ ] Performance test
+Custom Hugo theme for the Weyland-Yutani Corporation.

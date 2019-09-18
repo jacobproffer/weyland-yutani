@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<section class="profile gray-background">
+  <div class="container">
+
+    <header class="profile__header">
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    {{ range .Data.Pages }}
+      <article>
+        <header>
+          <h2>{{ .Params.title }}</h2>
+        </header>
+      </article>
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}

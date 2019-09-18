@@ -1,0 +1,140 @@
+{{ define "main" }}
+
+<section class="hero">
+  <div class="container">
+
+    <header>
+      <h1>Weyland-Yutani Corp</h1>
+      <h3>Building Better Worlds</h3>
+    </header>
+
+    <div class="hero__grid">
+      <div class="hero__grid-item hero__grid-item--span2">
+        <h4>Current Operation: <span>Acheron</span></h4>
+      </div>
+      <div class="hero__grid-item hero__grid-item--operation-founded">
+        <h5>Founded: <span>2157</span></h5>
+      </div>
+      <div class="hero__grid-item hero__grid-item--operation-colonist">
+        <h5>Colonists: <span>158</span></h5>
+      </div>
+      <a class="button hero__grid-item hero__grid-item--operation-cta" href="#">
+        Apply Today
+      </a>
+    </div>
+
+  </div>
+  <div class="hero__background animated hinge fadeIn"></div>
+</section>
+
+<section class="mission" id="mission">
+  <div class="container">
+
+    <header>
+      <h2>Our Mission</h2>
+    </header>
+
+    <p class="mission__intro">The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
+
+    <div class="mission__grid">
+
+      <div class="mission__grid-item mission__grid-item--text">
+        <p>As the largest company on the planet, we have taken it upon ourselves to constantly explore, expand and discover what lies beyond our own heavens. Every day, our biologists, military scientists, chemical engineers, geologists, mechanics and pilots work across our solar system to advance human interests and life. From Peter Weyland’s first commercially viable cybernetic android to the invention of the atmospheric processor, the Weyland-Yutani Corporation has continued to innovate and work towards the realization of a better world.</p>
+      </div>
+
+      <div class="mission__grid-item">
+        <img src="/images/mission-image.jpg" alt="Image of a barren landscape.">
+      </div>
+
+      <svg class="mission__graphic" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+        <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%" x="125" y="125">
+          <image width="362" height="362" xlink:href="/images/ground-texture-small.jpg">
+        </pattern>
+        <circle cx="300" cy="300" r="175" style="fill:url(#pattern);" fill-opacity=".25"/>
+        <g class="mission__circle">
+          <circle cx="300" cy="300" r="223.5" stroke="#FFF" opacity=".1"/>
+          <circle cx="300" cy="300" r="299.5" stroke="#FFF" opacity=".1"/>
+        </g>
+      </svg>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="technology" id="technology">
+  <div class="container">
+
+    <header>
+      <h2>Our Technology</h2>
+    </header>
+
+    <div class="technology__grid">
+
+      <div class="technology__grid-item">
+        <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
+          <pattern id="tech1" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
+            <image width="275" height="275" xlink:href="/images/loader-small.jpg">
+          </pattern>
+          <circle cx="175" cy="175" r="125" style="fill:url(#tech1);"/>
+          <g class="technology__circle">
+            <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
+          </g>
+        </svg>
+        <h4>Security</h4>
+        <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
+      </div>
+
+      <div class="technology__grid-item">
+        <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
+          <pattern id="tech3" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
+            <image width="275" height="275" xlink:href="/images/ship-small.jpg">
+          </pattern>
+          <circle cx="175" cy="175" r="125" style="fill:url(#tech3);"/>
+          <g class="technology__circle">
+            <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
+          </g>
+        </svg>
+        <h4>Transportation</h4>
+        <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
+      </div>
+
+      <div class="technology__grid-item">
+        <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
+          <pattern id="tech2" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
+            <image width="275" height="275" xlink:href="/images/processor-small.jpg">
+          </pattern>
+          <circle cx="175" cy="175" r="125" fill="#FFF" style="fill:url(#tech2);"/>
+          <g class="technology__circle">
+            <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
+          </g>
+        </svg>
+        <h4>Terraforming</h4>
+        <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<section class="careers">
+  <div class="container">
+
+    <header>
+      <h2>Careers</h2>
+    </header>
+
+    <div class="careers__row">
+      {{ range .Pages }}
+        <div class="careers__job-title">
+          <span>{{ .Title }}</span>
+        </div>
+        <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+  
+{{ end }}

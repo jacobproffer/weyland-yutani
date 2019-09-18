@@ -1,0 +1,28 @@
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+
+  {{ if .URL }}
+    <li class="inline-link">
+      <a
+      {{ if $currentPage.IsMenuCurrent "main" . }}
+        class="active"
+      {{ end }}
+      {{ if .URL }}
+        href="{{ .URL }}"
+      {{ end }}
+      >
+        {{ .Name }}
+      </a>
+    </li>
+  {{ else }}
+    <li class="inline-link">
+      <a
+        class="disabled"
+        aria-hidden="true"
+        >
+          {{ .Name }}
+        </a>
+    </li>
+  {{ end }}
+  
+{{ end }}
