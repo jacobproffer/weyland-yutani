@@ -1,40 +1,45 @@
 .technology {
   text-align: center;
-  padding: 0 0 72px;
+  padding: 0 0 124px;
+
+  h2 {
+    margin-bottom: 120px;
+
+    @include screen-below(1440px) {
+      margin-bottom: 90px;
+    }
+  }
 
   &__grid {
     margin-top: 32px;
     display: grid;
-    grid-gap: 48px;
+    grid-gap: 95px;
     grid-template-columns: repeat(3, 1fr);
-
-    @include screen-below(1024px) {
-      grid-template-columns: 1fr;
-    }
+    margin-top: 68px;
 
     @include screen-between(1280px, 1440px) {
       margin-top: 50px;
       grid-gap: 71px;
     }
 
-    @include screen-above(1440px) {
-      margin-top: 68px;
-      grid-gap: 95px;
+    @include screen-below(1024px) {
+      grid-template-columns: 1fr;
     }
   }
 
   &__grid-item {
-    overflow: hidden;
+    span {
+      display: block;
+      margin-top: 128px;
+      color: $white;
+      text-transform: uppercase;
 
-    h4 {
-      margin-top: 32px;
-
-      @include screen-between(1280px, 1440px) {
-        margin-top: 50px;
+      @include screen-below(1440px) {
+        margin-top: 96px;
       }
 
-      @include screen-above(1440px) {
-        margin-top: 75px;
+      @include screen-below(1280px) {
+        margin-top: 64px;
       }
     }
 
@@ -49,15 +54,40 @@
     }
   }
 
-  @include screen-between(1280px, 1440px) {
-    padding: 0 0 108px;
+  &__image {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 350px;
+      height: 350px;
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+
+      @include screen-below(1280px) {
+        width: 263px;
+        height: 263px;
+      }
+    }
+
+    img {
+      border-radius: 50%;
+
+      @include screen-below(1280px) {
+        max-width: 206px;
+      }
+    }
   }
 
-  @include screen-above(1440px) {
-    padding: 0 0 124px;
+  @include screen-below(1440px) {
+    padding: 0 0 94px;
   }
 
-  &__circle {
-    opacity: 0;
+  @include screen-below(1024px) {
+    padding: 0 0 62px;
   }
 }

@@ -1,6 +1,7 @@
 .button {
   @include transition(background-color 300ms ease-in-out);
   @include font-size($h4-font-sizes);
+  max-width: 100%;
   display: block;
   color: $black;
   background-color: $yellow;
@@ -11,6 +12,10 @@
   margin: 0 -.15em 0 0;
 
   &:hover {
-    background-color: darken($yellow, 20%);
+    background-color: $gray;
+  }
+
+  &:active {
+    background-color: $black;
   }
 }

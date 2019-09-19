@@ -1,27 +1,16 @@
 .careers {
   text-align: center;
-  padding-bottom: 72px;
+  padding-bottom: 144px;
 
   h2 {
     margin-bottom: 52px;
   }
 
-  &__row {
+  &__item {
     text-align: left;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 25px;
 
-    &:not(:first-of-type) {
-      margin-top: 24px;
-    }
-
-    @include screen-between(600px, 1024px) {
-      grid-template-columns: 2fr 1fr;
-    }
-
-    @include screen-above(1024px) {
-      grid-template-columns: 4fr 1fr;
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
     }
   }
 
@@ -36,9 +25,6 @@
     display: block;
     line-height: 1;
     text-transform: uppercase;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-left: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
 
     span {
       color: $gray;
@@ -56,13 +42,23 @@
     @include screen-below(1024px) {
       text-align: center;
     }
+
+    @include screen-above(600px) {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      border-left: 1px solid rgba(255, 255, 255, .1);
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    @include screen-below(600px) {
+      border: 1px solid rgba(255, 255, 255, .1);
+    }
   }
 
-  @include screen-between(1280px, 1440px) {
+  @include screen-below(1280px) {
     padding-bottom: 108px;
   }
 
-  @include screen-above(1440px) {
-    padding-bottom: 144px;
+  @include screen-below(1024px) {
+    padding-bottom: 72px;
   }
 }

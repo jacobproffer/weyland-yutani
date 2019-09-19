@@ -4,19 +4,19 @@
   <div class="container">
 
     <header>
-      <h1>Weyland-Yutani Corp</h1>
+      <h1>{{ .Site.Title }}</h1>
       <span class="hero__subheading h3 letter-spacing">Building Better Worlds</span>
     </header>
 
     <div class="hero__grid">
       <div class="hero__grid-item hero__grid-item--span2 letter-spacing">
-        Current Operation: <span>Acheron</span></h4>
+        Current Operation: <span>{{ .Site.Params.currentOperation }}</span></h4>
       </div>
       <div class="hero__grid-item hero__grid-item--operation-founded letter-spacing">
-        Founded: <span>2157</span>
+        Founded: <span>{{ .Site.Params.founded }}</span>
       </div>
       <div class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
-        Colonists: <span>158</span>
+        Colonists: <span>{{ .Site.Params.colonists }}</span>
       </div>
       <a class="button hero__grid-item hero__grid-item--operation-cta" href="#">
         Apply Today
@@ -65,44 +65,26 @@
     <div class="technology__grid">
 
       <div class="technology__grid-item">
-        <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
-          <pattern id="tech1" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
-            <image width="275" height="275" xlink:href="{{ .Site.BaseURL }}/images/loader-small.jpg">
-          </pattern>
-          <circle cx="175" cy="175" r="125" style="fill:url(#tech1);"/>
-          <g class="technology__circle">
-            <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
-          </g>
-        </svg>
-        <h4>Security</h4>
+        <div class="technology__image">
+          <img src="/images/loader-small.jpg" alt="">
+        </div>
+        <span class="h4">Security</span>
         <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
       </div>
 
       <div class="technology__grid-item">
-        <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
-          <pattern id="tech3" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
-            <image width="275" height="275" xlink:href="{{ .Site.BaseURL }}/images/ship-small.jpg">
-          </pattern>
-          <circle cx="175" cy="175" r="125" style="fill:url(#tech3);"/>
-          <g class="technology__circle">
-            <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
-          </g>
-        </svg>
-        <h4>Transportation</h4>
+        <div class="technology__image">
+          <img src="/images/ship-small.jpg" alt="">
+        </div>
+        <span class="h4">Transportation</span>
         <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
       </div>
 
       <div class="technology__grid-item">
-        <svg class="technology-svg" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
-          <pattern id="tech2" patternUnits="userSpaceOnUse" width="100%" height="100%" x="38px" y="38px">
-            <image width="275" height="275" xlink:href="{{ .Site.BaseURL }}/images/processor-small.jpg">
-          </pattern>
-          <circle cx="175" cy="175" r="125" fill="#FFF" style="fill:url(#tech2);"/>
-          <g class="technology__circle">
-            <circle cx="175" cy="175" r="174.5" stroke="#FFF" opacity=".1"/>
-          </g>
-        </svg>
-        <h4>Terraforming</h4>
+        <div class="technology__image">
+          <img src="/images/processor-small.jpg" alt="">
+        </div>
+        <span class="h4">Terraforming</span>
         <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
       </div>
       
@@ -118,14 +100,16 @@
       <h2>Careers</h2>
     </header>
 
-    <article class="careers__row">
-      {{ range .Pages }}
-        <header class="careers__job-title letter-spacing">
-          <h3>{{ .Title }}</h3>
-        </header>
-        <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
-      {{ end }}
-    </article>
+    {{ range .Pages }}
+      <article class="careers__item">
+        <div class="careers__row grid grid--careers">
+          <header class="careers__job-title letter-spacing">
+            <h3>{{ .Title }}</h3>
+          </header>
+          <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
+        </div>
+      </article>
+    {{ end }}
 
   </div>
 </section>

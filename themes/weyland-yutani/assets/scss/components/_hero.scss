@@ -16,11 +16,15 @@
     opacity: 1;
     position: relative;
     line-height: 1.5;
-    padding-top: 164px;
+    padding-top: 270px;
     z-index: 8;
 
-    @include screen-above(768px) {
-      padding-top: 270px;
+    @include screen-below(1440px) {
+      padding-top: 203px;
+    }
+
+    @include screen-below(1024px) {
+      padding-top: 135px;
     }
   }
 
@@ -28,11 +32,19 @@
     display: block;
     z-index: 8;
     position: relative;
-    padding-bottom: 112px;
+    padding-bottom: 220px;
     text-transform: uppercase;
 
-    @include screen-above(768px) {
-      padding-bottom: 220px;
+    @include screen-below(1440px) {
+      padding-bottom: 165px;
+    }
+
+    @include screen-below(1024px) {
+      padding-bottom: 110px;
+    }
+
+    @include screen-below(768px) {
+      padding-bottom: 55px;
     }
   }
 
@@ -47,15 +59,15 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
 
-    @include screen-below(1280px) {
+    @include screen-below(1440px) {
       grid-template-columns: 2fr 1fr 1fr;
     }
 
-    @include screen-below(1024px) {
+    @include screen-below(1280px) {
       grid-template-columns: 2fr 1fr;
     }
 
-    @include screen-below(768px) {
+    @include screen-below(1024px) {
       grid-template-columns: 1fr;
     }
   }
@@ -69,7 +81,6 @@
     border-left: 1px solid rgba(255, 255, 255, .1);
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     text-transform: uppercase;
-    overflow: hidden;
 
     span {
       color: $gray;
@@ -78,7 +89,7 @@
     &--span2 {
       @include font-size($h4-font-sizes);
 
-      @include screen-below(768px) {
+      @include screen-below(1024px) {
         border-right: 1px solid rgba(255, 255, 255, .1);
       }
     }
@@ -86,7 +97,7 @@
     &--operation-founded {
       @include font-size($h5-font-sizes);
 
-      @include screen-below(1024px) {
+      @include screen-below(1280px) {
         display: none;
       }
     }
@@ -94,7 +105,7 @@
     &--operation-colonist {
       @include font-size($h5-font-sizes);
 
-      @include screen-below(1280px) {
+      @include screen-below(1440px) {
         display: none;
       }
     }

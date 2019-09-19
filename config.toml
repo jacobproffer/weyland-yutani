@@ -1,12 +1,15 @@
 baseURL = "https://weyland-yutani.proffer.dev"
 languageCode = "en-us"
-title = "Weyland-Yutani"
+title = "Weyland-Yutani Corp"
 theme = "weyland-yutani"
 
 [params]
   description = "The Weyland-Yutani Corporation specializes in and develops major advancements in technology, such as off-world colonization."
   subTitle = "Building Better Worlds"
   logo = "/images/aan-world-news-logo.png"
+  currentOperation = "Acheron"
+  founded = 2157
+  colonists = 158
 
 [taxonomies]
   careers = "careers"
@@ -24,5 +27,5 @@ theme = "weyland-yutani"
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
-    url = "/contact"
+    url = "/contact/"
     weight = 2
