@@ -3,30 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/careers/</loc>
+    <loc>https://weyland-yutani.proffer.dev/careers/</loc>
+    <lastmod>2019-09-18T15:13:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://weyland-yutani.proffer.dev/careers/refinery-operator/</loc>
+    <lastmod>2019-09-18T15:13:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://weyland-yutani.proffer.dev/</loc>
+    <lastmod>2019-09-18T15:13:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/careers/power-loader-operator/</loc>
+    <loc>https://weyland-yutani.proffer.dev/careers/power-loader-operator/</loc>
+    <lastmod>2019-09-18T15:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/careers/refinery-operator/</loc>
-  </url>
-  
-  <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://weyland-yutani.proffer.dev/careers/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://weyland-yutani.proffer.dev/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://weyland-yutani.proffer.dev/tags/</loc>
     <priority>0</priority>
   </url>
   

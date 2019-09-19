@@ -4,7 +4,7 @@
   @include box-sizing(border-box);
 }
 
-::selection { background: $yellow;}
+::selection { background: $yellow; }
 
 img,
 svg {
@@ -26,4 +26,8 @@ h4 {
 
 h4 {
   font-weight: 400;
+}
+
+.letter-spacing {
+  letter-spacing: .15rem;
 }

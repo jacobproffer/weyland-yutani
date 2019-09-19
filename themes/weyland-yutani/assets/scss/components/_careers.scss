@@ -1,16 +1,17 @@
 .careers {
   text-align: center;
-  padding-bottom: 72px;
+  padding-bottom: 144px;
 
   h2 {
     margin-bottom: 52px;
   }
 
-  &__row {
+  &__item {
     text-align: left;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-row-gap: 25px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
   }
 
   &__job-title,
@@ -19,16 +20,45 @@
   }
 
   &__job-title {
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-left: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    font-size: 1rem;
+    color: $white;
+    display: block;
+    line-height: 1;
+    text-transform: uppercase;
+
+    span {
+      color: $gray;
+      margin-left: 8px;
+
+      @include screen-below(1024px) {
+        display: none;
+      }
+
+      @include screen-above(1024px) {
+        margin-left: 16px;
+      }
+    }
+
+    @include screen-below(1024px) {
+      text-align: center;
+    }
+
+    @include screen-above(600px) {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      border-left: 1px solid rgba(255, 255, 255, .1);
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    @include screen-below(600px) {
+      border: 1px solid rgba(255, 255, 255, .1);
+    }
   }
 
-  @include screen-between(1280px, 1440px) {
+  @include screen-below(1280px) {
     padding-bottom: 108px;
   }
 
-  @include screen-above(1440px) {
-    padding-bottom: 144px;
+  @include screen-below(1024px) {
+    padding-bottom: 72px;
   }
 }

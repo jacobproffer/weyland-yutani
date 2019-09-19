@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Weyland Yutani</title>
-    <link>http://example.org/</link>
-    <description>Recent content on Weyland Yutani</description>
+    <title>Weyland-Yutani</title>
+    <link>https://weyland-yutani.proffer.dev/</link>
+    <description>Recent content on Weyland-Yutani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 18 Sep 2019 15:13:13 -0400</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://weyland-yutani.proffer.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Refinery Operator</title>
+      <link>https://weyland-yutani.proffer.dev/careers/refinery-operator/</link>
+      <pubDate>Wed, 18 Sep 2019 15:13:13 -0400</pubDate>
+      
+      <guid>https://weyland-yutani.proffer.dev/careers/refinery-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Power Loader Operator</title>
+      <link>https://weyland-yutani.proffer.dev/careers/power-loader-operator/</link>
+      <pubDate>Wed, 18 Sep 2019 15:13:06 -0400</pubDate>
+      
+      <guid>https://weyland-yutani.proffer.dev/careers/power-loader-operator/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

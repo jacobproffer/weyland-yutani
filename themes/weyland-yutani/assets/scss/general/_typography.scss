@@ -6,12 +6,13 @@ h2 {
   @include font-size($h2-font-sizes);
 }
 
-h3 {
+h3,
+.h3 {
   @include font-size($h3-font-sizes);
-  font-weight: 400;
 }
 
-h4 {
+h4,
+.h4 {
   @include font-size($h4-font-sizes);
 }
 
@@ -38,13 +39,14 @@ h3 {
   letter-spacing: .2em;
   margin: 0 -.2em 0 0;
 
-  @include screen-above(768px) {
+  @include screen-above(1024px) {
     letter-spacing: .4em;
     margin: 0 -.4em 0 0;
   }
 }
 
 h4,
+.h4,
 h5 {
   letter-spacing: .15em;
   margin: 0 -.15em 0 0;

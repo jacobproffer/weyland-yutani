@@ -1,12 +1,9 @@
 var body = document.querySelector("html, body");
 var hamburger = document.querySelector(".hamburger");
 var mainNav = document.querySelector(".main-nav");
-var missionCircle = document.querySelector(".mission__circle");
-var technologyCircle = document.querySelectorAll(".technology__circle");
 var mainHeader = document.querySelector(".main-header");
 var links = document.querySelectorAll("a[href*='#']");
 var headerHeight = mainHeader.offsetHeight;
-var controller = new ScrollMagic.Controller();
 
 var headroom = new Headroom(mainHeader, {
   offset: headerHeight,
@@ -29,43 +26,6 @@ var headroom = new Headroom(mainHeader, {
 });
 
 headroom.init();
-
-document.ontouchmove = function(event) {
-  var isTouchMoveAllowed = true,
-    target = event.target;
-
-  while (target !== null) {
-    if (target.classList && target.classList.contains("disable-scrolling")) {
-      isTouchMoveAllowed = false;
-      break;
-    }
-    target = target.parentNode;
-  }
-
-  if (!isTouchMoveAllowed) {
-    event.preventDefault();
-  }
-};
-
-new ScrollMagic.Scene({
-  triggerElement: missionCircle,
-  offset: "-100"
-})
-  .addTo(controller)
-  .on("enter", function() {
-    missionCircle.classList.add("animated", "hinge", "fadeIn");
-  });
-
-new ScrollMagic.Scene({
-  triggerElement: technologyCircle,
-  offset: "-100"
-})
-  .addTo(controller)
-  .on("enter", function() {
-    technologyCircle.forEach(function(foo) {
-      foo.classList.add("animated", "hinge", "fadeIn");
-    });
-  });
 
 hamburger.addEventListener("click", function() {
   mainNav.classList.toggle("nav-open");
