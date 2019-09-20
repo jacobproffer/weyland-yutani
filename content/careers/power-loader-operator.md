@@ -4,6 +4,7 @@ description: "Post description"
 date: 2019-09-18T15:13:06-04:00
 images:
   - /images/placeholder.png
+weight: 2
 ---
 
-Test.
+This is the power-loader-operator post.
