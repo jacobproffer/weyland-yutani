@@ -1,3 +1,12 @@
+:root {
+  --white: #fff;
+  --black: #07080c;
+  --gray: #c8c8c8;
+  --yellow: #ffd302;
+  --transparent: rgba(255, 255, 255, .5);
+  --border: 1px solid rgba(255, 255, 255, .1);
+}
+
 *,
 *::after,
 *::before {
@@ -18,19 +27,15 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   color: $gray;
-  background-color: $black;
+  background-color: var(--black);
 }
 
 h1,
 h2,
 h4 {
-  color: $white;
+  color: var(--white);
 }
 
 h4 {
   font-weight: 400;
-}
-
-.letter-spacing {
-  letter-spacing: .15rem;
 }

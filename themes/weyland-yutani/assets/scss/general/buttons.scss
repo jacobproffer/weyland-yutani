@@ -3,8 +3,8 @@
   @include font-size($h4-font-sizes);
   max-width: 100%;
   display: block;
-  color: $black;
-  background-color: $yellow;
+  color: var(--black);
+  background-color: var(--yellow);
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -12,10 +12,10 @@
   margin: 0 -.15em 0 0;
 
   &:hover {
-    background-color: $gray;
+    background-color: var(--gray);
   }
 
   &:active {
-    background-color: $black;
+    background-color: var(--black);
   }
 }

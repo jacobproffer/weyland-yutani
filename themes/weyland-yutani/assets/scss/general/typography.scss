@@ -52,7 +52,7 @@ h5 {
   margin: 0 -.15em 0 0;
 
   span {
-    color: $gray;
+    color: var(--gray);
   }
 
   @include screen-above(768px) {
