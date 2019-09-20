@@ -1,18 +1,21 @@
 {{ define "main" }}
 
-<section class="profile gray-background">
+<section class="careers">
   <div class="container">
-
-    <header class="profile__header">
-      <h1>{{ .Title }}</h1>
+    <header>
+      <h1>
+        {{ .Title }}
+      </h1>
     </header>
 
     {{ range .Pages }}
-      <article class="careers__row">
-        <header class="careers__job-title letter-spacing">
-          <h2 class="h3">{{ .Title }}</h2>
-        </header>
-        <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
+      <article class="careers__item">
+        <div class="careers__row grid grid--careers">
+          <header class="careers__job-title letter-spacing">
+            <h3>{{ .Title }}</h3>
+          </header>
+          <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
+        </div>
       </article>
     {{ end }}
 

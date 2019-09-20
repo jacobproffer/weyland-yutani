@@ -6,15 +6,9 @@ theme = "weyland-yutani"
 [params]
   description = "The Weyland-Yutani Corporation specializes in and develops major advancements in technology, such as off-world colonization."
   subTitle = "Building Better Worlds"
-  logo = "/images/aan-world-news-logo.png"
   currentOperation = "Acheron"
   founded = 2157
   colonists = 158
-
-[taxonomies]
-  careers = "careers"
-  tag = "tags"
-  category = "categories"
 
 [menu]
 
@@ -25,7 +19,13 @@ theme = "weyland-yutani"
     weight = 1
 
   [[menu.main]]
+    identifier = "news"
+    name = "News"
+    url = "/news/"
+    weight = 2
+
+  [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 2
+    weight = 3

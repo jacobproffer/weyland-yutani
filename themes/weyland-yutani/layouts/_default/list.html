@@ -1,20 +1,22 @@
 {{ define "main" }}
-  <section class="list gray-background">
-    <div class="container container--wide container--white">
+  <section class="list">
+    <div class="container">
 
-      <header class="visually-hide">
-        <h1>Recent Articles</h1>
+      <header>
+        <h1>News</h1>
       </header>
 
-      <div class="grid grid__four-column list__grid">
+      {{ range .Pages }}
 
-        {{ range .Pages }}
-          
-          {{ .Title }}
+        <article>
+          <header>
+            <h2>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+          </header>
+        </article>
 
-        {{ end }}
-
-      </div>
+      {{ end }}
       
     </div>
   </section>
