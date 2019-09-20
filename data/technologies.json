@@ -1,0 +1,17 @@
+[
+  {
+    "image": "/images/loader-small.jpg",
+    "title": "Security",
+    "blurb": "The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds"
+  },
+  {
+    "image": "/images/ship-small.jpg",
+    "title": "Transportation",
+    "blurb": "The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds"
+  },
+  {
+    "image": "/images/processor-small.jpg",
+    "title": "Terraforming",
+    "blurb": "The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds"
+  }
+]

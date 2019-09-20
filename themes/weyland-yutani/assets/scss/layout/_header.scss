@@ -18,33 +18,54 @@
     @include transform(translateY(0));
     background: rgba(0, 0, 0, .9);
   }
+
+  &__button {
+    justify-self: end;
+
+    @include screen-above(1024px) {
+      display: none;
+    }
+  }
 }
 
 .open {
-  height: 100%;
-  background: rgba(0, 0, 0, .9);
+  @include screen-below(1024px) {
+    height: auto;
+    background: rgba(0, 0, 0, .9);
+  }
 }
 
 .logo {
-  @include transition(opacity 300ms ease-in-out);
+  place-self: start;
   display: inline-block;
   margin: 0;
-
-  &:hover {
-    opacity: .5;
-  }
+  transition: opacity 300ms ease-in-out;
 
   svg {
     @include size(134px, 34px);
   }
-}
 
-.st0 {
-  fill: #ffd302;
-}
+  path {
+    transition: fill 300ms ease-in-out;
+  }
 
-.st1 {
-  fill: #c8c8c8;
+  .st0 {
+    fill: #ffd302;
+  }
+  
+  .st1 {
+    fill: #c8c8c8;
+  }
+
+  &:hover {
+    .st1 {
+      fill: #ffd302;
+    }
+
+    .st0 {
+      fill: #c8c8c8;
+    }
+  }
 }
 
 .main-nav {
@@ -79,7 +100,6 @@
   a {
     @include transition(color 300ms ease-in-out);
     position: relative;
-    cursor: pointer;
     padding: 10px 0 38px;
     margin: 0 32px 0 0;
     font-size: .875em;
@@ -103,26 +123,20 @@
     }
 
     &::before {
-      @include transition(background-color 300ms ease-in-out);
       position: absolute;
       content: '';
       bottom: -1px;
       left: 0;
       width: 100%;
-      height: 1px solid;
+      height: 1px;
       background-color: transparent;
+      transition: background-color 300ms ease-in-out;
     }
 
     &.active {
       color: rgba(255, 255, 255, .5);
 
       &::before {
-        position: absolute;
-        content: '';
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 1px;
         background-color: $yellow;
       }
     }
@@ -136,12 +150,12 @@
   @include screen-above(1024px) {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     opacity: 1;
-    background: none;
-    display: block;
     height: inherit;
-    float: right;
-    position: relative;
     pointer-events: all;
+  }
+
+  @include screen-below(1024px) {
+    grid-column: span 2;
   }
 
   &.nav-open {
@@ -157,28 +171,14 @@
 }
 
 .hamburger {
-  @include transition(color 300ms ease-in-out);
   color: $white;
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 20px;
-  top: 33px;
-  right: 33px;
   background: none;
   border: 0;
   outline: none;
   cursor: pointer;
   padding: 0;
   text-transform: uppercase;
-
-  @include screen-between(600px, 768px) {
-    right: 50px;
-  }
-
-  @include screen-between(768px, 1024px) {
-    right: 75px;
-  }
+  transition: color 300ms ease-in-out;
 
   @include screen-above(1024px) {
     display: none;
@@ -186,15 +186,5 @@
 
   &:hover {
     color: rgba(255, 255, 255, .5);
-  }
-
-  &.navOpen,
-  &.close {
-    display: block;
-
-    div {
-      @include transform(rotate(90deg) scale(1.5));
-      opacity: 1;
-    }
   }
 }

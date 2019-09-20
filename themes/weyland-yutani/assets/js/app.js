@@ -29,20 +29,6 @@ headroom.init();
 
 hamburger.addEventListener("click", function() {
   mainNav.classList.toggle("nav-open");
-  this.classList.toggle("navOpen");
+  this.classList.toggle("nav-open");
   mainHeader.classList.toggle("open");
-  body.classList.toggle("body-modal-open");
-  body.classList.toggle("disable-scrolling");
 });
-
-for (var i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function(event) {
-    if (!mainNav.classList.contains("nav-open")) return;
-
-    mainNav.classList.remove("nav-open");
-    mainHeader.classList.remove("open");
-    hamburger.classList.remove("navOpen");
-    body.classList.remove("body-modal-open");
-    body.classList.remove("disable-scrolling");
-  });
-}
