@@ -18,7 +18,7 @@
       <div class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
         Colonists: <span>{{ .Site.Params.colonists }}</span>
       </div>
-      <a class="button hero__grid-item hero__grid-item--operation-cta" href="#">
+      <a class="button hero__grid-item hero__grid-item--operation-cta" href="/contact/">
         Apply Today
       </a>
     </div>
@@ -64,29 +64,17 @@
 
     <div class="technology__grid">
 
-      <div class="technology__grid-item">
-        <div class="technology__image">
-          <img src="/images/loader-small.jpg" alt="">
-        </div>
-        <span class="h4">Security</span>
-        <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
-      </div>
+      {{ range $.Site.Data.technologies }}
 
-      <div class="technology__grid-item">
-        <div class="technology__image">
-          <img src="/images/ship-small.jpg" alt="">
+        <div class="technology__grid-item">
+          <div class="technology__image">
+            <img src="{{ .image }}" alt="">
+          </div>
+          <span class="h4">{{ .title }}</span>
+          <p>{{ .blurb }}</p>
         </div>
-        <span class="h4">Transportation</span>
-        <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
-      </div>
 
-      <div class="technology__grid-item">
-        <div class="technology__image">
-          <img src="/images/processor-small.jpg" alt="">
-        </div>
-        <span class="h4">Terraforming</span>
-        <p>The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
-      </div>
+      {{ end }}
       
     </div>
 

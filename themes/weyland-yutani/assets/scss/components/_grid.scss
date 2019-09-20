@@ -14,4 +14,16 @@
       grid-row-gap: 0;
     }
   }
+
+  &--header {
+    grid-template-columns: auto auto;
+
+    @include screen-above(1024px) {
+      justify-content: space-between;
+    }
+    
+    @include screen-below(1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

@@ -4,7 +4,10 @@
   @include box-sizing(border-box);
 }
 
-::selection { background: $yellow; }
+::selection { 
+  color: $black;
+  background: $yellow;
+}
 
 img,
 svg {
