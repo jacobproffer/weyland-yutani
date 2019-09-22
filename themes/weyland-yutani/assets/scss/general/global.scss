@@ -39,3 +39,14 @@ h4 {
 h4 {
   font-weight: 400;
 }
+
+a {
+  color: var(--white);
+  letter-spacing: 3px;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+
+  &:hover {
+    color: var(--transparent);
+  }
+}

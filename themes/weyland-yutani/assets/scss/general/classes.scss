@@ -1,3 +1,45 @@
 .letter-spacing {
   letter-spacing: .15rem;
 }
+
+.logo {
+  margin: 0;
+
+  .st0 {
+    fill: var(--yellow);
+  }
+  
+  .st1 {
+    fill: var(--gray);
+  }
+
+  &--header {
+    place-self: start;
+    display: inline-block;
+    transition: opacity 300ms ease-in-out;
+    
+    svg {
+      @include size(134px, 34px);
+    }
+  
+    path {
+      transition: fill 300ms ease-in-out;
+    }
+  
+    &:hover {
+      .st1 {
+        fill: var(--yellow);
+      }
+  
+      .st0 {
+        fill: var(--gray);
+      }
+    }
+  }
+
+  &--footer {
+    svg {
+      @include size(98px, 26px);
+    }
+  }
+}

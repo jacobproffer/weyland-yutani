@@ -14,3 +14,20 @@
     padding: 0;
   }
 }
+
+.grid {
+  display: grid;
+
+  &--footer {
+    grid-template-columns: 1fr 98px 1fr;
+    grid-gap: 20px;
+
+    @include screen-below(1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include screen-below(1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
