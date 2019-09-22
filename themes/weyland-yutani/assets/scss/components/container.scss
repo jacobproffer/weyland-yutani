@@ -5,6 +5,10 @@
   margin-right: auto;
   padding: 0 2%;
 
+  &--page {
+    max-width: 768px;
+  }
+
   @include screen-above(768px) {
     padding: 0 2.5%;
   }

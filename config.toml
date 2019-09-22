@@ -63,5 +63,5 @@ theme = "weyland-yutani"
   [[menu.info]]
     identifier = "repository"
     name = "Repository"
-    url = "/repository/"
+    url = "https://github.com/jacobproffer/weyland-yutani"
     weight = 3
