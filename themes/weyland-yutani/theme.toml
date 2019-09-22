@@ -5,11 +5,11 @@ name = "Weyland Yutani"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
 description = "Fictional Weyland Yutani theme."
-homepage = "http://example.com/"
+homepage = "https://weyland-yutani.proffer.dev/"
 tags = ["aliens", "news", "articles"]
-features = ["careers"]
+features = ["careers", "news"]
 min_version = "0.41"
 
 [author]
   name = "Jacob Proffer"
-  homepage = "https://proffer.dev"
+  homepage = "https://proffer.dev/"

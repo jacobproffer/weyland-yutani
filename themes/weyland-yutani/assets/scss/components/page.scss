@@ -1,0 +1,7 @@
+.page {
+  padding: 186px 0 108px;
+
+  @include screen-below(1024px) {
+    padding: 150px 0 72px;
+  }
+}
