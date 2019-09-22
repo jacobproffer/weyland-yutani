@@ -34,34 +34,27 @@
 }
 
 .logo {
-  place-self: start;
-  display: inline-block;
-  margin: 0;
-  transition: opacity 300ms ease-in-out;
-
-  svg {
-    @include size(134px, 34px);
-  }
-
-  path {
-    transition: fill 300ms ease-in-out;
-  }
-
-  .st0 {
-    fill: var(--yellow);
-  }
-  
-  .st1 {
-    fill: var(--gray);
-  }
-
-  &:hover {
-    .st1 {
-      fill: var(--yellow);
+  &--header {
+    place-self: start;
+    display: inline-block;
+    transition: opacity 300ms ease-in-out;
+    
+    svg {
+      @include size(134px, 34px);
     }
-
-    .st0 {
-      fill: var(--gray);
+  
+    path {
+      transition: fill 300ms ease-in-out;
+    }
+  
+    &:hover {
+      .st1 {
+        fill: var(--yellow);
+      }
+  
+      .st0 {
+        fill: var(--gray);
+      }
     }
   }
 }
@@ -96,19 +89,13 @@
   }
 
   a {
-    @include transition(color 300ms ease-in-out);
     position: relative;
     padding: 10px 0 38px;
     margin: 0 32px 0 0;
     font-size: .875em;
-    color: var(--white);
-    text-decoration: none;
     display: block;
-    letter-spacing: 3px;
 
     &:hover {
-      color: var(--transparent);
-
       &::before {
         position: absolute;
         content: '';

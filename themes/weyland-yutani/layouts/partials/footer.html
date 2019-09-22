@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="container">
+    <div class="grid grid--footer">
+
+      <ul>
+
+        {{ range .Site.Menus.required }}
+          <li>
+            <a href="{{ .URL }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+
+      </ul>
+
+      <div class="footer__logo logo logo--footer">
+        {{ partial "svg/logo.html" }}
+      </div>
+
+      <ul>
+
+        {{ range .Site.Menus.info }}
+          <li>
+            <a href="{{ .URL }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+
+      </ul>
+
+    </div>
+  </div>
+</footer>

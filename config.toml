@@ -29,3 +29,39 @@ theme = "weyland-yutani"
     name = "Contact"
     url = "/contact/"
     weight = 3
+
+  [[menu.required]]
+    identifier = "privacy-policy"
+    name = "Privacy Policy"
+    url = "/privacy-policy/"
+    weight = 1
+
+  [[menu.required]]
+    identifier = "copyright"
+    name = "Copyright"
+    url = "/copyright/"
+    weight = 2
+
+  [[menu.required]]
+    identifier = "terms-of-use"
+    name = "Terms of Use"
+    url = "/terms-of-use/"
+    weight = 3
+
+  [[menu.info]]
+    identifier = "site-map"
+    name = "Site Map"
+    url = "/site-map/"
+    weight = 1
+
+  [[menu.info]]
+    identifier = "compatibility"
+    name = "Compatibility"
+    url = "/compatibility/"
+    weight = 2
+
+  [[menu.info]]
+    identifier = "repository"
+    name = "Repository"
+    url = "/repository/"
+    weight = 3
