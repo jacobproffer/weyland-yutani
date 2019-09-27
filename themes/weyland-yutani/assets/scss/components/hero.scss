@@ -8,39 +8,32 @@
   justify-content: center;
   align-items: center;
 
-  .container {
-    margin: 0;
-  }
-
   h1 {
-    position: relative;
-    line-height: 1.5;
     padding-top: 270px;
 
-    @include screen-below(1440px) {
+    @include screen-below($desktop-sm) {
       padding-top: 203px;
     }
 
-    @include screen-below(1024px) {
+    @include screen-below($tablet) {
       padding-top: 135px;
     }
   }
 
   &__subheading {
     display: block;
-    position: relative;
     padding-bottom: 220px;
     text-transform: uppercase;
 
-    @include screen-below(1440px) {
+    @include screen-below($desktop-sm) {
       padding-bottom: 165px;
     }
 
-    @include screen-below(1024px) {
+    @include screen-below($tablet) {
       padding-bottom: 110px;
     }
 
-    @include screen-below(768px) {
+    @include screen-below($portrait) {
       padding-bottom: 55px;
     }
   }
@@ -50,23 +43,6 @@
     @include background-cover('/images/weyland-hero.jpg');
     @include absolute(0, 0, 0, 0);
     z-index: -1;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-
-    @include screen-below(1440px) {
-      grid-template-columns: 2fr 1fr 1fr;
-    }
-
-    @include screen-below(1280px) {
-      grid-template-columns: 2fr 1fr;
-    }
-
-    @include screen-below(1024px) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__grid-item {
@@ -86,7 +62,7 @@
     &--span2 {
       @include font-size($h4-font-sizes);
 
-      @include screen-below(1024px) {
+      @include screen-below($tablet) {
         border-right: var(--border);
       }
     }
@@ -94,7 +70,7 @@
     &--operation-founded {
       @include font-size($h5-font-sizes);
 
-      @include screen-below(1280px) {
+      @include screen-below($laptop-sm) {
         display: none;
       }
     }
@@ -102,7 +78,7 @@
     &--operation-colonist {
       @include font-size($h5-font-sizes);
 
-      @include screen-below(1440px) {
+      @include screen-below($desktop-sm) {
         display: none;
       }
     }

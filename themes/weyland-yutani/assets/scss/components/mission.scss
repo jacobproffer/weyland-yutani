@@ -32,7 +32,7 @@
       width: 450px;
       height: 450px;
 
-      @include screen-below(1280px) {
+      @include screen-below($laptop-sm) {
         width: 338px;
         height: 338px;
       }
@@ -42,7 +42,7 @@
       width: 600px;
       height: 600px;
 
-      @include screen-below(1280px) {
+      @include screen-below($laptop-sm) {
         width: 450px;
         height: 450px;
       }
@@ -53,12 +53,12 @@
       border-radius: 50%;
     }
 
-    @include screen-below(1280px) {
+    @include screen-below($laptop-sm) {
       width: 272px;
       height: 272px;
     }
 
-    @include screen-below(1024px) {
+    @include screen-below($tablet) {
       display: none;
     }
   }
@@ -73,33 +73,17 @@
       margin-bottom: 32px;
     }
 
-    @include screen-above(1024px) {
+    @include screen-above($tablet) {
       margin-bottom: 122px;
     }
 
-    @include screen-above(1280px) {
+    @include screen-above($laptop-sm) {
       margin-bottom: 160px;
     }
   }
 
   &__grid {
     position: relative;
-    display: grid;
-    grid-gap: 35px;
-    grid-template-columns: 1fr;
-
-    @include screen-above(1024px) {
-      grid-gap: 50px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include screen-between(1280px, 1440px) {
-      grid-gap: 75px;
-    }
-
-    @include screen-above(1440px) {
-      grid-gap: 100px;
-    }
   }
 
   &__grid-item {
@@ -109,18 +93,18 @@
       align-self: center;
       text-align: center;
 
-      @include screen-above(1024px) {
+      @include screen-above($tablet) {
         max-width: 100%;
         text-align: left;
       }
     }
   }
 
-  @include screen-below(1280px) {
+  @include screen-below($laptop-sm) {
     padding: 97px 0 179px;
   }
 
-  @include screen-below(1024px) {
+  @include screen-below($tablet) {
     padding: 65px 0 90px;
   }
 }

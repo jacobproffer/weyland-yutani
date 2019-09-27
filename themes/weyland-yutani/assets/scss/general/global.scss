@@ -14,8 +14,8 @@
 }
 
 ::selection { 
-  color: $black;
-  background: $yellow;
+  color: var(--black);
+  background: var(--yellow);
 }
 
 img,
@@ -26,7 +26,7 @@ svg {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  color: $gray;
+  color: var(--gray);
   background-color: var(--black);
 }
 

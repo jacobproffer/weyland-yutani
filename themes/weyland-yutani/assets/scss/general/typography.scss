@@ -39,7 +39,7 @@ h3 {
   letter-spacing: .2em;
   margin: 0 -.2em 0 0;
 
-  @include screen-above(1024px) {
+  @include screen-above(1440px) {
     letter-spacing: .4em;
     margin: 0 -.4em 0 0;
   }

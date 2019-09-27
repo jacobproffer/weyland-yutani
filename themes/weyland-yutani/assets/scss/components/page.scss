@@ -1,7 +1,11 @@
 .page {
   padding: 186px 0 108px;
 
+  h1 {
+    margin: 0 0 2rem;
+  }
+
   @include screen-below(1024px) {
-    padding: 150px 0 72px;
+    padding: 135px 0 72px;
   }
 }

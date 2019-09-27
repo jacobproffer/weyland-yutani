@@ -30,16 +30,16 @@
       color: var(--gray);
       margin-left: 8px;
 
-      @include screen-below(1024px) {
+      @include screen-below($tablet) {
         display: none;
       }
 
-      @include screen-above(1024px) {
+      @include screen-above($tablet) {
         margin-left: 16px;
       }
     }
 
-    @include screen-below(1024px) {
+    @include screen-below($tablet) {
       text-align: center;
     }
 
@@ -54,11 +54,11 @@
     }
   }
 
-  @include screen-below(1280px) {
+  @include screen-below($laptop-sm) {
     padding-bottom: 108px;
   }
 
-  @include screen-below(1024px) {
+  @include screen-below($tablet) {
     padding-bottom: 72px;
   }
 }
