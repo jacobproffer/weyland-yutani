@@ -5,25 +5,16 @@
   h2 {
     margin-bottom: 120px;
 
-    @include screen-below(1440px) {
+    @include screen-below($desktop-sm) {
       margin-bottom: 90px;
     }
   }
 
   &__grid {
-    margin-top: 32px;
-    display: grid;
-    grid-gap: 95px;
-    grid-template-columns: repeat(3, 1fr);
     margin-top: 68px;
 
-    @include screen-between(1280px, 1440px) {
+    @include screen-between($laptop-sm, $desktop-sm) {
       margin-top: 50px;
-      grid-gap: 71px;
-    }
-
-    @include screen-below(1024px) {
-      grid-template-columns: 1fr;
     }
   }
 
@@ -34,11 +25,11 @@
       color: var(--white);
       text-transform: uppercase;
 
-      @include screen-below(1440px) {
+      @include screen-below($desktop-sm) {
         margin-top: 96px;
       }
 
-      @include screen-below(1280px) {
+      @include screen-below($laptop-sm) {
         margin-top: 64px;
       }
     }
@@ -46,7 +37,7 @@
     p {
       margin-bottom: 0;
 
-      @include screen-below(1024px) {
+      @include screen-below($tablet) {
         max-width: 505px;
         margin-left: auto;
         margin-right: auto;
@@ -71,7 +62,7 @@
       transform: translate(-50%, -50%);
       content: "";
 
-      @include screen-below(1280px) {
+      @include screen-below($laptop-sm) {
         width: 263px;
         height: 263px;
       }
@@ -81,17 +72,17 @@
       border-radius: 50%;
     }
 
-    @include screen-below(1280px) {
+    @include screen-below($laptop-sm) {
       width: 206px;
       height: 206px;
     }
   }
 
-  @include screen-below(1440px) {
+  @include screen-below($desktop-sm) {
     padding: 0 0 94px;
   }
 
-  @include screen-below(1024px) {
+  @include screen-below($tablet) {
     padding: 0 0 62px;
   }
 }

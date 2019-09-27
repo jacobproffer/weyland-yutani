@@ -39,6 +39,12 @@
 
   li {
     list-style: none;
+
+    &:not(:last-of-type) {
+      @include screen-below(600px) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   a {

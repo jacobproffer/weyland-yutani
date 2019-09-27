@@ -8,7 +8,7 @@
       <span class="hero__subheading h3 letter-spacing">Building Better Worlds</span>
     </header>
 
-    <div class="hero__grid">
+    <div class="grid grid--hero">
       <div class="hero__grid-item hero__grid-item--span2 letter-spacing">
         Current Operation: <span>{{ .Site.Params.currentOperation }}</span></h4>
       </div>
@@ -36,7 +36,7 @@
 
     <p class="mission__intro">The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
 
-    <div class="mission__grid">
+    <div class="grid grid--mission mission__grid">
 
       <div class="mission__grid-item mission__grid-item--text">
         <p>As the largest company on the planet, we have taken it upon ourselves to constantly explore, expand and discover what lies beyond our own heavens. Every day, our biologists, military scientists, chemical engineers, geologists, mechanics and pilots work across our solar system to advance human interests and life. From Peter Weyland’s first commercially viable cybernetic android to the invention of the atmospheric processor, the Weyland-Yutani Corporation has continued to innovate and work towards the realization of a better world.</p>
@@ -62,7 +62,7 @@
       <h2>Our Technology</h2>
     </header>
 
-    <div class="technology__grid">
+    <div class="grid grid--technology technology__grid">
 
       {{ range $.Site.Data.technologies }}
 
