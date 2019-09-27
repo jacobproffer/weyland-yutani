@@ -1,6 +1,6 @@
 {{ define "main" -}}
 
-<div class="page">
+<div class="page spacing">
   <div class="container container--page">
 
     <article class="content">
@@ -8,6 +8,10 @@
       <header>
 
         <h1>{{ .Title }}</h1>
+
+        <time class="letter-spacing" datetime="{{ .PublishDate.Format "2006-01-02" }}">
+          {{ .PublishDate.Format "January 2, 2006" }}
+        </time>
 
       </header>
 
