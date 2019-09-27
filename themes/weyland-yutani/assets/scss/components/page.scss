@@ -1,11 +1,23 @@
 .page {
-  padding: 186px 0 108px;
-
-  h1 {
+  header {
     margin: 0 0 2rem;
   }
 
-  @include screen-below(1024px) {
-    padding: 135px 0 72px;
+  h1 {
+    line-height: 1;
+  }
+
+  time {
+    display: block;
+    margin-top: 11px;
+    font-size: .875rem;
+  }
+
+  p {
+    font-size: 1rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 }
