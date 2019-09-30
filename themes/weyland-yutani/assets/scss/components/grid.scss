@@ -74,6 +74,10 @@
     }
   }
 
+  &--pagination {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &--footer {
     grid-template-columns: 1fr 98px 1fr;
     grid-gap: 20px;

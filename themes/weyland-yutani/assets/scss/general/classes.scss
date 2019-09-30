@@ -5,7 +5,7 @@
 .spacing {
   padding: 186px 0 108px;
 
-  @include screen-below(1024px) {
+  @include screen-below($tablet) {
     padding: 135px 0 72px;
   }
 }
