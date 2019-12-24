@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="container">
+
+    <header>
+      <h1>{{ .Site.Title }}</h1>
+      <span class="hero__subheading h3 letter-spacing">Building Better Worlds</span>
+    </header>
+
+    <div class="grid grid--hero">
+      <div class="hero__grid-item hero__grid-item--span2 letter-spacing">
+        Current Operation: <span>{{ .Site.Params.currentOperation }}</span></h4>
+      </div>
+      <div class="hero__grid-item hero__grid-item--operation-founded letter-spacing">
+        Founded: <span>{{ .Site.Params.founded }}</span>
+      </div>
+      <div class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
+        Colonists: <span>{{ .Site.Params.colonists }}</span>
+      </div>
+      <a class="button hero__grid-item hero__grid-item--operation-cta" href="/contact/">
+        Apply Today
+      </a>
+    </div>
+
+  </div>
+  <div class="hero__background animated hinge fadeIn"></div>
+</section>

@@ -1,0 +1,13 @@
+<section class="careers">
+  <div class="container">
+
+    <header class="center">
+      <h2>Careers</h2>
+    </header>
+
+    {{ range where .Site.RegularPages ".Type" "careers" }}
+      {{ partial "careers/item" . }}
+    {{ end }}
+
+  </div>
+</section>

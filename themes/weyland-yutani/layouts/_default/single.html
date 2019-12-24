@@ -2,23 +2,38 @@
 
 <div class="page spacing">
   <div class="container container--page">
-
     <article class="content">
 
-      <header>
-
+      <header class="internal-header center">
         <h1>{{ .Title }}</h1>
-
         <time class="letter-spacing" datetime="{{ .PublishDate.Format "2006-01-02" }}">
           {{ .PublishDate.Format "January 2, 2006" }}
         </time>
-
       </header>
 
       {{ .Content }}
 
     </article>
+  </div>
 
+  <div class="pagination">
+    <div class="container">
+      <div class="grid grid--pagination">
+
+        {{ with .PrevInSection }}
+          <a class="pagination-item pagination-item--prev" href="{{ .Permalink }}">
+            Previous Post
+          </a>
+        {{ end }}
+
+        {{ with .NextInSection }}
+          <a class="pagination-item pagination-item--next" href="{{ .Permalink }}">
+            Next Post
+          </a>
+        {{ end }}
+
+      </div>
+    </div>
   </div>
 </div>
 

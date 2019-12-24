@@ -1,105 +1,11 @@
 {{ define "main" }}
 
-<section class="hero">
-  <div class="container">
+{{ partial "home/hero" . }}
 
-    <header>
-      <h1>{{ .Site.Title }}</h1>
-      <span class="hero__subheading h3 letter-spacing">Building Better Worlds</span>
-    </header>
+{{ partial "home/mission" }}
 
-    <div class="grid grid--hero">
-      <div class="hero__grid-item hero__grid-item--span2 letter-spacing">
-        Current Operation: <span>{{ .Site.Params.currentOperation }}</span></h4>
-      </div>
-      <div class="hero__grid-item hero__grid-item--operation-founded letter-spacing">
-        Founded: <span>{{ .Site.Params.founded }}</span>
-      </div>
-      <div class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
-        Colonists: <span>{{ .Site.Params.colonists }}</span>
-      </div>
-      <a class="button hero__grid-item hero__grid-item--operation-cta" href="/contact/">
-        Apply Today
-      </a>
-    </div>
+{{ partial "home/technology" . }}
 
-  </div>
-  <div class="hero__background animated hinge fadeIn"></div>
-</section>
-
-<section class="mission" id="mission">
-  <div class="container">
-
-    <header>
-      <h2>Our Mission</h2>
-    </header>
-
-    <p class="mission__intro">The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds</p>
-
-    <div class="grid grid--mission mission__grid">
-
-      <div class="mission__grid-item mission__grid-item--text">
-        <p>As the largest company on the planet, we have taken it upon ourselves to constantly explore, expand and discover what lies beyond our own heavens. Every day, our biologists, military scientists, chemical engineers, geologists, mechanics and pilots work across our solar system to advance human interests and life. From Peter Weyland’s first commercially viable cybernetic android to the invention of the atmospheric processor, the Weyland-Yutani Corporation has continued to innovate and work towards the realization of a better world.</p>
-      </div>
-
-      <div class="mission__grid-item">
-        <img src="/images/mission-image.jpg" alt="Image of a barren landscape.">
-      </div>
-
-      <div class="mission__graphic">
-        <img src="/images/ground-texture-small.jpg" alt="">
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="technology" id="technology">
-  <div class="container">
-
-    <header>
-      <h2>Our Technology</h2>
-    </header>
-
-    <div class="grid grid--technology technology__grid">
-
-      {{ range $.Site.Data.technologies }}
-
-        <div class="technology__grid-item">
-          <div class="technology__image">
-            <img src="{{ .image }}" alt="">
-          </div>
-          <span class="h4">{{ .title }}</span>
-          <p>{{ .blurb }}</p>
-        </div>
-
-      {{ end }}
-      
-    </div>
-
-  </div>
-</section>
-
-<section class="careers">
-  <div class="container">
-
-    <header>
-      <h2>Careers</h2>
-    </header>
-
-    {{ range where .Pages ".Type" "careers" }}
-      <article class="careers__item">
-        <div class="careers__row grid grid--careers">
-          <header class="careers__job-title letter-spacing">
-            <h3>{{ .Title }}</h3>
-          </header>
-          <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
-        </div>
-      </article>
-    {{ end }}
-
-  </div>
-</section>
+{{ partial "home/careers" . }}
   
 {{ end }}

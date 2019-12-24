@@ -1,6 +1,8 @@
 <nav class="navigation navigation--tag">
   <ul>
+
     {{ $currentPage := . }}
+
     {{ range .Site.Menus.tags }}
       <li class="inline-link">
         <a
@@ -13,5 +15,6 @@
         </a>
       </li>
     {{ end }}
+
   </ul>
 </nav>

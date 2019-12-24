@@ -39,9 +39,9 @@
   }
 
   &__background {
+    @include absolute(0, 0, 0, 0);
     @include size(100%);
     @include background-cover('/images/weyland-hero.jpg');
-    @include absolute(0, 0, 0, 0);
     z-index: -1;
   }
 

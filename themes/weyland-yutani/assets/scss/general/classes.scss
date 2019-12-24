@@ -5,9 +5,13 @@
 .spacing {
   padding: 186px 0 108px;
 
-  @include screen-below(1024px) {
+  @include screen-below($tablet) {
     padding: 135px 0 72px;
   }
+}
+
+.internal-header {
+  margin-bottom: 92px;
 }
 
 .logo {
@@ -16,7 +20,7 @@
   .st0 {
     fill: var(--yellow);
   }
-  
+
   .st1 {
     fill: var(--gray);
   }
@@ -25,20 +29,20 @@
     place-self: start;
     display: inline-block;
     transition: opacity 300ms ease-in-out;
-    
+
     svg {
       @include size(134px, 34px);
     }
-  
+
     path {
       transition: fill 300ms ease-in-out;
     }
-  
+
     &:hover {
       .st1 {
         fill: var(--yellow);
       }
-  
+
       .st0 {
         fill: var(--gray);
       }
@@ -50,4 +54,8 @@
       @include size(98px, 26px);
     }
   }
+}
+
+.center {
+  text-align: center;
 }
