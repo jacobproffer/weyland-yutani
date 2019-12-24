@@ -1,4 +1,6 @@
 name = "Weyland-Yutani"
+license = "Apache 2.0"
+licenselink = "https://github.com/jacobproffer/weyland-yutani/blob/master/LICENSE"
 description = "A Weyland-Yutani Hugo theme with careers and news post types."
 homepage = "https://weyland-yutani.proffer.dev/"
 tags = ["aliens", "news", "articles", "careers"]
