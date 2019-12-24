@@ -2,21 +2,13 @@
 
 <section class="careers spacing">
   <div class="container">
-    <header>
-      <h1>
-        {{ .Title }}
-      </h1>
+
+    <header class="internal-header center">
+      <h1>{{ .Title }}</h1>
     </header>
 
     {{ range .Pages }}
-      <article class="careers__item">
-        <div class="careers__row grid grid--careers">
-          <header class="careers__job-title letter-spacing">
-            <h3>{{ .Title }}</h3>
-          </header>
-          <a class="button careers__button" href="{{ .Permalink }}">Read More</a>
-        </div>
-      </article>
+      {{ partial "careers/item" . }}
     {{ end }}
 
   </div>

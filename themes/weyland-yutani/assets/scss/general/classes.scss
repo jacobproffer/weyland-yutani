@@ -10,13 +10,17 @@
   }
 }
 
+.internal-header {
+  margin-bottom: 92px;
+}
+
 .logo {
   margin: 0;
 
   .st0 {
     fill: var(--yellow);
   }
-  
+
   .st1 {
     fill: var(--gray);
   }
@@ -25,20 +29,20 @@
     place-self: start;
     display: inline-block;
     transition: opacity 300ms ease-in-out;
-    
+
     svg {
       @include size(134px, 34px);
     }
-  
+
     path {
       transition: fill 300ms ease-in-out;
     }
-  
+
     &:hover {
       .st1 {
         fill: var(--yellow);
       }
-  
+
       .st0 {
         fill: var(--gray);
       }
@@ -50,4 +54,8 @@
       @include size(98px, 26px);
     }
   }
+}
+
+.center {
+  text-align: center;
 }

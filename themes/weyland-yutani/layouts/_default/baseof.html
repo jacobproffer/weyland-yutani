@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
-    {{- partial "head.html" . -}}
-    <body class="animated fade-in">
-        {{- partial "header.html" . -}}
-        <main id="content">
-        {{- block "main" . }}{{- end }}
-        </main>
-        {{- partial "footer.html" . -}}
-        {{- partial "scripts.html" . -}}
-    </body>
+  {{ partial "head.html" . }}
+  <body class="animated fade-in">
+    {{ partial "header.html" . }}
+    <main id="content">
+    {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partial "scripts.html" . }}
+  </body>
 </html>
