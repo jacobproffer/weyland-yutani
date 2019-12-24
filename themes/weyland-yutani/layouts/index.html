@@ -88,7 +88,7 @@
       <h2>Careers</h2>
     </header>
 
-    {{ range where .Pages ".Type" "careers" }}
+    {{ range where .Site.RegularPages ".Type" "careers" }}
       <article class="careers__item">
         <div class="careers__row grid grid--careers">
           <header class="careers__job-title letter-spacing">

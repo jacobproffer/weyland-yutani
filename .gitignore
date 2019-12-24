@@ -1,4 +1,8 @@
+# Hugo
+public/*
+!public/images
+!public/favicons
+resources/
+
+# OSX
 .DS_Store
-*.log
-node_modules
-gulp/node_modules
