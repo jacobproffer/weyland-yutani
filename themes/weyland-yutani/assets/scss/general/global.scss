@@ -11,10 +11,16 @@
 *,
 *::after,
 *::before {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
-::selection { 
+* {
+  &:focus {
+    outline: 2px dotted var(--gray);
+  }
+}
+
+::selection {
   color: var(--black);
   background: var(--yellow);
 }
@@ -29,16 +35,6 @@ body {
   font-size: 16px;
   color: var(--gray);
   background-color: var(--black);
-}
-
-h1,
-h2,
-h4 {
-  color: var(--white);
-}
-
-h4 {
-  font-weight: 400;
 }
 
 a {
