@@ -7,8 +7,9 @@ theme = "weyland-yutani"
   description = "The Weyland-Yutani Corporation specializes in and develops major advancements in technology, such as off-world colonization."
   subTitle = "Building Better Worlds"
   currentOperation = "Acheron"
-  founded = 2157
-  colonists = 158
+  founded = "2157"
+  colonists = "158"
+  images = ["/images/weyland-yutani-social.jpg"]
 
 [menu]
 

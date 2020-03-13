@@ -5,14 +5,11 @@
   border-bottom: var(--border);
 
   &::before {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100%;
+    @include absolute(0, auto, auto, 50%);
+    @include size(1px, 100%);
     background-color: var(--border-color);
-    content: '';
     transform: translateX(-50%);
+    content: '';
   }
 
   @include screen-below($tablet) {

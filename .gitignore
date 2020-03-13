@@ -1,7 +1,5 @@
 # Hugo
-public/*
-!public/images
-!public/favicons
+public/
 resources/
 
 # OSX

@@ -3,8 +3,6 @@ title: "Copyright"
 description: "Copyright information for the Weyland Yutani Corporation."
 date: 2019-09-22T16:19:32-04:00
 layout: "section"
-images:
-  - /images/placeholder.png
 ---
 
  Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there. Another one. We the best. Celebrate success right, the only way, apple. Cloth talk. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. Every chance I get, I water the plants, Lion! Special cloth alert. Stay focused. Surround yourself with angels. Don’t ever play yourself.

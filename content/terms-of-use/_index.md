@@ -2,8 +2,6 @@
 title: "Terms of Use"
 description: "Terms of Use for the Weyland Yutani Corporation."
 date: 2019-09-22T16:33:31-04:00
-images:
-  - /images/placeholder.png
 ---
 
  The key to success is to keep your head above the water, never give up. I’m up to something. You should never complain, complaining is a weak emotion, you got life, we breathing, we blessed. I told you all this before, when you have a swimming pool, do not use chlorine, use salt water, the healing, salt water is the healing. Another one. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. Hammock talk come soon. Wraith talk. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there.

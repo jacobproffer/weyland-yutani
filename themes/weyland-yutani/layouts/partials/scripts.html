@@ -2,4 +2,5 @@
 {{ $appJS := resources.Get "js/app.js" }}
 {{ $js := slice $headroomJS $appJS | resources.Concat "js/bundled.js" }}
 {{ $minify := $js | resources.Minify }}
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@13.0.1/dist/lazyload.min.js"></script>
 <script src="{{ $minify.Permalink }}"></script>

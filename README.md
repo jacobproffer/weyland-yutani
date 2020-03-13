@@ -2,10 +2,6 @@
 
 Custom Hugo theme for the Weyland-Yutani Corporation.
 
-## Compile public folder
-
-`hugo`
-
 ## Compile public folder with minification
 
 `hugo --minify`

@@ -1,26 +1,6 @@
-@mixin box-sizing($box-model) {
-  box-sizing: $box-model;
-}
-
-*,
-*::after,
-*::before {
-  @include box-sizing(border-box);
-}
-
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
-}
-
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
-}
-
-@mixin transform($args) {
-  transform: #{$args};
 }
 
 @mixin background-cover($url) {
@@ -34,26 +14,6 @@
   bottom: $bottom;
   left: $left;
   position: absolute;
-}
-
-@mixin clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
-@mixin vertical-align {
-  @include transform(translateY(-50%));
-  position: absolute;
-  top: 50%;
-}
-
-@mixin horizontal-align {
-  @include transform(translateX(-50%));
-  position: absolute;
-  left: 50%;
 }
 
 @mixin transition($args) {
@@ -87,25 +47,5 @@
         font-size: $fs-font-size;
       }
     }
-  }
-}
-
-@mixin ratio($width: 1, $height: 1) {
-  position: relative;
-
-  &::before {
-    display: block;
-    content: '';
-    width: 100%;
-    padding-top: ($height / $width) * 100%;
-  }
-
-  > .content,
-  > .inside {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
   }
 }
