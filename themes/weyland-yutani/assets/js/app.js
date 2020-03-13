@@ -32,3 +32,7 @@ hamburger.addEventListener("click", function() {
   this.classList.toggle("nav-open");
   mainHeader.classList.toggle("open");
 });
+
+var lazyLoadInstance = new LazyLoad({
+  elements_selector: ".lazy"
+});
