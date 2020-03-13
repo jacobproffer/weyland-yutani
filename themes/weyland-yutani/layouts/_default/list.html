@@ -1,17 +1,17 @@
 {{ define "main" }}
 
-  <section class="list spacing">
-    <div class="container">
+<section class="list spacing">
+  <div class="container">
 
-      <header class="internal-header center">
-        <h1>{{ .Title }}</h1>
-      </header>
+    <header class="internal-header center">
+      <h1>{{ .Title }}</h1>
+    </header>
 
-      {{ range .Pages }}
-        {{ partial "list/article" . }}
-      {{ end }}
+    {{ range .Pages }}
+      {{ partial "list/article" . }}
+    {{ end }}
 
-    </div>
-  </section>
+  </div>
+</section>
 
 {{ end }}
