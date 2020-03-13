@@ -3,8 +3,6 @@ title: "Privacy Policy"
 description: "The privacy policy for the Weyland Yutani Corporation."
 date: 2019-09-22T16:08:43-04:00
 layout: "section"
-images:
-  - /images/placeholder.png
 ---
 
 Lorem Khaled Ipsum is a major key to success. The key is to drink coconut, fresh coconut, trust me. The key is to enjoy life, because they don’t want you to enjoy life. I promise you, they don’t want you to jetski, they don’t want you to smile. Surround yourself with angels. Let’s see what Chef Dee got that they don’t want us to eat. The ladies always say Khaled you smell good, I use no cologne. Cocoa butter is the key. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth.
