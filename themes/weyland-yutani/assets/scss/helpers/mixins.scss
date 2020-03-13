@@ -16,10 +16,6 @@
   position: absolute;
 }
 
-@mixin transition($args) {
-  transition: #{$args};
-}
-
 @mixin screen-above($screen-size) {
   @media screen and (min-width: $screen-size) {
     @content;

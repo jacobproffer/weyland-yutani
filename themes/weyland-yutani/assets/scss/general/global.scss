@@ -30,9 +30,15 @@ svg {
 	max-width: 100%;
 }
 
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
+  margin: 0;
   color: var(--gray);
   background-color: var(--black);
 }
