@@ -2,9 +2,33 @@
 
 <section class="contact spacing">
   <div class="container">
+
     <header class="internal-header center">
       <h1>Contact</h1>
     </header>
+
+    <form class="grid grid--two-column form" name="contact" action="/success/" netlify>
+      <label for="name">
+        <span class="visually-hide">
+          Your Name
+        </span>
+        <input type="text" id="name" name="name" placeholder="Name" required />
+      </label>
+      <label for="email">
+        <span class="visually-hide">
+          Your Email
+        </span>
+        <input type="email" id="email" name="email" placeholder="Email" />
+      </label>
+      <label class="form__message" for="message">
+        <span class="visually-hide">
+          Your Message
+        </span>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
+      </label>
+      <button class="button" type="submit">Submit</button>
+    </form>
+
   </div>
 </section>
 
