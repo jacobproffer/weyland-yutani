@@ -5,8 +5,10 @@
   border-bottom: var(--border);
 
   &::before {
-    @include absolute(0, auto, auto, 50%);
     @include size(1px, 100%);
+    position: absolute;
+    top: 0;
+    left: 50%;
     background-color: var(--border-color);
     transform: translateX(-50%);
     content: '';
