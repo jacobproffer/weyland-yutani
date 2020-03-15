@@ -23,16 +23,21 @@
         <input type="email" id="email" name="email" placeholder="Email" />
       </label>
 
-      <label class="visually-hide" for="job-select">Choose a career:</label>
-      <select class="form__select" name="jobs" id="job-select" required>
+      <div class="form__select">
+        <label class="visually-hide" for="job-select">Choose a career:</label>
 
-        <option value="">Select Career</option>
+        <i></i>
 
-        {{ range .Site.Taxonomies.series.careers }}
-          <option value="{{ lower .Title }}">{{ .Title }}</option>
-        {{ end }}
+        <select name="jobs" id="job-select" required>
 
-      </select>
+          <option value="">Select Career</option>
+
+          {{ range .Site.Taxonomies.series.careers }}
+            <option value="{{ lower .Title }}">{{ .Title }}</option>
+          {{ end }}
+
+        </select>
+      </div>
 
       <label class="form__resume custom-file-input" for="resume">
 
