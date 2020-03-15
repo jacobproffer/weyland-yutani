@@ -8,7 +8,6 @@
   textarea,
   select {
     width: 100%;
-    padding: 20px;
     margin: 0;
     color: var(--white);
     background-color: transparent;
@@ -26,6 +25,15 @@
     }
   }
 
+  input,
+  textarea {
+    padding: 20px 25px;
+  }
+
+  select {
+    padding: 20px;
+  }
+
   button {
     grid-column: span 1;
     padding: 20px;
@@ -36,6 +44,21 @@
   &__message {
     @include screen-above($tablet) {
       grid-column: span 2;
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 26px;
+      right: 25px;
+      padding: 3px;
+      border: solid var(--yellow);
+      border-width: 0 3px 3px 0;
+      pointer-events: none;
+      transform: rotate(45deg);
     }
   }
 
