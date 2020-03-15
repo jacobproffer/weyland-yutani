@@ -1,0 +1,46 @@
+.form {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  max-width: 80ch;
+  margin: 20px auto auto;
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    color: var(--white);
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    border: var(--border);
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::placeholder {
+      color: var(--white);
+      opacity: 1;
+    }
+  }
+
+  button {
+    grid-column: span 1;
+    padding: 20px;
+  }
+
+  &__resume,
+  &__select,
+  &__message {
+    @include screen-above($tablet) {
+      grid-column: span 2;
+    }
+  }
+
+  @include screen-below($tablet) {
+    grid-template-columns: 1fr;
+    max-width: unset;
+  }
+}

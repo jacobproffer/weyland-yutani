@@ -5,10 +5,13 @@
   display: block;
   color: var(--black);
   background-color: var(--yellow);
+  font-family: inherit;
+  border: none;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .15em;
+  cursor: pointer;
   transition: background-color 300ms ease-in-out;
 
   &:hover {
