@@ -2,6 +2,7 @@
 title: "Security Officer"
 description: "Post description"
 date: 2019-09-20T05:15:39-04:00
+series: ["careers"]
 weight: 3
 ---
 
