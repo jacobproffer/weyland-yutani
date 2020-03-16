@@ -16,23 +16,26 @@
     </article>
   </div>
 
-  <div class="pagination">
-    <div class="grid grid--pagination">
+  {{ if or .PrevInSection .NextInSection }}
+    <div class="pagination">
+      <div class="grid grid--pagination">
 
-      {{ with .PrevInSection }}
-        <a class="button pagination-item pagination-item--prev" href="{{ .Permalink }}">
-          Previous Post
-        </a>
-      {{ end }}
+        {{ with .PrevInSection }}
+          <a class="button pagination-item pagination-item--prev" href="{{ .Permalink }}">
+            Previous Post
+          </a>
+        {{ end }}
 
-      {{ with .NextInSection }}
-        <a class="button pagination-item pagination-item--next" href="{{ .Permalink }}">
-          Next Post
-        </a>
-      {{ end }}
+        {{ with .NextInSection }}
+          <a class="button pagination-item pagination-item--next" href="{{ .Permalink }}">
+            Next Post
+          </a>
+        {{ end }}
 
+      </div>
     </div>
-  </div>
+  {{ end }}
+
 </div>
 
 {{ end }}
