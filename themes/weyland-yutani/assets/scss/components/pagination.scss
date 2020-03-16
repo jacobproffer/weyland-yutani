@@ -9,7 +9,8 @@
     position: absolute;
     top: 0;
     left: 50%;
-    background-color: var(--border-color);
+    z-index: 2;
+    background-color: var(--black);
     transform: translateX(-50%);
     content: '';
   }
@@ -21,13 +22,14 @@
 
 .pagination-item {
   padding: 45px 0;
-  justify-self: start;
   text-transform: uppercase;
 
   &--next {
-    text-align: right;
     grid-column: 2 / -1;
-    justify-self: end;
+  }
+
+  a {
+    display: block;
   }
 
   span {

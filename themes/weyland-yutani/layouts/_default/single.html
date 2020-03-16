@@ -2,7 +2,7 @@
 
 <div class="page spacing">
   <div class="container container--page">
-    <article class="content">
+    <article class="page__content">
 
       <header class="internal-header center">
         <h1>{{ .Title }}</h1>
@@ -16,25 +16,26 @@
     </article>
   </div>
 
-  <div class="pagination">
-    <div class="container">
+  {{ if or .PrevInSection .NextInSection }}
+    <div class="pagination">
       <div class="grid grid--pagination">
 
         {{ with .PrevInSection }}
-          <a class="pagination-item pagination-item--prev" href="{{ .Permalink }}">
+          <a class="button pagination-item pagination-item--prev" href="{{ .Permalink }}">
             Previous Post
           </a>
         {{ end }}
 
         {{ with .NextInSection }}
-          <a class="pagination-item pagination-item--next" href="{{ .Permalink }}">
+          <a class="button pagination-item pagination-item--next" href="{{ .Permalink }}">
             Next Post
           </a>
         {{ end }}
 
       </div>
     </div>
-  </div>
+  {{ end }}
+
 </div>
 
 {{ end }}
