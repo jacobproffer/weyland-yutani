@@ -1,7 +1,14 @@
 .list-article {
   a {
     display: block;
-    padding: 10px 20px;
     border: var(--border);
+  }
+
+  span {
+    padding: 20px;
+  }
+
+  &__content {
+    padding: 10px 20px;
   }
 }

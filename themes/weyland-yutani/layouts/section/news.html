@@ -13,19 +13,25 @@
         <article class="list-article">
           <a href="{{ .Permalink }}">
 
-            {{ if isset .Params "thumbnail" }}
-              <img class="lazy" data-src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}" />
-            {{ end }}
+            <div class="list-article__content">
 
-            <header>
-              <h2>
-                {{ .Title }}
-              </h2>
-            </header>
+              {{ if isset .Params "images" }}
+                <img class="lazy" data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
+              {{ end }}
 
-            {{ if isset .Params "description" }}
-              <p>{{ .Params.description }}</p>
-            {{ end }}
+              <header>
+                <h2>
+                  {{ .Title }}
+                </h2>
+              </header>
+
+              {{ if isset .Params "description" }}
+                <p>{{ .Params.description }}</p>
+              {{ end }}
+
+            </div>
+
+            <span class="button">View Article</span>
 
           </a>
         </article>
