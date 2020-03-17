@@ -21,7 +21,7 @@
     @include screen-above($tablet) {
       justify-content: space-between;
     }
-    
+
     @include screen-below($tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -74,8 +74,17 @@
     }
   }
 
-  &--pagination {
+  &--two-column {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--list {
+    grid-gap: 40px;
+
+    @include screen-below($tablet) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
   }
 
   &--footer {

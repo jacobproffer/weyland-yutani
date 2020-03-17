@@ -1,18 +1,39 @@
 {{ define "main" }}
-  <section class="list spacing">
-    <div class="container">
 
-      <header class="internal-header center">
-        <h1>News</h1>
-      </header>
+<section class="list spacing">
+  <div class="container">
+
+    <header class="internal-header center">
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="grid grid--two-column grid--list">
 
       {{ range .Pages }}
+        <article class="list-article">
+          <a href="{{ .Permalink }}">
 
-        {{ partial "news/article" . }}
+            {{ if isset .Params "thumbnail" }}
+              <img class="lazy" data-src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}" />
+            {{ end }}
 
+            <header>
+              <h2>
+                {{ .Title }}
+              </h2>
+            </header>
+
+            {{ if isset .Params "description" }}
+              <p>{{ .Params.description }}</p>
+            {{ end }}
+
+          </a>
+        </article>
       {{ end }}
 
     </div>
-  </section>
+
+  </div>
+</section>
 
 {{ end }}

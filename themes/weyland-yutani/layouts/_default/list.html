@@ -7,9 +7,31 @@
       <h1>{{ .Title }}</h1>
     </header>
 
-    {{ range .Pages }}
-      {{ partial "list/article" . }}
-    {{ end }}
+    <div class="grid grid--two-column grid--list">
+
+      {{ range .Pages }}
+        <article class="list-article">
+          <a href="{{ .Permalink }}">
+
+            {{ if isset .Params "thumbnail" }}
+              <img class="lazy" data-src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}" />
+            {{ end }}
+
+            <header>
+              <h2>
+                {{ .Title }}
+              </h2>
+            </header>
+
+            {{ if isset .Params "description" }}
+              <p>{{ .Params.description }}</p>
+            {{ end }}
+
+          </a>
+        </article>
+      {{ end }}
+
+    </div>
 
   </div>
 </section>

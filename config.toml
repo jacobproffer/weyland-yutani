@@ -2,6 +2,7 @@ baseURL = "https://weyland-yutani.proffer.dev"
 languageCode = "en-us"
 title = "Weyland-Yutani Corp"
 theme = "weyland-yutani"
+enableRobotsTXT = true
 
 [params]
   description = "The Weyland-Yutani Corporation specializes in and develops major advancements in technology, such as off-world colonization."
@@ -12,9 +13,7 @@ theme = "weyland-yutani"
   images = ["/images/weyland-yutani-social.jpg"]
 
 [taxonomies]
-  category = "categories"
   series = "series"
-  tag = "tags"
 
 [menu]
 
