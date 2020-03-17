@@ -18,7 +18,7 @@
 
   {{ if or .PrevInSection .NextInSection }}
     <div class="pagination">
-      <div class="grid grid--pagination">
+      <div class="grid grid--two-column">
 
         {{ with .PrevInSection }}
           <a class="button pagination-item pagination-item--prev" href="{{ .Permalink }}">
