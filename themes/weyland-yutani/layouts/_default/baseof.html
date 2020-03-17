@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
   {{ partial "head.html" . }}
-  <body class="animated fade-in">
+
+  <body {{ if not .IsHome }}class="animated fade-in"{{ end }}>
     {{ partial "header.html" . }}
     <main id="content">
     {{ block "main" . }}{{ end }}
