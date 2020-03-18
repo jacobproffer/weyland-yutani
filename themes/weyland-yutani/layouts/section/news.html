@@ -7,13 +7,13 @@
       <h1>{{ .Title }}</h1>
     </header>
 
-    <div class="grid grid--two-column grid--list">
+    <div class="grid grid--two-column grid--list grid--one-col-mobile">
 
       {{ range .Pages }}
         <article class="list-article">
-          <a href="{{ .Permalink }}">
+          <a class="border" href="{{ .Permalink }}">
 
-            <div class="list-article__content">
+            <div class="content">
 
               {{ if isset .Params "images" }}
                 <img class="lazy" data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />

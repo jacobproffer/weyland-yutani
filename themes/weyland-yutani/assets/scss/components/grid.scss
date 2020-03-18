@@ -10,7 +10,6 @@
     }
 
     @include screen-below($portrait) {
-      grid-template-columns: 1fr;
       grid-row-gap: 0;
     }
   }
@@ -36,10 +35,6 @@
 
     @include screen-below($laptop-sm) {
       grid-template-columns: 2fr 1fr;
-    }
-
-    @include screen-below($tablet) {
-      grid-template-columns: 1fr;
     }
   }
 
@@ -68,10 +63,6 @@
     @include screen-between($laptop-sm, $desktop-sm) {
       grid-gap: 71px;
     }
-
-    @include screen-below($tablet) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &--two-column {
@@ -82,7 +73,6 @@
     grid-gap: 40px;
 
     @include screen-below($tablet) {
-      grid-template-columns: 1fr;
       grid-gap: 20px;
     }
   }
@@ -94,7 +84,9 @@
     @include screen-below($laptop-sm) {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
 
+  &--one-col-mobile {
     @include screen-below($tablet) {
       grid-template-columns: 1fr;
     }
