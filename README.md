@@ -1,10 +1,8 @@
-# Weyland-Yutani 2019
+# Weyland-Yutani Corporation Hugo Theme
 
-Custom Hugo theme for the Weyland-Yutani Corporation.
+![Weyland-Yutani Corporation](https://raw.githubusercontent.com/jacobproffer/weyland-yutani/master/static/images/weyland-yutani-social.jpg)
 
-## Compile public folder with minification
-
-`hugo --minify`
+A responsive theme for Hugo themed around the fictional Weyland-Yutani Corporation featured throughout the Alien universe.
 
 ## Run Hugo server
 
