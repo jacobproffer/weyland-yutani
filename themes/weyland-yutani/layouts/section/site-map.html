@@ -1,0 +1,61 @@
+{{ define "main" }}
+
+<section class="site-map spacing">
+  <div class="container">
+
+    <header class="internal-header center">
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="grid grid--two-column grid--list grid--one-col-mobile">
+      <div class="content border">
+        <h2 id="careers">Careers</h2>
+
+        <ul class="grid unstyled-list" aria-labelledby="careers">
+
+          {{ range .Site.Taxonomies.series.careers }}
+            <li>
+              <a href="{{ .Permalink }}">
+                {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+
+        </ul>
+      </div>
+
+      <div class="content border">
+        <h2 id="news">News</h2>
+
+        <ul class="grid unstyled-list" aria-labelledby="news">
+
+          {{ range .Site.Taxonomies.series.news }}
+            <li>
+              <a href="{{ .Permalink }}">
+                {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+
+        </ul>
+      </div>
+
+      <div class="content border">
+        <h2 id="general">General</h2>
+
+        <ul class="grid unstyled-list" aria-labelledby="general">
+
+          <li>
+            <a href="/apply/">
+              Apply
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{{ end }}

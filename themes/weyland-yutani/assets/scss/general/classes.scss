@@ -13,6 +13,10 @@
 .internal-header {
   margin-bottom: 92px;
 
+  time {
+    display: block;
+  }
+
   @include screen-below($tablet) {
     margin-bottom: 70px;
   }
@@ -109,4 +113,12 @@
       }
     }
   }
+}
+
+.border {
+  border: var(--border);
+}
+
+.content {
+  padding: 42px 30px;
 }

@@ -42,16 +42,10 @@ enableRobotsTXT = true
     weight = 1
 
   [[menu.required]]
-    identifier = "copyright"
-    name = "Copyright"
-    url = "/copyright/"
-    weight = 2
-
-  [[menu.required]]
     identifier = "terms-of-use"
     name = "Terms of Use"
     url = "/terms-of-use/"
-    weight = 3
+    weight = 2
 
   [[menu.info]]
     identifier = "site-map"
@@ -60,13 +54,7 @@ enableRobotsTXT = true
     weight = 1
 
   [[menu.info]]
-    identifier = "compatibility"
-    name = "Compatibility"
-    url = "/compatibility/"
+    identifier = "site-information"
+    name = "Site Information"
+    url = "/site-information/"
     weight = 2
-
-  [[menu.info]]
-    identifier = "repository"
-    name = "Repository"
-    url = "https://github.com/jacobproffer/weyland-yutani"
-    weight = 3
