@@ -18,6 +18,7 @@
   &__subheading {
     display: block;
     padding-bottom: 220px;
+    color: var(--gray);
     text-transform: uppercase;
 
     @include screen-below($desktop-sm) {
