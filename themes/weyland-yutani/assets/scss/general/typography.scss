@@ -6,22 +6,18 @@ h2 {
   @include font-size($h2-font-sizes);
 }
 
-h3,
 .h3 {
   @include font-size($h3-font-sizes);
 }
 
-h4 {
-  font-weight: 400;
-}
-
-h4,
 .h4 {
-  @include font-size($h4-font-sizes);
-}
+  letter-spacing: .15em;
+  margin: 0 -.15em 0 0;
 
-h5 {
-  @include font-size($h5-font-sizes);
+  @include screen-above(768px) {
+    letter-spacing: .2em;
+    margin: 0 -.2em 0 0;
+  }
 }
 
 p {
@@ -37,7 +33,7 @@ p {
 
 h1,
 h2,
-h3 {
+.h3 {
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: .2em;
@@ -51,30 +47,12 @@ h3 {
 
 h1,
 h2,
-h4 {
+.h3 {
   color: var(--white);
-}
-
-h4,
-.h4,
-h5 {
-  letter-spacing: .15em;
-  margin: 0 -.15em 0 0;
-
-  span {
-    color: var(--gray);
-  }
-
-  @include screen-above(768px) {
-    letter-spacing: .2em;
-    margin: 0 -.2em 0 0;
-  }
 }
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+.h3 {
   text-transform: uppercase;
 }

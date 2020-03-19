@@ -20,23 +20,11 @@
 
   &__job-title {
     font-size: 1rem;
+    font-weight: 700;
     color: var(--white);
     display: block;
     line-height: 1;
     text-transform: uppercase;
-
-    span {
-      color: var(--gray);
-      margin-left: 8px;
-
-      @include screen-below($tablet) {
-        display: none;
-      }
-
-      @include screen-above($tablet) {
-        margin-left: 16px;
-      }
-    }
 
     @include screen-below($tablet) {
       text-align: center;
