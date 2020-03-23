@@ -12,19 +12,19 @@
         <span class="visually-hide">
           Your Name
         </span>
-        <input type="text" id="name" name="name" placeholder="Name" required />
+        <input type="text" id="name" name="name" placeholder="Name" required aria-required="true" />
       </label>
       <label for="email">
         <span class="visually-hide">
           Your Email
         </span>
-        <input type="email" id="email" name="email" placeholder="Email" />
+        <input type="email" id="email" name="email" placeholder="Email" required aria-required="true" />
       </label>
       <label class="form__message" for="message">
         <span class="visually-hide">
           Your Message
         </span>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." required aria-required="true"></textarea>
       </label>
       <button class="button" type="submit">Submit</button>
     </form>
