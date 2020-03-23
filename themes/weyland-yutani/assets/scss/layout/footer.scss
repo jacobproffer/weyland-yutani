@@ -1,9 +1,7 @@
 .footer {
   padding-bottom: 108px;
 
-  ul {
-    justify-content: start;
-
+  nav {
     &:first-of-type {
       order: 1;
 
@@ -16,22 +14,20 @@
       order: 3;
 
       @include screen-above(1024px) {
-        justify-content: end;
+        justify-self: end;
       }
     }
 
     @include screen-below(1024px) {
-      justify-content: center;
+      text-align: center;
     }
+  }
 
-    @include screen-above(600px) {
+  ul {
+    @include screen-above(1024px) {
       display: inline-grid;
       grid-auto-flow: column;
       grid-gap: 25px;
-    }
-
-    @include screen-below(600px) {
-      text-align: center;
     }
   }
 
@@ -39,7 +35,7 @@
     list-style: none;
 
     &:not(:last-of-type) {
-      @include screen-below(600px) {
+      @include screen-below(1024px) {
         margin-bottom: 20px;
       }
     }

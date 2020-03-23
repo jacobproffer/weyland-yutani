@@ -2,33 +2,37 @@
   <div class="container">
     <div class="grid grid--footer grid--one-col-mobile">
 
-      <ul class="unstyled-list">
+      <nav aria-label="legal">
+        <ul class="unstyled-list">
 
-        {{ range .Site.Menus.required }}
-          <li>
-            <a href="{{ .URL }}">
-              {{ .Name }}
-            </a>
-          </li>
-        {{ end }}
+          {{ range .Site.Menus.required }}
+            <li>
+              <a href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
 
-      </ul>
+        </ul>
+      </nav>
 
       <div class="footer__logo logo logo--footer">
         {{ partial "svg/logo.html" }}
       </div>
 
-      <ul class="unstyled-list">
+      <nav aria-label="site-information">
+        <ul class="unstyled-list">
 
-        {{ range .Site.Menus.info }}
-          <li>
-            <a href="{{ .URL }}">
-              {{ .Name }}
-            </a>
-          </li>
-        {{ end }}
+          {{ range .Site.Menus.info }}
+            <li>
+              <a href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
 
-      </ul>
+        </ul>
+      </nav>
 
     </div>
   </div>
