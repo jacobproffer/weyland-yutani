@@ -47,3 +47,46 @@
     padding-bottom: 72px;
   }
 }
+
+.career {
+  span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 20px 40px;
+    margin-top: 30px;
+  }
+
+  &__quick-facts {
+    list-style: none;
+
+    li {
+      padding: 20px;
+      text-align: center;
+
+      &:not(:last-of-type) {
+        border-right: var(--border);
+      }
+    }
+  }
+
+  &__content {
+    max-width: 85ch;
+    margin: 80px auto;
+  }
+
+  &__benefits {
+    grid-gap: 20px;
+    padding: 0;
+    list-style-position: inside;
+  }
+}

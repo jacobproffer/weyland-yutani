@@ -1,13 +1,51 @@
 {{ define "main" }}
 
-<article class="spacing">
+<article class="career spacing">
   <div class="container">
 
     <header class="internal-header center">
-      <h1>{{ .Title }}</h1>
+      <h1 id="job-title">{{ .Title }}</h1>
     </header>
 
-    {{ .Content }}
+    <ul class="career__quick-facts unstyled-list grid grid--three-column border">
+
+      {{ if isset .Params "salary" }}
+        <li>
+          <span class="letter-spacing">Salary</span>
+          {{ .Params.salary }}
+        </li>
+      {{ end }}
+
+      {{ if isset .Params "start" }}
+        <li>
+          <span class="letter-spacing">Start Date</span>
+          {{ .Params.start }}
+        </li>
+      {{ end }}
+
+      {{ if isset .Params "location" }}
+        <li>
+          <span class="letter-spacing">Location</span>
+          {{ .Params.location }}
+        </li>
+      {{ end }}
+
+    </ul>
+
+    <div class="career__content">
+      {{ .Content }}
+
+      <h2 class="h3" id="benefits">List of Benefits</h2>
+
+      <ul class="grid career__benefits" aria-labelledby="benefits">
+        <li>IRA retirement account matching of 5%.</li>
+        <li>30 required days of vacation for full-time staff.</li>
+        <li>Company retreats.</li>
+        <li>Medical, dental and vision insurance premiums are 100% covered.</li>
+      </ul>
+
+      <a class="button" href="/apply/" aria-labelledby="job-title">Apply for Position</a>
+    </div>
 
   </div>
 </article>
