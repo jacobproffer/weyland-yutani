@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
   {{ partial "head.html" . }}
 
-  <body {{ if not .IsHome }}class="animated fade-in"{{ end }}>
+  <body class="animated fade-in">
     {{ partial "header.html" . }}
     <main id="content">
     {{ block "main" . }}{{ end }}

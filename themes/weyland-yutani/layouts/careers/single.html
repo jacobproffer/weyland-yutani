@@ -1,13 +1,79 @@
 {{ define "main" }}
 
-<article class="spacing">
+<article class="career spacing">
   <div class="container">
 
     <header class="internal-header center">
-      <h1>{{ .Title }}</h1>
+      <h1 id="job-title">{{ .Title }}</h1>
     </header>
 
-    {{ .Content }}
+    <ul class="career__quick-facts unstyled-list grid grid--three-column border">
+
+      {{ if isset .Params "salary" }}
+        <li>
+          <span class="letter-spacing">Salary</span>
+          ${{ .Params.salary }}
+        </li>
+      {{ end }}
+
+      {{ if isset .Params "start" }}
+        <li>
+          <span class="letter-spacing">Start Date</span>
+          {{ .Params.start }}
+        </li>
+      {{ end }}
+
+      {{ if isset .Params "location" }}
+        <li>
+          <span class="letter-spacing">Location</span>
+          {{ .Params.location }}
+        </li>
+      {{ end }}
+
+    </ul>
+
+    <div class="career__content">
+      {{ .Content }}
+
+      <h2 class="h3" id="benefits">List of Benefits</h2>
+
+      <ul class="grid career__benefits" aria-labelledby="benefits">
+        <li>IRA retirement account matching of 5%.</li>
+        <li>30 required days of vacation for full-time staff.</li>
+        <li>Company retreats.</li>
+        <li>Medical, dental and vision insurance premiums are 100% covered.</li>
+      </ul>
+
+      <h2 class="h3" id="apply">Apply for Position</h2>
+
+      <form class="grid form" name="apply" action="/success/" netlify aria-labelledby="apply">
+
+        <label for="name">
+          <span class="visually-hide">
+            Your Name
+          </span>
+          <input type="text" id="name" name="name" placeholder="Name" required aria-required="true" />
+        </label>
+
+        <label for="email">
+          <span class="visually-hide">
+            Your Email
+          </span>
+          <input type="email" id="email" name="email" placeholder="Email" required aria-required="true" />
+        </label>
+
+        <label class="form__resume custom-file-input" for="resume">
+
+          <span>Upload Resume</span>
+
+          <input name="resume" id="resume" type="file" accept=".pdf, .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+
+        </label>
+
+        <button class="button" type="submit">Submit</button>
+
+      </form>
+    </div>
 
   </div>
 </article>
