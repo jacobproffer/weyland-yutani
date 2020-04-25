@@ -49,21 +49,13 @@
 }
 
 .career {
-  span {
-    display: block;
-    margin-bottom: 7px;
-    color: var(--white);
-    text-transform: uppercase;
-  }
-
   h2 {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
-  .button {
-    display: inline-block;
-    padding: 20px 40px;
-    margin-top: 30px;
+  form {
+    max-width: unset;
+    margin: 30px 0 0;
   }
 
   &__quick-facts {
@@ -76,6 +68,13 @@
       &:not(:last-of-type) {
         border-right: var(--border);
       }
+    }
+
+    span {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--white);
+      text-transform: uppercase;
     }
   }
 

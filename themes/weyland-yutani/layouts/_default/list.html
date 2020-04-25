@@ -16,7 +16,7 @@
             <div class="list-article__content">
 
               {{ if isset .Params "images" }}
-                <img class="lazy" data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
+                <img data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
               {{ end }}
 
               <header>

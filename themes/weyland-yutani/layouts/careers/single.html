@@ -12,7 +12,7 @@
       {{ if isset .Params "salary" }}
         <li>
           <span class="letter-spacing">Salary</span>
-          {{ .Params.salary }}
+          ${{ .Params.salary }}
         </li>
       {{ end }}
 
@@ -44,7 +44,35 @@
         <li>Medical, dental and vision insurance premiums are 100% covered.</li>
       </ul>
 
-      <a class="button" href="/apply/" aria-labelledby="job-title">Apply for Position</a>
+      <h2 class="h3" id="apply">Apply for Position</h2>
+
+      <form class="grid form" name="apply" action="/success/" netlify aria-labelledby="apply">
+
+        <label for="name">
+          <span class="visually-hide">
+            Your Name
+          </span>
+          <input type="text" id="name" name="name" placeholder="Name" required aria-required="true" />
+        </label>
+
+        <label for="email">
+          <span class="visually-hide">
+            Your Email
+          </span>
+          <input type="email" id="email" name="email" placeholder="Email" required aria-required="true" />
+        </label>
+
+        <label class="form__resume custom-file-input" for="resume">
+
+          <span>Upload Resume</span>
+
+          <input name="resume" id="resume" type="file" accept=".pdf, .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+
+        </label>
+
+        <button class="button" type="submit">Submit</button>
+
+      </form>
     </div>
 
   </div>
