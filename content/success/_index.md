@@ -1,6 +1,6 @@
 ---
 title: "Success"
-description: "Post description"
+description: "Contact form submission was successfully submitted."
 date: 2020-03-14T13:14:34-04:00
 images: ["/images/weyland-yutani-social.jpg"]
 ---
