@@ -7,6 +7,7 @@ var lazyImg = document.querySelectorAll("img");
 var missionGraphic = document.querySelector(".mission__graphic");
 var technologyItem = document.querySelectorAll(".technology__grid-item");
 var careerItem = document.querySelectorAll(".careers__item");
+var listItem = document.querySelectorAll(".list-article");
 
 var headroom = new Headroom(mainHeader, {
   offset: headerHeight,
@@ -93,4 +94,16 @@ if (careerItem) {
     triggerHook: 0.8,
     duration: 0,
   }).setTween(careerTL).addTo(controller);
+}
+
+if (listItem) {
+  var listTL = gsap.timeline();
+
+  listTL.from(listItem, {duration: 1.25, opacity: 0, stagger: 0.25});
+
+  var listTrigger = new ScrollMagic.Scene({
+    triggerElement: listItem,
+    triggerHook: 0.8,
+    duration: 0,
+  }).setTween(listTL).addTo(controller);
 }
