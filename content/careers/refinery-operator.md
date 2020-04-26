@@ -1,10 +1,9 @@
 ---
 title: "Refinery Operator"
-description: "Post description"
+description: "Our refinery operators utilize specialized equipment and machines to transform raw materials into usable products."
 date: 2019-09-18T15:13:13-04:00
 salary: "70,000"
 location: "Acheron"
-start: "June 06, 2157"
 series: ["careers"]
 weight: 1
 ---
