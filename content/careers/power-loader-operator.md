@@ -1,11 +1,11 @@
 ---
-title: "Power Loader Operator"
-description: "Post description"
+title: "P-5000 Operator"
+description: "Our P-5000 operators are highly trained and are essential to the Weyland-Yutani supply chain."
 date: 2019-09-18T15:13:06-04:00
 salary: "50,000"
-location: "Acheron"
+location: "Classified"
 series: ["careers"]
 weight: 2
 ---
 
-Lorem Khaled Ipsum is a major key to success. Surround yourself with angels. The key is to enjoy life, because they don’t want you to enjoy life. I promise you, they don’t want you to jetski, they don’t want you to smile. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I’m never giving up, I’m just getting started. The weather is amazing, walk with me through the pathway of more success.
+Weyland-Yutani is seeking a P-5000 operator with a Class-2 rating. Additional training will be provided, which incldues simulated and  applied practices. Responsibilities include lifting and moving heavy equipment and ordnance for the Weyland-Yutani fleet. Once hired, the operator will be required to pass a physical fitness test twice a year.

@@ -2,16 +2,16 @@
   {
     "image": "/images/loader-small.jpg",
     "title": "Security",
-    "blurb": "The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds"
+    "blurb": "We dedicate a large amount of our resources and funding to the advancement of security for both military and private sector applications."
   },
   {
     "image": "/images/ship-small.jpg",
-    "title": "Transportation",
-    "blurb": "The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds"
+    "title": "Manufacturing",
+    "blurb": "We manufacture and service numerous fleets of starships, including ships and crafts that are utilized by the United States Colonial Marine Corps."
   },
   {
     "image": "/images/processor-small.jpg",
     "title": "Terraforming",
-    "blurb": "The Weyland-Yutani Corporation applies science, technology and an unparralleled global network of resources to the pursuit of Building Better Worlds"
+    "blurb": "While our atmospheric processing is streamlined and automated today, Weyland-Yutani still uses the same chemical model pioneered by Sir Weyland in 2015."
   }
 ]
