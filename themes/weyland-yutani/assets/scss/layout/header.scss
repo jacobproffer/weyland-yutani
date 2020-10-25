@@ -13,7 +13,7 @@
   }
 
   &.pinned {
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, .95);
     transform: translateY(-100px);
   }
 
@@ -55,7 +55,7 @@
 .open {
   @include screen-below(1024px) {
     height: auto;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, .95);
   }
 }
 

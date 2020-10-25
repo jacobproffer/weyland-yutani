@@ -80,7 +80,9 @@
     }
 
     &--operation-cta {
-      color: var(--black);
+      a {
+        color: var(--black);
+      }
     }
 
     @include screen-above(1300px) {

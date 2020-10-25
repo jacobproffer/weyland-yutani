@@ -7,37 +7,39 @@
       <h1>{{ .Title }}</h1>
     </header>
 
-    <div class="grid grid--two-column grid--list grid--one-col-mobile">
+    <ul class="unstyled-list grid grid--two-column grid--list grid--one-col-mobile">
 
       {{ range .Pages }}
-        <article class="list-article">
-          <a class="border" href="{{ .Permalink }}">
+        <li>
+          <article class="list-article">
+            <div class="border">
 
-            <div class="content">
+              <div class="content">
 
-              {{ if isset .Params "images" }}
-                <img class="lazy" data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
-              {{ end }}
+                {{ if isset .Params "images" }}
+                  <img class="lazy" data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
+                {{ end }}
 
-              <header>
-                <h2>
-                  {{ .Title }}
-                </h2>
-              </header>
+                <header>
+                  <h2>
+                    {{ .Title }}
+                  </h2>
+                </header>
 
-              {{ if isset .Params "description" }}
-                <p>{{ .Params.description }}</p>
-              {{ end }}
+                {{ if isset .Params "description" }}
+                  <p>{{ .Params.description }}</p>
+                {{ end }}
+
+              </div>
+
+              <a class="button" href="{{ .Permalink }}">View Article</a>
 
             </div>
-
-            <span class="button">View Article</span>
-
-          </a>
-        </article>
+          </article>
+        </li>
       {{ end }}
 
-    </div>
+    </ul>
 
   </div>
 </section>

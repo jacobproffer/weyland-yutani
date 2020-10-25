@@ -7,9 +7,11 @@
       <h1>{{ .Title }}</h1>
     </header>
 
-    {{ range .Pages }}
-      {{ partial "careers/item" . }}
-    {{ end }}
+    <ul class="unstyled-list">
+      {{ range .Pages }}
+        {{ partial "careers/item" . }}
+      {{ end }}
+    </ul>
 
   </div>
 </section>
