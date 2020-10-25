@@ -6,20 +6,22 @@
       <span class="hero__subheading h3 letter-spacing">Building Better Worlds</span>
     </header>
 
-    <div class="grid grid--hero grid--one-col-mobile">
-      <div class="hero__grid-item hero__grid-item--span2 letter-spacing">
+    <ul class="unstyled-list grid grid--hero grid--one-col-mobile">
+      <li class="hero__grid-item hero__grid-item--span2 letter-spacing">
         Current Operation: <span>{{ .Site.Params.currentOperation }}</span>
-      </div>
-      <div class="hero__grid-item hero__grid-item--operation-founded letter-spacing">
+      </li>
+      <li class="hero__grid-item hero__grid-item--operation-founded letter-spacing">
         Founded: <span>{{ .Site.Params.founded }}</span>
-      </div>
-      <div class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
+      </li>
+      <li class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
         Colonists: <span>{{ .Site.Params.colonists }}</span>
-      </div>
-      <a class="button hero__grid-item hero__grid-item--operation-cta" href="/apply/" aria-label="Apply to work for Weyland-Yutani">
-        Apply Today
-      </a>
-    </div>
+      </li>
+      <li class="button hero__grid-item hero__grid-item--operation-cta">
+        <a href="/apply/" aria-label="Apply to work for Weyland-Yutani">
+          Apply Today
+        </a>
+      </li>
+    </ul>
 
   </div>
   <div class="hero__background"></div>

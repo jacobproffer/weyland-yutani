@@ -35,6 +35,12 @@ hamburger.addEventListener("click", function() {
   mainNav.classList.toggle("nav-open");
   this.classList.toggle("nav-open");
   mainHeader.classList.toggle("open");
+
+  if (mainNav.classList.contains("nav-open")) {
+    this.setAttribute('aria-expanded', 'true');
+  } else {
+    this.setAttribute('aria-expanded', 'false');
+  }
 });
 
 var controller = new ScrollMagic.Controller();

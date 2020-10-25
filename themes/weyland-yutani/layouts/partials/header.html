@@ -13,11 +13,11 @@
       <span class="visually-hide">{{ .Site.Title }}</span>
     </a>
 
-    <button class="main-header__button hamburger">
+    <button class="main-header__button hamburger" aria-expanded="false" aria-controls="menu">
       Menu
     </button>
 
-    <nav class="main-nav" aria-label="primary">
+    <nav class="main-nav" id="menu" aria-label="primary">
       <ul class="unstyled-list">
         {{ if .Site.Menus.main }}
           {{ partial "navigation/main-navigation" . }}
