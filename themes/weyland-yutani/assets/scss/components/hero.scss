@@ -42,7 +42,6 @@
   }
 
   &__grid-item {
-    padding: 43px 30px;
     order: 0;
     color: var(--white);
     text-align: center;
@@ -50,10 +49,6 @@
     border-left: var(--border);
     border-bottom: var(--border);
     text-transform: uppercase;
-
-    span {
-      color: var(--gray);
-    }
 
     &--span2 {
       @include font-size($h4-font-sizes);
@@ -81,12 +76,9 @@
 
     &--operation-cta {
       a {
+        display: block;
         color: var(--black);
       }
-    }
-
-    @include screen-above(1300px) {
-      padding: 43px 58px;
     }
   }
 }

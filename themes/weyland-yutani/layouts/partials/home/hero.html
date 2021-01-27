@@ -7,17 +7,17 @@
     </header>
 
     <ul class="unstyled-list grid grid--hero grid--one-col-mobile">
-      <li class="hero__grid-item hero__grid-item--span2 letter-spacing">
+      <li class="hero__grid-item hero__grid-item--span2 letter-spacing hero-padding">
         Current Operation: <span>{{ .Site.Params.currentOperation }}</span>
       </li>
-      <li class="hero__grid-item hero__grid-item--operation-founded letter-spacing">
+      <li class="hero__grid-item hero__grid-item--operation-founded letter-spacing hero-padding">
         Founded: <span>{{ .Site.Params.founded }}</span>
       </li>
-      <li class="hero__grid-item hero__grid-item--operation-colonist letter-spacing">
+      <li class="hero__grid-item hero__grid-item--operation-colonist letter-spacing hero-padding">
         Colonists: <span>{{ .Site.Params.colonists }}</span>
       </li>
       <li class="button hero__grid-item hero__grid-item--operation-cta">
-        <a href="/apply/" aria-label="Apply to work for Weyland-Yutani">
+        <a class="hero-padding" href="/apply/" aria-label="Apply to work for Weyland-Yutani">
           Apply Today
         </a>
       </li>
