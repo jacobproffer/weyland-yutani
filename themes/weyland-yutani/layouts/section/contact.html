@@ -1,21 +1,13 @@
 {{ define "main" }}
 
-<section class="spacing">
+<section class="spacing center">
   <div class="container">
 
     <header class="internal-header center">
       <h1>{{ .Title }}</h1>
     </header>
 
-    <form class="grid form" name="contact" action="/success/" netlify>
-      <label class="visually-hide" for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Name" required aria-required="true" />
-      <label class="visually-hide" for="email">Your Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Email" required aria-required="true" />
-      <label class="visually-hide form__message" for="message">Your Message</label>
-      <textarea class="form__message" name="message" id="message" cols="30" rows="10" placeholder="Your message..." required aria-required="true"></textarea>
-      <button class="button" type="submit">Submit</button>
-    </form>
+    <p>At this time, we are not accepting contact submissions.</p>
 
   </div>
 </section>
