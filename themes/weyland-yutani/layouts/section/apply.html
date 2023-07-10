@@ -3,11 +3,64 @@
 <section class="spacing center">
   <div class="container">
 
-    <header class="internal-header">
+    <div class="internal-header">
       <h1>{{ .Title }}</h1>
-    </header>
+    </div>
 
-    <p>At this time, we are not accepting applications.</p>
+    <form
+      class="grid form"
+      name="apply"
+      action="/success/"
+      netlify
+      netlify-honeypot="bot-field"
+    >
+
+      <label for="name">
+        <span class="visually-hide">
+          Your Name
+        </span>
+        <input type="text" id="name" name="name" placeholder="Name" required aria-required="true" />
+      </label>
+
+      <label for="email">
+        <span class="visually-hide">
+          Your Email
+        </span>
+        <input type="email" id="email" name="email" placeholder="Email" required aria-required="true" />
+      </label>
+
+      <div class="form__select">
+        <label class="visually-hide" for="job-select">Choose a career:</label>
+
+        <i></i>
+
+        <select name="jobs" id="job-select" required aria-required="true">
+
+          <option value="">Select Career</option>
+
+          {{ range .Site.Taxonomies.series.careers }}
+            <option value="{{ lower .Title }}">{{ .Title }}</option>
+          {{ end }}
+
+        </select>
+      </div>
+
+      <label class="form__resume custom-file-input" for="resume">
+
+        <span>Upload Resume</span>
+
+        <input name="resume" id="resume" type="file" accept=".pdf, .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+
+      </label>
+
+      <label class="visually-hide" for="bot-field">
+        Are you a pesky robot?
+        <input type="text" id="bot-field" />
+      </label>
+
+      <button class="form__button button" type="submit">Submit</button>
+
+    </form>
 
   </div>
 </section>

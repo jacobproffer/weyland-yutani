@@ -6,29 +6,39 @@
         <ul class="unstyled-list">
 
           {{ range .Site.Menus.required }}
+
             <li>
+
               <a href="{{ .URL }}">
                 {{ .Name }}
               </a>
+
             </li>
+
           {{ end }}
 
         </ul>
       </nav>
 
       <div class="footer__logo logo logo--footer">
+
         {{ partial "svg/logo.html" }}
+
       </div>
 
       <nav aria-label="site-information">
         <ul class="unstyled-list">
 
           {{ range .Site.Menus.info }}
+
             <li>
+
               <a href="{{ .URL }}">
                 {{ .Name }}
               </a>
+
             </li>
+
           {{ end }}
 
         </ul>

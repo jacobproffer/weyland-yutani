@@ -8,12 +8,27 @@
   background-size: cover;
 }
 
-@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin position($top: null, $right: null, $bottom: null, $left: null) {
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $left != null {
+    left: $left;
+  }
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  @include position($top, $right, $bottom, $left);
   position: absolute;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
 }
 
 @mixin screen-above($screen-size) {

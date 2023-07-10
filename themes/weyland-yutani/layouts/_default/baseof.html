@@ -3,11 +3,15 @@
   {{ partial "head.html" . }}
 
   <body class="animated fade-in">
+
     {{ partial "header.html" . }}
+
     <main id="content">
-    {{ block "main" . }}{{ end }}
+      {{ block "main" . }}{{ end }}
     </main>
+
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
+
   </body>
 </html>

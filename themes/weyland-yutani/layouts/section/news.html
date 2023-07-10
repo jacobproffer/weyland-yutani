@@ -3,40 +3,20 @@
 <section class="list spacing">
   <div class="container">
 
-    <header class="internal-header center">
+    <div class="internal-header center">
       <h1>{{ .Title }}</h1>
-    </header>
+    </div>
 
     <ul class="unstyled-list grid grid--two-column grid--list grid--one-col-mobile">
 
       {{ range .Pages }}
+
         <li>
-          <article class="list-article">
-            <div class="border">
 
-              <div class="content">
+          {{ .Render "article" }}
 
-                {{ if isset .Params "images" }}
-                  <img class="lazy" data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
-                {{ end }}
-
-                <header>
-                  <h2>
-                    {{ .Title }}
-                  </h2>
-                </header>
-
-                {{ if isset .Params "description" }}
-                  <p>{{ .Params.description }}</p>
-                {{ end }}
-
-              </div>
-
-              <a class="button" href="{{ .Permalink }}">View Article</a>
-
-            </div>
-          </article>
         </li>
+
       {{ end }}
 
     </ul>

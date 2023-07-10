@@ -77,11 +77,10 @@
 }
 
 .visually-hide {
+  @include size(1px);
   position: absolute;
-  top: 0;
-  left: -9999px;
-  clip: rec(0, 0, 0, 0);
-  pointer-events: none;
+  clip-path: inset(50%);
+  overflow: hidden;
 }
 
 .unstyled-list {
@@ -133,4 +132,8 @@
 
 .content {
   padding: 42px 30px;
+}
+
+.absolute-link {
+  @include absolute(0, 0, 0, 0);
 }

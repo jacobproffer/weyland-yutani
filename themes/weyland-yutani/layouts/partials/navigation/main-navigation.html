@@ -1,6 +1,7 @@
 {{ $currentPage := . }}
 
 {{ range .Site.Menus.main }}
+
   <li class="inline-link">
     <a
     {{ if $currentPage.IsMenuCurrent "main" . }}
@@ -13,4 +14,5 @@
       {{ .Name }}
     </a>
   </li>
+
 {{ end }}

@@ -3,42 +3,65 @@
 <article class="career spacing">
   <div class="container">
 
-    <header class="internal-header center">
-      <h1 id="job-title">{{ .Title }}</h1>
-    </header>
+    <div class="internal-header center">
+
+      <h1 id="job-title">
+        {{ .Title }}
+      </h1>
+
+      <time
+        class="visually-hide"
+        datetime="{{ .PublishDate.Format "2006-01-02" }}"
+      >
+        {{ .PublishDate.Format "January 2, 2006" }}
+      </time>
+
+    </div>
 
     <div class="career__content">
 
       <ul class="career__quick-facts unstyled-list grid grid--two-column border">
 
         {{ if isset .Params "salary" }}
+
           <li>
             <span class="letter-spacing">Salary</span>
             ${{ .Params.salary }}
           </li>
+
         {{ end }}
 
         {{ if isset .Params "location" }}
+
           <li>
             <span class="letter-spacing">Location</span>
             {{ .Params.location }}
           </li>
+
         {{ end }}
 
       </ul>
 
       {{ .Content }}
 
-      <h2 class="h3" id="benefits">List of Benefits</h2>
+      <h2 class="h3" id="benefits">
+        List of Benefits
+      </h2>
 
-      <ul class="grid career__benefits" aria-labelledby="benefits">
+      <ul
+        class="grid career__benefits"
+        aria-labelledby="benefits"
+      >
         <li>IRA retirement account matching of 5%.</li>
         <li>30 required days of vacation for full-time staff.</li>
         <li>Company retreats.</li>
         <li>Medical, dental and vision insurance premiums are 100% covered.</li>
       </ul>
 
-      <a class="button" href="/apply/">Apply for Position</a>
+      <a class="button" href="/apply/">
+        Apply for Position
+      </a>
+
     </div>
 
   </div>
