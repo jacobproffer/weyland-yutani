@@ -6,18 +6,37 @@
   --transparent: rgba(255, 255, 255, .5);
   --border: 1px solid rgba(255, 255, 255, .1);
   --border-color: rgba(255, 255, 255, .1);
+
+  // Font Weights
+  --weight-normal: 300;
+  --weight-bold: 700;
+
+  // Spacing Sizes
+  --spacing-0: #{create-fluid-value(8px, 10px)};
+  --spacing-1: #{create-fluid-value(16px, 20px)};
+  --spacing-2: #{create-fluid-value(24px, 30px)};
+  --spacing-3: #{create-fluid-value(32px, 40px)};
+  --spacing-4: #{create-fluid-value(40px, 50px)};
+  --spacing-5: #{create-fluid-value(48px, 60px)};
+  --spacing-6: #{create-fluid-value(64px, 80px)};
+  --spacing-7: #{create-fluid-value(80px, 100px)};
+  --spacing-8: #{create-fluid-value(144px, 180px)};
+  --spacing-9: #{create-fluid-value(160px, 200px)};
+  --spacing-0-1: #{create-fluid-value(8px, 20px)};
+  --spacing-1-2: #{create-fluid-value(16px, 30px)};
+  --spacing-2-3: #{create-fluid-value(24px, 40px)};
+  --spacing-3-4: #{create-fluid-value(32px, 50px)};
+  --spacing-4-5: #{create-fluid-value(40px, 60px)};
+  --spacing-5-6: #{create-fluid-value(48px, 80px)};
+  --spacing-6-7: #{create-fluid-value(64px, 100px)};
+  --spacing-7-8: #{create-fluid-value(80px, 180px)};
+  --spacing-8-9: #{create-fluid-value(144px, 200px)};
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-* {
-  &:focus {
-    outline: 2px dotted var(--gray);
-  }
 }
 
 ::selection {
@@ -30,12 +49,17 @@ svg {
 	max-width: 100%;
 }
 
+img {
+  display: block;
+}
+
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
   margin: 0;
   color: var(--gray);
   background-color: var(--black);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  font-weight: var(--weight-normal);
 }
 
 a {
@@ -44,7 +68,32 @@ a {
   text-decoration: none;
   transition: color 300ms ease-in-out;
 
-  &:hover {
+  @include hover {
     color: var(--transparent);
+  }
+}
+
+a,
+button {
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 2px dotted var(--gray);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
   }
 }

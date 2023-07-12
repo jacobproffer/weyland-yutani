@@ -1,6 +1,6 @@
 .main-header {
   @include size(100%, 100px);
-  padding: 33px 0;
+  padding: var(--spacing-2) 0;
   position: fixed;
   background: transparent;
   overflow-y: visible;
@@ -21,7 +21,7 @@
     position: fixed;
     top: -5em;
     left: 50%;
-    padding: 16px 24px;
+    padding: 16px var(--spacing-1);
     transform: translateX(-50%);
     transition: top 300ms ease-in-out;
 
@@ -35,7 +35,7 @@
     padding: 0;
     color: var(--white);
     background: none;
-    font-size: 1rem;
+    font-size: rem(16);
     border: 0;
     outline: none;
     cursor: pointer;
@@ -120,7 +120,7 @@
     position: relative;
     padding: 10px 0 38px;
     margin: 0 32px 0 0;
-    font-size: .875em;
+    font-size: rem(14);
 
     &:hover {
       &::before {
@@ -143,7 +143,7 @@
       content: '';
     }
 
-    &.active {
+    &[aria-current="page"] {
       color: rgba(255, 255, 255, .5);
 
       &::before {

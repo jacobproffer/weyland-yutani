@@ -1,0 +1,31 @@
+<article class="list-article">
+  <div class="border">
+
+    <div class="content">
+
+      {{ if isset .Params "images" }}
+
+        <img
+          class="lazy"
+          data-src="{{ index (.Params.images) 0 }}"
+          alt="{{ .Params.thumbnailAlt }}"
+        />
+
+      {{ end }}
+
+      <div>
+        <h2>{{ .Title }}</h2>
+      </div>
+
+      {{ if isset .Params "description" }}
+        <p>{{ .Params.description }}</p>
+      {{ end }}
+
+    </div>
+
+    <a class="button" href="{{ .Permalink }}">
+      View Article
+    </a>
+
+  </div>
+</article>

@@ -4,3 +4,10 @@ $desktop-sm: 1440px;
 $laptop-sm: 1280px;
 $tablet: 1024px;
 $portrait: 768px;
+
+// Baseline Font Size
+$html-font-size: 16px !default;
+
+// The createFluidValue function defaults to these values for the min/max screen sizes
+$fluid-min-screen: 768px;
+$fluid-max-screen: 1440px;

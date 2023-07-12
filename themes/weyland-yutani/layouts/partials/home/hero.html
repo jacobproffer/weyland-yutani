@@ -1,19 +1,19 @@
 <section class="hero">
   <div class="container">
 
-    <header>
+    <div>
       <h1>{{ .Site.Title }}</h1>
-      <span class="hero__subheading h3 letter-spacing">Building Better Worlds</span>
-    </header>
+      <h2 class="hero__subheading h3 letter-spacing">Building Better Worlds</h2>
+    </div>
 
     <ul class="unstyled-list grid grid--hero grid--one-col-mobile">
-      <li class="hero__grid-item hero__grid-item--span2 letter-spacing hero-padding">
+      <li class="hero__grid-item hero__grid-item--span2 h4 letter-spacing hero-padding">
         Current Operation: <span>{{ .Site.Params.currentOperation }}</span>
       </li>
-      <li class="hero__grid-item hero__grid-item--operation-founded letter-spacing hero-padding">
+      <li class="hero__grid-item hero__grid-item--operation-founded h5 letter-spacing hero-padding">
         Founded: <span>{{ .Site.Params.founded }}</span>
       </li>
-      <li class="hero__grid-item hero__grid-item--operation-colonist letter-spacing hero-padding">
+      <li class="hero__grid-item hero__grid-item--operation-colonist h5 letter-spacing hero-padding">
         Colonists: <span>{{ .Site.Params.colonists }}</span>
       </li>
       <li class="button hero__grid-item hero__grid-item--operation-cta">

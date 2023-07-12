@@ -1,0 +1,48 @@
+<div class="list-article">
+
+  <div class="list-article__content">
+
+    {{ if isset .Params "images" }}
+
+      <img
+        data-src="{{ index (.Params.images) 0 }}"
+        alt="{{ .Params.thumbnailAlt }}"
+      />
+
+    {{ end }}
+
+    <h2>{{ .Title }}</h2>
+
+    <time
+      class="visually-hide"
+      datetime="{{ .PublishDate.Format "2006-01-02" }}"
+    >
+      {{ .PublishDate.Format "January 2, 2006" }}
+    </time>
+
+    {{ if isset .Params "description" }}
+
+      <p>{{ .Params.description }}</p>
+
+    {{ end }}
+
+  </div>
+
+  {{ if .IsPage }}
+
+    <span class="button">View Article</span>
+
+  {{ else }}
+
+    <span class="button">View {{ .Title }}</span>
+
+  {{ end }}
+
+  <a
+    class="absolute-link"
+    href="{{ .Permalink }}"
+    aria-label="View {{ .Title }}"
+  >
+  </a>
+
+</div>

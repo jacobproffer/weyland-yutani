@@ -1,5 +1,4 @@
 .button {
-  @include font-size($h4-font-sizes);
   max-width: 100%;
   margin: 0 -.15em 0 0;
   display: block;
@@ -14,12 +13,12 @@
   cursor: pointer;
   transition: background-color 300ms ease-in-out;
 
-  &:hover {
-    color: var(--black);
-    background-color: var(--gray);
-  }
-
   &:active {
     background-color: var(--black);
+  }
+
+  @include hover {
+    color: var(--black);
+    background-color: var(--gray);
   }
 }

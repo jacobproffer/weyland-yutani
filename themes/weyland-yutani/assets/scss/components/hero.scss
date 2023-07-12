@@ -4,34 +4,15 @@
   text-align: center;
 
   h1 {
-    padding-top: 270px;
-
-    @include screen-below($desktop-sm) {
-      padding-top: 203px;
-    }
-
-    @include screen-below($tablet) {
-      padding-top: 135px;
-    }
+    padding-top: #{create-fluid-value(135px, 270px)};
   }
 
   &__subheading {
     display: block;
-    padding-bottom: 220px;
+    padding-bottom: #{create-fluid-value(55px, 220px)};
     color: var(--gray);
+    font-weight: var(--weight-normal);
     text-transform: uppercase;
-
-    @include screen-below($desktop-sm) {
-      padding-bottom: 165px;
-    }
-
-    @include screen-below($tablet) {
-      padding-bottom: 110px;
-    }
-
-    @include screen-below($portrait) {
-      padding-bottom: 55px;
-    }
   }
 
   &__background {
@@ -51,24 +32,18 @@
     text-transform: uppercase;
 
     &--span2 {
-      @include font-size($h4-font-sizes);
-
       @include screen-below($tablet) {
         border-right: var(--border);
       }
     }
 
     &--operation-founded {
-      @include font-size($h5-font-sizes);
-
       @include screen-below($laptop-sm) {
         display: none;
       }
     }
 
     &--operation-colonist {
-      @include font-size($h5-font-sizes);
-
       @include screen-below($desktop-sm) {
         display: none;
       }

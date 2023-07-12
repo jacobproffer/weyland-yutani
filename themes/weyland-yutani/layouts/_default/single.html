@@ -4,12 +4,18 @@
   <div class="container container--page">
     <article class="page__content">
 
-      <header class="internal-header center">
+      <div class="internal-header center">
+
         <h1>{{ .Title }}</h1>
-        <time class="letter-spacing">
+
+        <time
+          class="letter-spacing"
+          datetime="{{ .PublishDate.Format "2006-01-02" }}"
+        >
           {{ .PublishDate.Format "January 2, 2006" }}
         </time>
-      </header>
+
+      </div>
 
       {{ .Content }}
 

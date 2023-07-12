@@ -2,12 +2,16 @@
   letter-spacing: .15rem;
 }
 
-.spacing {
-  padding: 186px 0 108px;
+.relative {
+  position: relative;
+}
 
-  @include screen-below($tablet) {
-    padding: 135px 0 72px;
-  }
+.z-1 {
+  z-index: 1;
+}
+
+.spacing {
+  padding: #{create-fluid-value(135px, 186px)} 0 #{create-fluid-value(72px, 108px)};
 }
 
 .hero-padding {
@@ -19,14 +23,10 @@
 }
 
 .internal-header {
-  margin-bottom: 80px;
+  margin-bottom: var(--spacing-5-6);
 
   time {
     display: block;
-  }
-
-  @include screen-below($tablet) {
-    margin-bottom: 40px;
   }
 }
 
@@ -77,11 +77,10 @@
 }
 
 .visually-hide {
+  @include size(1px);
   position: absolute;
-  top: 0;
-  left: -9999px;
-  clip: rec(0, 0, 0, 0);
-  pointer-events: none;
+  clip-path: inset(50%);
+  overflow: hidden;
 }
 
 .unstyled-list {
@@ -100,7 +99,7 @@
   span {
     @include absolute(0, 0, 0, 0);
     z-index: 5;
-    padding: 20px 25px;
+    padding: var(--spacing-1) 25px;
     color: var(--white);
     background-color: var(--black);
     border: var(--border);
@@ -110,7 +109,7 @@
       z-index: 6;
       height: 100%;
       display: block;
-      padding: 20px;
+      padding: var(--spacing-1);
       color: var(--black);
       background-color: var(--yellow);
       text-transform: uppercase;
@@ -119,7 +118,7 @@
       content: "Browse";
     }
 
-    &:hover {
+    @include hover {
       &::before {
         background-color: var(--gray);
       }
@@ -132,5 +131,9 @@
 }
 
 .content {
-  padding: 42px 30px;
+  padding: var(--spacing-4) var(--spacing-2);
+}
+
+.absolute-link {
+  @include absolute(0, 0, 0, 0);
 }

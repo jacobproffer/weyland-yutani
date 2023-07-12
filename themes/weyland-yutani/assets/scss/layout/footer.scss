@@ -1,5 +1,5 @@
 .footer {
-  padding-bottom: 108px;
+  padding-bottom: var(--spacing-6-7);
 
   nav {
     &:first-of-type {
@@ -27,7 +27,7 @@
     @include screen-above(1024px) {
       display: inline-grid;
       grid-auto-flow: column;
-      grid-gap: 25px;
+      gap: var(--spacing-2);
     }
   }
 
@@ -42,7 +42,7 @@
   }
 
   a {
-    font-size: .875rem;
+    font-size: rem(14);
     text-transform: uppercase;
   }
 
@@ -57,9 +57,5 @@
       order: 1;
       margin: auto;
     }
-  }
-
-  @include screen-below(1024px) {
-    padding-bottom: 72px;
   }
 }
