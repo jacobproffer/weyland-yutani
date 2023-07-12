@@ -13,12 +13,12 @@
   cursor: pointer;
   transition: background-color 300ms ease-in-out;
 
-  &:hover {
-    color: var(--black);
-    background-color: var(--gray);
-  }
-
   &:active {
     background-color: var(--black);
+  }
+
+  @include hover {
+    color: var(--black);
+    background-color: var(--gray);
   }
 }

@@ -1,14 +1,12 @@
 .pagination {
   position: relative;
-  margin-top: 98px;
+  margin-top: var(--spacing-7);
   border-top: var(--border);
   border-bottom: var(--border);
 
   &::before {
+    @include absolute(0, null, null, 50%);
     @include size(1px, 100%);
-    position: absolute;
-    top: 0;
-    left: 50%;
     z-index: 2;
     background-color: var(--black);
     transform: translateX(-50%);
@@ -16,12 +14,12 @@
   }
 
   @include screen-below($tablet) {
-    margin-top: 74px;
+    margin-top: var(--spacing-6);
   }
 }
 
 .pagination-item {
-  padding: 45px 0;
+  padding: var(--spacing-3-4) 0;
   text-transform: uppercase;
 
   &--next {

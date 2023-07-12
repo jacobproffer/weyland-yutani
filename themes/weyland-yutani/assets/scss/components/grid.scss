@@ -3,14 +3,14 @@
 
   &--careers {
     grid-template-columns: 4fr 1fr;
-    grid-row-gap: 25px;
+    row-gap: 25px;
 
     @include screen-below($tablet) {
       grid-template-columns: 2fr 1fr;
     }
 
     @include screen-below($portrait) {
-      grid-row-gap: 0;
+      row-gap: 0;
     }
   }
 
@@ -39,30 +39,26 @@
   }
 
   &--mission {
-    grid-gap: 35px;
+    gap: 35px;
     grid-template-columns: 1fr;
 
     @include screen-above($tablet) {
-      grid-gap: 50px;
+      gap: 50px;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @include screen-between($laptop-sm, $desktop-sm) {
-      grid-gap: 75px;
+      gap: 75px;
     }
 
     @include screen-above($desktop-sm) {
-      grid-gap: 100px;
+      gap: 100px;
     }
   }
 
   &--technology {
-    grid-gap: 95px;
     grid-template-columns: repeat(3, 1fr);
-
-    @include screen-between($laptop-sm, $desktop-sm) {
-      grid-gap: 71px;
-    }
+    gap: var(--spacing-6);
   }
 
   &--two-column {
@@ -74,16 +70,12 @@
   }
 
   &--list {
-    grid-gap: 40px;
-
-    @include screen-below($tablet) {
-      grid-gap: 20px;
-    }
+    gap: var(--spacing-2-3);
   }
 
   &--footer {
     grid-template-columns: 1fr 98px 1fr;
-    grid-gap: 20px;
+    gap: var(--spacing-1);
 
     @include screen-below($laptop-sm) {
       grid-template-columns: repeat(2, 1fr);

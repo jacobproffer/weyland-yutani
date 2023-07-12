@@ -1,36 +1,20 @@
 .technology {
-  padding: 0 0 124px;
+  padding: 0 0 var(--spacing-6-7);
 
   h2 {
-    margin-bottom: 120px;
-
-    @include screen-below($desktop-sm) {
-      margin-bottom: 90px;
-    }
+    margin-bottom: var(--spacing-7);
   }
 
   &__grid {
-    margin-top: 68px;
-
-    @include screen-between($laptop-sm, $desktop-sm) {
-      margin-top: 50px;
-    }
+    margin-top: var(--spacing-4-5);
   }
 
   &__grid-item {
     span {
       display: block;
-      margin-top: 128px;
+      margin-top: var(--spacing-6-7);
       color: var(--white);
       text-transform: uppercase;
-
-      @include screen-below($desktop-sm) {
-        margin-top: 96px;
-      }
-
-      @include screen-below($laptop-sm) {
-        margin-top: 64px;
-      }
     }
 
     p {
@@ -50,10 +34,8 @@
     margin: auto;
 
     &::before {
+      @include absolute(50%, null, null, 50%);
       @include size(350px);
-      position: absolute;
-      top: 50%;
-      left: 50%;
       border: var(--border);
       border-radius: 50%;
       transform: translate(-50%, -50%);
@@ -71,13 +53,5 @@
     @include screen-below($laptop-sm) {
       @include size(206px);
     }
-  }
-
-  @include screen-below($desktop-sm) {
-    padding: 0 0 94px;
-  }
-
-  @include screen-below($tablet) {
-    padding: 0 0 62px;
   }
 }

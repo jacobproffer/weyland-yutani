@@ -1,25 +1,16 @@
 .mission {
-  padding: 129px 0 238px;
-
-  .container {
-    position: relative;
-    z-index: 1;
-  }
+  padding: #{create-fluid-value(65px, 130px)} 0 #{create-fluid-value(90px, 238px)};
 
   &__graphic {
+    @include absolute(50%, null, null, 50%);
     @include size(362px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
 
     &::before,
     &::after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include absolute(50%, null, null, 50%);
       border: var(--border);
       border-radius: 50%;
       transform: translate(-50%, -50%);
@@ -91,13 +82,5 @@
         text-align: left;
       }
     }
-  }
-
-  @include screen-below($laptop-sm) {
-    padding: 97px 0 179px;
-  }
-
-  @include screen-below($tablet) {
-    padding: 65px 0 90px;
   }
 }

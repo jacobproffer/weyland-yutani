@@ -10,6 +10,27 @@
   // Font Weights
   --weight-normal: 300;
   --weight-bold: 700;
+
+  // Spacing Sizes
+  --spacing-0: #{create-fluid-value(8px, 10px)};
+  --spacing-1: #{create-fluid-value(16px, 20px)};
+  --spacing-2: #{create-fluid-value(24px, 30px)};
+  --spacing-3: #{create-fluid-value(32px, 40px)};
+  --spacing-4: #{create-fluid-value(40px, 50px)};
+  --spacing-5: #{create-fluid-value(48px, 60px)};
+  --spacing-6: #{create-fluid-value(64px, 80px)};
+  --spacing-7: #{create-fluid-value(80px, 100px)};
+  --spacing-8: #{create-fluid-value(144px, 180px)};
+  --spacing-9: #{create-fluid-value(160px, 200px)};
+  --spacing-0-1: #{create-fluid-value(8px, 20px)};
+  --spacing-1-2: #{create-fluid-value(16px, 30px)};
+  --spacing-2-3: #{create-fluid-value(24px, 40px)};
+  --spacing-3-4: #{create-fluid-value(32px, 50px)};
+  --spacing-4-5: #{create-fluid-value(40px, 60px)};
+  --spacing-5-6: #{create-fluid-value(48px, 80px)};
+  --spacing-6-7: #{create-fluid-value(64px, 100px)};
+  --spacing-7-8: #{create-fluid-value(80px, 180px)};
+  --spacing-8-9: #{create-fluid-value(144px, 200px)};
 }
 
 *,

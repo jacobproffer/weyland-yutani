@@ -1,6 +1,6 @@
 .list-article {
   a {
     display: block;
-    padding: 42px 30px;
+    padding: var(--spacing-3) var(--spacing-2);
   }
 }
