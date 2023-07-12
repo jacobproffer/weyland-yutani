@@ -34,8 +34,8 @@
 
   span {
     display: block;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: rem(16);
+    font-weight: var(--weight-normal);
     line-height: 2;
     color: var(--gray);
   }

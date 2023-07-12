@@ -19,6 +19,7 @@
     display: block;
     padding-bottom: 220px;
     color: var(--gray);
+    font-weight: var(--weight-normal);
     text-transform: uppercase;
 
     @include screen-below($desktop-sm) {
@@ -51,24 +52,18 @@
     text-transform: uppercase;
 
     &--span2 {
-      @include font-size($h4-font-sizes);
-
       @include screen-below($tablet) {
         border-right: var(--border);
       }
     }
 
     &--operation-founded {
-      @include font-size($h5-font-sizes);
-
       @include screen-below($laptop-sm) {
         display: none;
       }
     }
 
     &--operation-colonist {
-      @include font-size($h5-font-sizes);
-
       @include screen-below($desktop-sm) {
         display: none;
       }

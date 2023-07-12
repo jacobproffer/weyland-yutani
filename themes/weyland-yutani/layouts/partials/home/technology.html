@@ -8,6 +8,7 @@
     <ul class="unstyled-list grid grid--technology grid--one-col-mobile technology__grid">
 
       {{ range $.Site.Data.technologies }}
+
         <li class="technology__grid-item center">
           <div class="technology__image">
             <img data-src="{{ .image }}" alt="">
@@ -15,6 +16,7 @@
           <span class="h4">{{ .title }}</span>
           <p>{{ .blurb }}</p>
         </li>
+
       {{ end }}
 
     </ul>

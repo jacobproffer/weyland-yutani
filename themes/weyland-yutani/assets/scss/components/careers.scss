@@ -19,7 +19,7 @@
   }
 
   &__job-title {
-    font-weight: 700;
+    font-weight: var(--weight-bold);
     color: var(--white);
     display: block;
     line-height: 1;
@@ -76,7 +76,7 @@
       display: block;
       margin-bottom: 7px;
       color: var(--white);
-      font-weight: bold;
+      font-weight: var(--weight-bold);
       text-transform: uppercase;
     }
   }

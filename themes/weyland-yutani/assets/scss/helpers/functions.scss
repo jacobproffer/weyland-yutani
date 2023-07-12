@@ -1,0 +1,31 @@
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($px-value) {
+  @return #{strip-unit($px-value) / strip-unit($html-font-size)}rem;
+}
+
+@function get-calc($min-size, $max-size, $min-screen-size, $max-screen-size) {
+  $y1: strip-unit($min-size);
+  $y2: strip-unit($max-size);
+  $x1: strip-unit($min-screen-size);
+  $x2: strip-unit($max-screen-size);
+  $vw: "#{(100 * ($y2 - $y1)) / ($x2 - $x1)}vw";
+  $rem: rem((($x1 * $y2) - ($x2 * $y1)) / ($x1 - $x2));
+
+  @return "#{$vw} + #{$rem}";
+}
+
+@function create-fluid-value(
+  $min-size,
+  $max-size,
+  $min-screen-size: $fluid-min-screen,
+  $max-screen-size: $fluid-max-screen
+) {
+  $min: rem($min-size);
+  $max: rem($max-size);
+  $calc: get-calc($min-size, $max-size, $min-screen-size, $max-screen-size);
+
+  @return clamp(#{$min}, #{$calc}, #{$max});
+}

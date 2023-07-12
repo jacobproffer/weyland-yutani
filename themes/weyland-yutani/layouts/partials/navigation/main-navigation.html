@@ -5,7 +5,7 @@
   <li class="inline-link">
     <a
     {{ if $currentPage.IsMenuCurrent "main" . }}
-      class="active"
+      aria-current="page"
     {{ end }}
     {{ if .URL }}
       href="{{ .URL }}"

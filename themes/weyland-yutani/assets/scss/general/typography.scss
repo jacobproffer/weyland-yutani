@@ -1,16 +1,17 @@
 h1 {
-  @include font-size($h1-font-sizes);
+  font-size: #{create-fluid-value(24px, 60px)};
 }
 
 h2 {
-  @include font-size($h2-font-sizes);
+  font-size: #{create-fluid-value(24px, 48px)};
 }
 
 .h3 {
-  @include font-size($h3-font-sizes);
+  font-size: #{create-fluid-value(18px, 24px)};
 }
 
 .h4 {
+  font-size: rem(16);
   letter-spacing: .15em;
   margin: 0 -.15em 0 0;
 
@@ -20,8 +21,12 @@ h2 {
   }
 }
 
+.h5 {
+  font-size: rem(14);
+}
+
 p {
-  @include font-size($p-font-sizes);
+  font-size: rem(14);
   line-height: 2;
 
   @include screen-above(768px) {
