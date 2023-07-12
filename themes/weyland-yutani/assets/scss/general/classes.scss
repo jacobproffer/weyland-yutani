@@ -137,3 +137,14 @@
 .absolute-link {
   @include absolute(0, 0, 0, 0);
 }
+
+.pseudo-link {
+	text-decoration: none;
+
+	&::before {
+    @include absolute(0, null, null, 0);
+		@include size(100%);
+    z-index: 2;
+		content: "";
+	}
+}

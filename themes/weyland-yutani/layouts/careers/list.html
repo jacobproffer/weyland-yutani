@@ -11,7 +11,7 @@
 
       {{ range .Pages }}
 
-        {{ partial "careers/item" . }}
+        {{ .Render "career" }}
 
       {{ end }}
 

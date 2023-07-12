@@ -9,7 +9,7 @@
 
       {{ range where .Site.RegularPages ".Type" "careers" }}
 
-        {{ partial "careers/item" . }}
+        {{ .Render "career" }}
 
       {{ end }}
 
