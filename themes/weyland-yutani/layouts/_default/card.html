@@ -1,4 +1,4 @@
-<div class="list-article">
+<div class="list-article relative">
 
   <div class="list-article__content">
 
@@ -28,21 +28,14 @@
 
   </div>
 
-  {{ if .IsPage }}
+  <a class="button pseudo-link" href="{{ .Permalink }}">
 
-    <span class="button">View Article</span>
+    {{ if .IsPage }}
+      View Article
+    {{ else }}
+      View {{ .Title }}
+    {{ end }}
 
-  {{ else }}
-
-    <span class="button">View {{ .Title }}</span>
-
-  {{ end }}
-
-  <a
-    class="absolute-link"
-    href="{{ .Permalink }}"
-    aria-label="View {{ .Title }}"
-  >
   </a>
 
 </div>
