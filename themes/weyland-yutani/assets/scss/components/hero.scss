@@ -18,8 +18,16 @@
   &__background {
     @include absolute(0, 0, 0, 0);
     @include size(100%);
-    @include background-cover('/images/weyland-hero.jpg');
+    overflow: hidden;
     z-index: -1;
+  }
+
+  &__background-image {
+    @include size(100%);
+    object-fit: cover;
+    animation-name: zoom;
+    animation-duration: 80s;
+    animation-iteration-count: 1;
   }
 
   &__grid-item {

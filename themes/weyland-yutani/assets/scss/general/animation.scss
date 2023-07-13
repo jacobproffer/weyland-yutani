@@ -10,6 +10,16 @@
   }
 }
 
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
