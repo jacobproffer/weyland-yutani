@@ -23,10 +23,11 @@
   }
 
   &__background-image {
+    --animation-duration: 80s;
     @include size(100%);
     object-fit: cover;
     animation-name: zoom;
-    animation-duration: 80s;
+    animation-duration: var(--animation-duration);
     animation-iteration-count: 1;
   }
 

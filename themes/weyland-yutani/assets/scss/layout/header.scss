@@ -5,7 +5,7 @@
   background: transparent;
   overflow-y: visible;
   will-change: transform;
-  transition: transform 300ms ease-in-out;
+  transition: transform var(--animation-duration) ease-in-out;
   z-index: 9;
 
   &.unpinned {
@@ -23,7 +23,7 @@
     left: 50%;
     padding: 16px var(--spacing-1);
     transform: translateX(-50%);
-    transition: top 300ms ease-in-out;
+    transition: top var(--animation-duration) ease-in-out;
 
     &:focus {
       top: 0;
@@ -40,7 +40,7 @@
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
-    transition: color 300ms ease-in-out;
+    transition: color var(--animation-duration) ease-in-out;
 
     &:hover {
       color: var(--transparent);
@@ -64,14 +64,14 @@
     display: inline-block;
     align-self: start;
     justify-self: start;
-    transition: opacity 300ms ease-in-out;
+    transition: opacity var(--animation-duration) ease-in-out;
 
     svg {
       @include size(134px, 34px);
     }
 
     path {
-      transition: fill 300ms ease-in-out;
+      transition: fill var(--animation-duration) ease-in-out;
     }
 
     &:hover {
@@ -139,7 +139,7 @@
       bottom: -1px;
       left: 0;
       background-color: transparent;
-      transition: background-color 300ms ease-in-out;
+      transition: background-color var(--animation-duration) ease-in-out;
       content: '';
     }
 

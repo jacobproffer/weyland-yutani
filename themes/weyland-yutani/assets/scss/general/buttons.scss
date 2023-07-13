@@ -11,7 +11,7 @@
   text-align: center;
   letter-spacing: .15em;
   cursor: pointer;
-  transition: background-color 300ms ease-in-out;
+  transition: background-color var(--animation-duration) ease-in-out;
 
   &:active {
     background-color: var(--black);

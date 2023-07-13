@@ -44,14 +44,14 @@
   &--header {
     place-self: start;
     display: inline-block;
-    transition: opacity 300ms ease-in-out;
+    transition: opacity var(--animation-duration) ease-in-out;
 
     svg {
       @include size(134px, 34px);
     }
 
     path {
-      transition: fill 300ms ease-in-out;
+      transition: fill var(--animation-duration) ease-in-out;
     }
 
     &:hover {
@@ -114,7 +114,7 @@
       background-color: var(--yellow);
       text-transform: uppercase;
       letter-spacing: .15em;
-      transition: background-color 300ms ease-in-out;
+      transition: background-color var(--animation-duration) ease-in-out;
       content: "Browse";
     }
 

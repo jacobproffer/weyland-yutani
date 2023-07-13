@@ -7,6 +7,9 @@
   --border: 1px solid rgba(255, 255, 255, .1);
   --border-color: rgba(255, 255, 255, .1);
 
+  // Timing
+  --animation-duration: 300ms;
+
   // Font Weights
   --weight-normal: 300;
   --weight-bold: 700;
@@ -37,6 +40,13 @@
 *::after,
 *::before {
   box-sizing: border-box;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: .05s !important;
+    animation-iteration-count: 1;
+    transition-duration: .01ms;
+    scroll-behavior: auto;
+  }
 }
 
 ::selection {
@@ -66,7 +76,7 @@ a {
   color: var(--white);
   letter-spacing: 3px;
   text-decoration: none;
-  transition: color 300ms ease-in-out;
+  transition: color var(--animation-duration) ease-in-out;
 
   @include hover {
     color: var(--transparent);
@@ -89,7 +99,7 @@ button {
 
   &:focus,
   &:focus-visible {
-    outline: 2px dotted var(--gray);
+    outline: 2px solid var(--yellow);
     outline-offset: 2px;
   }
 
