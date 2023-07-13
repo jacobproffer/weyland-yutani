@@ -3,11 +3,6 @@
   height: $height;
 }
 
-@mixin background-cover($url) {
-  background: url($url) no-repeat center center;
-  background-size: cover;
-}
-
 @mixin position($top: null, $right: null, $bottom: null, $left: null) {
   @if $top != null {
     top: $top;

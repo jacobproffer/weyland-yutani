@@ -19,6 +19,10 @@
     -webkit-appearance: none;
     appearance: none;
 
+    &:focus {
+      outline: 1px solid var(--yellow);
+    }
+
     &::placeholder {
       color: var(--white);
       opacity: 1;
