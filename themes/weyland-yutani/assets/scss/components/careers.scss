@@ -1,27 +1,28 @@
 .careers {
-  padding-bottom: 144px;
+  padding-bottom: #{create-fluid-value(72px, 144px)};
 
-  h2 {
-    margin-bottom: 52px;
+  &__headline {
+    margin-bottom: var(--spacing-4);
   }
 
   &__item {
     text-align: left;
 
     &:not(:last-of-type) {
-      margin-bottom: 25px;
+      margin-bottom: var(--spacing-2);
     }
   }
 
   &__job-title,
   &__button {
-    padding: 43px 30px;
+    padding: var(--spacing-3) var(--spacing-2);
   }
 
   &__job-title {
     font-weight: var(--weight-bold);
     color: var(--white);
     display: block;
+    margin: 0;
     line-height: 1;
 
     @include screen-below($tablet) {
@@ -37,58 +38,5 @@
     @include screen-below(600px) {
       border: var(--border);
     }
-  }
-
-  @include screen-below($laptop-sm) {
-    padding-bottom: 108px;
-  }
-
-  @include screen-below($tablet) {
-    padding-bottom: 72px;
-  }
-}
-
-.career {
-  h2 {
-    margin-top: 40px;
-  }
-
-  .button {
-    display: inline-block;
-    padding: 20px 40px;
-    margin-top: 30px;
-  }
-
-  &__quick-facts {
-    margin-bottom: 40px;
-    list-style: none;
-
-    li {
-      padding: 20px;
-      text-align: center;
-
-      &:not(:last-of-type) {
-        border-right: var(--border);
-      }
-    }
-
-    span {
-      display: block;
-      margin-bottom: 7px;
-      color: var(--white);
-      font-weight: var(--weight-bold);
-      text-transform: uppercase;
-    }
-  }
-
-  &__content {
-    max-width: 85ch;
-    margin: auto;
-  }
-
-  &__benefits {
-    gap: 20px;
-    padding: 0;
-    list-style-position: inside;
   }
 }

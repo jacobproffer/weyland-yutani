@@ -9,12 +9,16 @@
 
       {{ range $.Site.Data.technologies }}
 
-        <li class="technology__grid-item center">
+        <li class="center">
+
           <div class="technology__image">
             <img data-src="{{ .image }}" alt="">
           </div>
-          <span class="h4">{{ .title }}</span>
-          <p>{{ .blurb }}</p>
+
+          <h3 class="technology__headline h4">{{ .title }}</h3>
+
+          <p class="technology__description">{{ .blurb }}</p>
+
         </li>
 
       {{ end }}

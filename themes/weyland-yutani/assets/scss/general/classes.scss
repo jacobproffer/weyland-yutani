@@ -15,11 +15,7 @@
 }
 
 .hero-padding {
-  padding: 43px 30px;
-
-  @include screen-above(1300px) {
-    padding: 43px 58px;
-  }
+  padding: var(--spacing-3) var(--spacing-5);
 }
 
 .internal-header {

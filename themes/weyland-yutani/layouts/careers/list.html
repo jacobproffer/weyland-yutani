@@ -11,7 +11,23 @@
 
       {{ range .Pages }}
 
-        {{ .Render "career" }}
+        <li class="careers__item relative">
+          <div class="careers__row grid grid--careers grid--one-col-mobile">
+
+            <h2 class="careers__job-title letter-spacing h3">
+              {{ .Title }}
+            </h2>
+
+            <a
+              class="button careers__button pseudo-link"
+              href="{{ .Permalink }}"
+              aria-label="Learn more about the {{ .Title }} job opening."
+            >
+              View Listing
+            </a>
+
+          </div>
+        </li>
 
       {{ end }}
 

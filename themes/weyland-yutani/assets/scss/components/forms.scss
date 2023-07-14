@@ -1,6 +1,6 @@
 .form {
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: var(--spacing-1);
   max-width: 80ch;
   margin: auto;
 
@@ -31,16 +31,16 @@
 
   input,
   textarea {
-    padding: 20px 25px;
+    padding: var(--spacing-1) 25px;
   }
 
   select {
-    padding: 20px;
+    padding: var(--spacing-1);
   }
 
   button {
     grid-column: span 1;
-    padding: 20px;
+    padding: var(--spacing-1);
   }
 
   &__resume,
