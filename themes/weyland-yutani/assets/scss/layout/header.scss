@@ -118,8 +118,8 @@
   a {
     display: block;
     position: relative;
-    padding: 10px 0 38px;
-    margin: 0 32px 0 0;
+    padding: var(--spacing-0) 0 var(--spacing-3);
+    margin: 0 var(--spacing-3) 0 0;
     font-size: rem(14);
 
     &:hover {
@@ -152,7 +152,7 @@
     }
 
     @include screen-below(1024px) {
-      padding: 32px 0;
+      padding: var(--spacing-2) 0;
       margin: 0;
     }
   }

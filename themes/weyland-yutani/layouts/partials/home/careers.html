@@ -2,14 +2,25 @@
   <div class="container">
 
     <div class="center">
-      <h2>Careers</h2>
+      <h2 class="careers__headline">Careers</h2>
     </div>
 
     <ul class="unstyled-list">
 
       {{ range where .Site.RegularPages ".Type" "careers" }}
 
-        {{ .Render "career" }}
+        <li class="careers__item relative">
+          <div class="careers__row grid grid--careers grid--one-col-mobile">
+
+            <h3 class="careers__job-title letter-spacing">
+              {{ .Title }}
+            </h3>
+
+            <a class="button careers__button pseudo-link" href="{{ .Permalink }}" aria-label="Learn more about the {{ .Title }} job opening.">
+              View Listing
+            </a>
+          </div>
+        </li>
 
       {{ end }}
 

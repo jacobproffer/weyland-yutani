@@ -9,22 +9,20 @@
     margin-top: var(--spacing-4-5);
   }
 
-  &__grid-item {
-    span {
-      display: block;
-      margin-top: var(--spacing-6-7);
-      color: var(--white);
-      text-transform: uppercase;
-    }
+  &__headline {
+    display: block;
+    margin-top: var(--spacing-6-7);
+    color: var(--white);
+    text-transform: uppercase;
+  }
 
-    p {
-      margin-bottom: 0;
+  &__description {
+    margin-bottom: 0;
 
-      @include screen-below($tablet) {
-        max-width: 505px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    @include screen-below($tablet) {
+      max-width: 505px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

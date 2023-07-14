@@ -18,12 +18,18 @@
       </div>
 
       {{ if isset .Params "description" }}
+
         <p>{{ .Params.description }}</p>
+
       {{ end }}
 
     </div>
 
-    <a class="button pseudo-link" href="{{ .Permalink }}">
+    <a
+      class="button pseudo-link"
+      href="{{ .Permalink }}"
+      aria-label="Go to {{ .Title }}"
+    >
       View Article
     </a>
 

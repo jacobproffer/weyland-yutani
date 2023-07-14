@@ -39,20 +39,11 @@
   }
 
   &--mission {
-    gap: 35px;
+    gap: #{create-fluid-value(25px, 100px)};
     grid-template-columns: 1fr;
 
     @include screen-above($tablet) {
-      gap: 50px;
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include screen-between($laptop-sm, $desktop-sm) {
-      gap: 75px;
-    }
-
-    @include screen-above($desktop-sm) {
-      gap: 100px;
     }
   }
 
