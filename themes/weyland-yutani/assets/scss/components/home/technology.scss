@@ -1,7 +1,7 @@
 .technology {
   padding: 0 0 var(--spacing-6-7);
 
-  h2 {
+  &__headline {
     margin-bottom: var(--spacing-7);
   }
 
@@ -9,10 +9,8 @@
     margin-top: var(--spacing-4-5);
   }
 
-  &__headline {
-    display: block;
+  &__subheadline {
     margin-top: var(--spacing-6-7);
-    color: var(--white);
     text-transform: uppercase;
   }
 

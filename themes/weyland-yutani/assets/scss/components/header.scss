@@ -91,8 +91,6 @@
   z-index: 9;
   opacity: 0;
   height: 0;
-  padding: 0;
-  margin: 0;
   pointer-events: none;
   will-change: transform;
 
@@ -144,8 +142,6 @@
     }
 
     &[aria-current="page"] {
-      color: rgba(255, 255, 255, .5);
-
       &::before {
         background-color: var(--yellow);
       }
@@ -173,9 +169,4 @@
     opacity: 1;
     pointer-events: all;
   }
-}
-
-.body-modal-open {
-  width: 100%;
-  overflow: hidden;
 }

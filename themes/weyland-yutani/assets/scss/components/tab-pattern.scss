@@ -19,7 +19,6 @@
     column-gap: var(--spacing-0);
     align-items: center;
     color: inherit;
-    padding: var(--spacing-1) var(--spacing-2);
     border-bottom: var(--border);
     text-transform: uppercase;
     line-height: 1;
@@ -42,7 +41,6 @@
   }
 
   &__panel-header-wrap {
-    padding: var(--spacing-1) var(--spacing-2);
     background-color: var(--yellow);
     border-bottom: var(--border);
   }
@@ -56,13 +54,11 @@
   }
 
   &__panel-content {
-    padding: var(--spacing-1) var(--spacing-2);
     outline: var(--border);
   }
 
   &__link {
     display: inline-block;
-    padding: var(--spacing-1) var(--spacing-2);
     margin-top: var(--spacing-1);
     border: var(--border);
   }

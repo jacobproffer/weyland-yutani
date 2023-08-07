@@ -1,21 +1,25 @@
 <section class="technology" id="technology">
   <div class="container">
 
-    <div class="center">
-      <h2>Our Technology</h2>
+    <div class="text-center">
+
+      <h2 class="technology__headline">
+        Our Technology
+      </h2>
+
     </div>
 
     <ul class="unstyled-list grid grid--technology grid--one-col-mobile technology__grid">
 
       {{ range $.Site.Data.technologies }}
 
-        <li class="center technology__grid-item">
+        <li class="text-center technology__grid-item">
 
           <div class="technology__image">
             <img data-src="{{ .image }}" alt="">
           </div>
 
-          <h3 class="technology__headline h4">{{ .title }}</h3>
+          <h3 class="technology__subheadline h4">{{ .title }}</h3>
 
           <p class="technology__description">{{ .blurb }}</p>
 

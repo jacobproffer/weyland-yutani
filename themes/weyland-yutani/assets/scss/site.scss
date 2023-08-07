@@ -12,23 +12,21 @@
 @import "general/buttons";
 @import "general/classes";
 
-// Layout
-
-@import "layout/header";
-@import "layout/footer";
-
 // Components
 
 @import "components/grid";
 @import "components/container";
+@import "components/header";
+@import "components/footer";
 @import "components/forms";
 @import "components/list";
+@import "components/logo";
 @import "components/pagination";
 @import "components/page";
-@import "components/hero";
-@import "components/mission";
-@import "components/technology";
 @import "components/careers";
 @import "components/career";
 @import "components/site-map";
 @import "components/tab-pattern";
+@import "components/home/hero";
+@import "components/home/mission";
+@import "components/home/technology";

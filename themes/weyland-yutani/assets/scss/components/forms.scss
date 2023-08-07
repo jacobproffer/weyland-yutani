@@ -71,3 +71,37 @@
     max-width: unset;
   }
 }
+
+.custom-file-input {
+  position: relative;
+  cursor: pointer;
+
+  span {
+    @include absolute(0, 0, 0, 0);
+    z-index: 5;
+    padding: var(--spacing-1) 25px;
+    color: var(--white);
+    background-color: var(--black);
+    border: var(--border);
+
+    &::before {
+      @include absolute(0, 0, 0, auto);
+      z-index: 6;
+      height: 100%;
+      display: block;
+      padding: var(--spacing-1);
+      color: var(--black);
+      background-color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      transition: background-color var(--animation-duration) ease-in-out;
+      content: "Browse";
+    }
+
+    @include hover {
+      &::before {
+        background-color: var(--gray);
+      }
+    }
+  }
+}
