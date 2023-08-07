@@ -1,17 +1,23 @@
 .tab-pattern {
   &__grid {
-    grid-template-columns: 1fr 2fr;
     align-items: start;
     column-gap: var(--spacing-1);
+
+    @include screen-above($tablet) {
+      grid-template-columns: 1fr 2fr;
+    }
   }
 
   &__tablist {
     display: flex;
     flex-direction: column;
-    border: var(--border);
+    outline: var(--border);
   }
 
   &__tab {
+    grid-template-columns: 16px 1fr;
+    column-gap: var(--spacing-0);
+    align-items: center;
     color: inherit;
     padding: var(--spacing-1) var(--spacing-2);
     border-bottom: var(--border);
@@ -51,7 +57,7 @@
 
   &__panel-content {
     padding: var(--spacing-1) var(--spacing-2);
-    border: var(--border);
+    outline: var(--border);
   }
 
   &__link {

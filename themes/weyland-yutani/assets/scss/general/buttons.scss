@@ -11,7 +11,7 @@
 
 .button {
   max-width: 100%;
-  margin: 0 -.15em 0 0;
+  margin: 0;
   display: block;
   color: var(--black);
   background-color: var(--yellow);
@@ -20,7 +20,6 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: .15em;
   cursor: pointer;
   transition: background-color var(--animation-duration) ease-in-out;
 
