@@ -1,11 +1,15 @@
 ---
-title: "Sitrep #01"
-description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sapiente? Cum debitis deserunt nesciunt minus repudiandae harum quisquam maiores deleniti."
+title: "Xenomorph Morphology"
+description: "Through extensive analysis of captured specimens, we have deciphered a complex genetic code that enables these creatures to inherit traits from their host organisms while retaining a core set of defining characteristics."
 series: ["news"]
 images: ["/images/weyland-yutani-social.jpg"]
 date: 2019-09-20T02:45:34-04:00
 ---
 
-Lorem Khaled Ipsum is a major key to success. Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. The first of the month is coming, we have to get money, we have no choice. It cost money to eat and they don’t want you to eat. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there. Bless up. The key to more success is to have a lot of pillows. Learning is cool, but knowing is better, and I know the key to success. Egg whites, turkey sausage, wheat toast, water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our breakfast.
+One of the most intriguing aspects of Xenomorphs is their remarkable ability to adapt and evolve rapidly. Through extensive analysis of captured specimens, we have deciphered a complex genetic code that enables these creatures to inherit traits from their host organisms while retaining a core set of defining characteristics. This phenomenon challenges conventional theories of genetics and has the potential to revolutionize our understanding of life's diversity.
 
-Find peace, life is like a water fall, you’ve gotta flow. Let’s see what Chef Dee got that they don’t want us to eat. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. In life there will be road blocks but we will over come it. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. You do know, you do know that they don’t want you to have lunch. I’m keeping it real with you, so what you going do is have lunch.
+Studying Xenomorph behavior has provided unprecedented insights into their survival strategies. Their social hierarchy, resource allocation, and intricate communication patterns are reminiscent of an advanced, albeit terrifying, civilization. Our discoveries in this realm could have far-reaching implications for our understanding of societal structures and cooperation across species.
+
+Xenomorphs' physiological traits have astonished even the most seasoned scientists at Weyland-Yutani. Their acidic blood, advanced respiratory systems, and rapid tissue regeneration mechanisms are nothing short of biological marvels. Unraveling the secrets behind these adaptations could lead to breakthroughs in medical science and bioengineering, potentially enhancing human capabilities and quality of life.
+
+While the pursuit of knowledge is our foremost objective, it is imperative to address the ethical concerns surrounding our research. The potential applications of Xenomorph biology could revolutionize medicine, energy production, and even space exploration, but we must proceed with caution. The delicate balance between scientific progress and ethical responsibility is a challenge we at Weyland-Yutani take seriously.

@@ -1,3 +1,14 @@
+.unstyled-button {
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  text-align: inherit;
+}
+
 .button {
   max-width: 100%;
   margin: 0 -.15em 0 0;

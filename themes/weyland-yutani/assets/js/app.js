@@ -31,6 +31,116 @@ var headroom = new Headroom(mainHeader, {
 
 headroom.init();
 
+/**
+ * Handles accessible tab functionality.
+ *
+ * @param {HTMLElement} buttons Tab buttons.
+ * @param {HTMLElement} button Tab button.
+ * @param {HTMLElement} panels Tab panels.
+ * @return {undefined}
+ */
+function handleTabs(buttons, button, panels) {
+  let tabList = buttons;
+  let tabs = Array.from(button);
+  let tabPanels = panels;
+  let focusedTabIndex = 0;
+
+  function selectTab(index) {
+    const activeTab = tabs[index];
+
+    if (!tabs) return;
+
+    // Deactivate all tabs
+    tabs.forEach(function (tab) {
+      tab.setAttribute('aria-selected', false);
+      tab.setAttribute('tabindex', -1);
+    });
+
+    // Activate only the requested tab and set focus to it
+    activeTab.setAttribute('aria-selected', true);
+    activeTab.setAttribute('tabindex', 0);
+    activeTab.focus();
+    focusedTabIndex = index;
+
+    // Hide all tabpanels
+    tabPanels.forEach(function (tabPanel) {
+      tabPanel.classList.remove('is-visible');
+    });
+
+    // Show only the tabpanel for the requested tab
+    let nextTabpanel = document.querySelector(
+      '#' + activeTab.getAttribute('aria-controls')
+    );
+
+    if (nextTabpanel !== null) {
+      nextTabpanel.classList.add('is-visible');
+    }
+  }
+
+  function focusFirstTab() {
+    focusedTabIndex = 0;
+    tabs[focusedTabIndex].focus();
+  }
+
+  function focusLastTab() {
+    focusedTabIndex = tabs.length - 1;
+    tabs[focusedTabIndex].focus();
+  }
+
+  function focusPreviousTab() {
+    if (focusedTabIndex > 0) {
+      focusedTabIndex -= 1;
+    } else {
+      focusedTabIndex = tabs.length - 1;
+    }
+
+    tabs[focusedTabIndex].focus();
+  }
+
+  function focusNextTab() {
+    if (focusedTabIndex < tabs.length - 1) {
+      focusedTabIndex += 1;
+    } else {
+      focusedTabIndex = 0;
+    }
+
+    tabs[focusedTabIndex].focus();
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function (e) {
+      let nextTabIndex = Array.prototype.slice.call(tabs).indexOf(e.target);
+
+      if (nextTabIndex !== null) {
+        selectTab(nextTabIndex);
+      }
+    });
+  });
+
+  if (tabList) {
+    // Select previous or next tabs using Left and Right arrow keys
+    tabList.addEventListener('keydown', function (e) {
+      // eslint-disable-next-line default-case
+      switch (e.key) {
+      case 'ArrowLeft':
+        focusPreviousTab();
+        break;
+      case 'ArrowRight':
+        focusNextTab();
+        break;
+      case 'Home':
+        e.preventDefault();
+        focusFirstTab();
+        break;
+      case 'End':
+        e.preventDefault();
+        focusLastTab();
+        break;
+      }
+    });
+  }
+}
+
 hamburger.addEventListener("click", function() {
   mainNav.classList.toggle("nav-open");
   this.classList.toggle("nav-open");
@@ -112,4 +222,18 @@ if (listItem) {
     triggerHook: 0.8,
     duration: 0,
   }).setTween(listTL).addTo(controller);
+}
+
+const tabPatterns = document.querySelectorAll('[data-tab-pattern]');
+
+if (tabPatterns) {
+  const tabPatternsArray = Array.from(tabPatterns);
+
+  tabPatternsArray.forEach(function (tabPattern) {
+    const tabList = tabPattern.querySelector('[data-tablist]');
+    const tabNodeList = tabPattern.querySelectorAll('[data-tab]');
+    const tabPanels = tabPattern.querySelectorAll('[data-tab-panel]');
+
+    handleTabs(tabList, tabNodeList, tabPanels);
+  });
 }

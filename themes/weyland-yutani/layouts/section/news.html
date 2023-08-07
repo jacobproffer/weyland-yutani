@@ -1,25 +1,73 @@
 {{ define "main" }}
 
-<section class="list spacing">
+<section class="list spacing" data-tab-pattern>
   <div class="container">
 
     <div class="internal-header center">
       <h1>{{ .Title }}</h1>
     </div>
 
-    <ul class="unstyled-list grid grid--two-column grid--list grid--one-col-mobile">
+  </div>
+  <div class="container tab-pattern__grid grid">
 
-      {{ range .Pages }}
+    <div
+      class="tab-pattern__tablist"
+      aria-label="News"
+      role="tablist"
+      data-tablist
+    >
 
-        <li>
+      {{ range $index, $posts := .Pages }}
 
-          {{ .Render "article" }}
-
-        </li>
+        <button
+          class="unstyled-button tab-pattern__tab"
+          role="tab"
+          aria-controls="news-panel-{{ $index }}"
+          aria-selected="{{ cond (eq $index 0) true false }}"
+          id="news-tab-{{ $index }}"
+          data-tab
+        >
+          {{ .PublishDate.Format "January, 2, 2006" }}
+        </button>
 
       {{ end }}
 
-    </ul>
+    </div>
+
+    {{ range $index, $posts := .Pages }}
+
+      <div
+        class="tab-pattern__panel {{ cond (eq $index 0) "is-visible" "" }}"
+        aria-label="news-panel-{{ $index }}"
+        tabindex="0"
+        role="tabpanel"
+        id="news-panel-{{ $index }}"
+        data-tab-panel
+      >
+
+        <div>
+
+          <div class="tab-pattern__panel-header-wrap">
+            <h2 class="tab-pattern__panel-header">{{ .Title }}</h2>
+          </div>
+
+          <div class="tab-pattern__panel-content">
+            {{ .Summary }}
+          </div>
+
+        </div>
+
+        <a
+          class="tab-pattern__link button"
+          href="{{ .Permalink }}"
+          aria-label="Go to {{ .Title }}"
+        >
+          View Full Post
+        </a>
+
+      </div>
+
+    {{ end }}
 
   </div>
 </section>
