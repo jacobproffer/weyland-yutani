@@ -5,38 +5,28 @@
     margin-bottom: var(--spacing-4);
   }
 
-  &__item {
-    text-align: left;
-
-    &:not(:last-of-type) {
-      margin-bottom: var(--spacing-2);
-    }
+  &__subheadline-wrap {
+    padding: var(--spacing-0) var(--spacing-1);
+    background-color: var(--yellow);
   }
 
-  &__job-title,
-  &__button {
-    padding: var(--spacing-3) var(--spacing-2);
+  &__subheadline {
+    color: var(--black);
+    font-size: rem(16);
+    font-weight: var(--weight-normal);
+    letter-spacing: normal;
   }
 
-  &__job-title {
-    font-weight: var(--weight-bold);
-    color: var(--white);
-    display: block;
-    margin: 0;
-    line-height: 1;
+  &__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-1);
+  }
 
-    @include screen-below($tablet) {
-      text-align: center;
-    }
+  &__link {
+    outline: var(--border);
 
-    @include screen-above(600px) {
-      border-top: var(--border);
-      border-left: var(--border);
-      border-bottom: var(--border);
-    }
-
-    @include screen-below(600px) {
-      border: var(--border);
+    @include hover {
+      outline: 1px solid var(--yellow);
     }
   }
 }

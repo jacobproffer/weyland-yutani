@@ -39,7 +39,25 @@
 }
 
 .internal-header {
-  margin-bottom: var(--spacing-5-6);
+  position: relative;
+  padding-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-5);
+  border-bottom: var(--border);
+
+  &::before,
+  &::after {
+    @include size(5%, 1px);
+    background-color: var(--yellow);
+    content: "";
+  }
+
+  &::before {
+    @include absolute(null, null, -1px, 0);
+  }
+
+  &::after {
+    @include absolute(null, 0, -1px, null);
+  }
 
   time {
     display: block;
