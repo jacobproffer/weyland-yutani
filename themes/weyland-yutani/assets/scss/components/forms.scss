@@ -21,10 +21,11 @@
 
     &:focus {
       outline: 1px solid var(--yellow);
+      outline-offset: -1px;
     }
 
     &::placeholder {
-      color: var(--white);
+      color: var(--gray);
       opacity: 1;
     }
   }
@@ -32,6 +33,10 @@
   input,
   textarea {
     padding: var(--spacing-1) 25px;
+  }
+
+  textarea {
+    resize: vertical;
   }
 
   select {
@@ -43,6 +48,13 @@
     padding: var(--spacing-1);
   }
 
+  &__label {
+    display: block;
+    width: 100%;
+    color: var(--black);
+    text-align: left;
+  }
+
   &__resume,
   &__select,
   &__message {
@@ -52,12 +64,8 @@
   }
 
   &__select {
-    position: relative;
-
     i {
-      position: absolute;
-      top: 26px;
-      right: 25px;
+      @include absolute(26px, 25px, null, null);
       padding: 3px;
       border: solid var(--yellow);
       border-width: 0 3px 3px 0;
@@ -73,7 +81,6 @@
 }
 
 .custom-file-input {
-  position: relative;
   cursor: pointer;
 
   span {

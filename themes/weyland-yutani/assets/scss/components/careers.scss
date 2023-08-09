@@ -5,18 +5,6 @@
     margin-bottom: var(--spacing-4);
   }
 
-  &__subheadline-wrap {
-    padding: var(--spacing-0) var(--spacing-1);
-    background-color: var(--yellow);
-  }
-
-  &__subheadline {
-    color: var(--black);
-    font-size: rem(16);
-    font-weight: var(--weight-normal);
-    letter-spacing: normal;
-  }
-
   &__list {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-1);

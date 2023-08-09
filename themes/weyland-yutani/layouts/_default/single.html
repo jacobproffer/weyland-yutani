@@ -23,23 +23,25 @@
   </div>
 
   {{ if or .PrevInSection .NextInSection }}
-    <div class="pagination">
+
+    <div class="pagination relative border-bottom">
       <div class="grid grid--two-column">
 
         {{ with .PrevInSection }}
-          <a class="button pagination-item pagination-item--prev" href="{{ .Permalink }}">
+          <a class="button text-uppercase pagination__item pagination__item--prev" href="{{ .Permalink }}">
             Previous Post
           </a>
         {{ end }}
 
         {{ with .NextInSection }}
-          <a class="button pagination-item pagination-item--next" href="{{ .Permalink }}">
+          <a class="button text-uppercase pagination__item pagination__item--next" href="{{ .Permalink }}">
             Next Post
           </a>
         {{ end }}
 
       </div>
     </div>
+
   {{ end }}
 
 </div>

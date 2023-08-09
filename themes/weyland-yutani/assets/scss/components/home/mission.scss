@@ -48,8 +48,6 @@
   }
 
   &__intro {
-    text-align: center;
-
     @include screen-above(505px) {
       max-width: 505px;
       margin-left: auto;
@@ -67,7 +65,12 @@
   }
 
   &__grid {
-    position: relative;
+    gap: #{create-fluid-value(25px, 100px)};
+    grid-template-columns: 1fr;
+
+    @include screen-above($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__grid-item {

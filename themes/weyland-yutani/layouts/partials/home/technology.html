@@ -9,17 +9,17 @@
 
     </div>
 
-    <ul class="unstyled-list grid grid--technology grid--one-col-mobile technology__grid">
+    <ul class="unstyled-list grid grid--one-col-mobile technology__grid">
 
       {{ range $.Site.Data.technologies }}
 
         <li class="text-center technology__grid-item">
 
-          <div class="technology__image">
+          <div class="relative technology__image">
             <img data-src="{{ .image }}" alt="">
           </div>
 
-          <h3 class="technology__subheadline h4">{{ .title }}</h3>
+          <h3 class="technology__subheadline text-uppercase h4">{{ .title }}</h3>
 
           <p class="technology__description">{{ .blurb }}</p>
 

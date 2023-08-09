@@ -7,27 +7,14 @@
       <h1>{{ .Title }}</h1>
     </div>
 
-    <div class="careers__subheadline-wrap">
-      <h2 class="careers__subheadline">
-        Current Career Opportunities
-      </h2>
-    </div>
-
     <ol class="unstyled-list grid careers__list">
 
       {{ range .Pages }}
 
         <li>
-          <a
-            class="careers__link grid grid--careers grid--one-col-mobile"
-            href="{{ .Permalink }}"
-          >
 
-            <h2 class="careers__job-title letter-spacing h3">
-              {{ .Title }}
-            </h2>
+          {{ .Render "card" }}
 
-          </a>
         </li>
 
       {{ end }}

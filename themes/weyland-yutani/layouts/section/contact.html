@@ -14,14 +14,30 @@
       netlify
       netlify-honeypot="bot-field"
     >
-      <label class="visually-hide" for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Name" required aria-required="true" />
-      <label class="visually-hide" for="email">Your Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Email" required aria-required="true" />
-      <label class="visually-hide form__message" for="message">Your Message</label>
-      <textarea class="form__message" name="message" id="message" cols="30" rows="10" placeholder="Your message..." required aria-required="true"></textarea>
+      <div>
+        <label class="form__label bg-yellow item-spacing" for="name">Name (Required)</label>
+        <input type="text" id="name" name="name" placeholder="Peter Weyland" required aria-required="true" />
+      </div>
+
+      <div>
+        <label class="form__label bg-yellow item-spacing" for="email">Email Address (Required)</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="pweyland@weylandyutani.com"
+          required
+          aria-required="true"
+        />
+      </div>
+
+      <div class="form__message">
+        <label class="form__label bg-yellow item-spacing" for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." required aria-required="true"></textarea>
+      </div>
+
       <label class="visually-hide" for="bot-field">
-        Are you a pesky robot?
+        Are you a synthetic? Get off the company network.
         <input type="text" id="bot-field" />
       </label>
       <button class="button" type="submit">Submit</button>

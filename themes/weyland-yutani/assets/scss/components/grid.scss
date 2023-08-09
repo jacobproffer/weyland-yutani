@@ -1,57 +1,6 @@
 .grid {
   display: grid;
 
-  &--careers {
-    grid-template-columns: 4fr 1fr;
-    row-gap: 25px;
-
-    @include screen-below($tablet) {
-      grid-template-columns: 2fr 1fr;
-    }
-
-    @include screen-below($portrait) {
-      row-gap: 0;
-    }
-  }
-
-  &--header {
-    grid-template-columns: auto auto;
-
-    @include screen-above($tablet) {
-      justify-content: space-between;
-    }
-
-    @include screen-below($tablet) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  &--hero {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-
-    @include screen-below($desktop-sm) {
-      grid-template-columns: 2fr 1fr 1fr;
-    }
-
-    @include screen-below($laptop-sm) {
-      grid-template-columns: 2fr 1fr;
-    }
-  }
-
-  &--mission {
-    gap: #{create-fluid-value(25px, 100px)};
-    grid-template-columns: 1fr;
-
-    @include screen-above($tablet) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  &--technology {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-6);
-  }
-
   &--two-column {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -62,15 +11,6 @@
 
   &--list {
     gap: var(--spacing-2-3);
-  }
-
-  &--footer {
-    grid-template-columns: 1fr 98px 1fr;
-    gap: var(--spacing-1);
-
-    @include screen-below($laptop-sm) {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 
   &--one-col-mobile {

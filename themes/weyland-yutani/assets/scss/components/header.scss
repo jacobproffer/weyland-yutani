@@ -30,6 +30,18 @@
     }
   }
 
+  &__grid {
+    grid-template-columns: auto auto;
+
+    @include screen-above($tablet) {
+      justify-content: space-between;
+    }
+
+    @include screen-below($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &__button {
     justify-self: end;
     padding: 0;

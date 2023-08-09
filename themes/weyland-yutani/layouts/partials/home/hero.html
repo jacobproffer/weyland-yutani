@@ -1,23 +1,23 @@
-<section class="hero text-center">
+<section class="hero relative z-1 text-center">
   <div class="container">
 
     <div>
       <h1 class="hero__headline">
         {{ .Site.Title }}
       </h1>
-      <h2 class="hero__subheading h3 letter-spacing">
+      <h2 class="hero__subheading h3 text-uppercase letter-spacing">
         Building Better Worlds
       </h2>
     </div>
 
-    <ul class="unstyled-list grid grid--hero grid--one-col-mobile">
-      <li class="hero__grid-item hero__grid-item--span2 h4 letter-spacing hero-padding">
+    <ul class="unstyled-list grid hero__grid grid--one-col-mobile">
+      <li class="hero__grid-item hero__grid-item--span2 h4 text-uppercase text-center letter-spacing hero-padding">
         Current Operation: <span>{{ .Site.Params.currentOperation }}</span>
       </li>
-      <li class="hero__grid-item hero__grid-item--operation-founded h5 letter-spacing hero-padding">
+      <li class="hero__grid-item hero__grid-item--operation-founded h5 text-uppercase text-center letter-spacing hero-padding">
         Founded: <span>{{ .Site.Params.founded }}</span>
       </li>
-      <li class="hero__grid-item hero__grid-item--operation-colonist h5 letter-spacing hero-padding">
+      <li class="hero__grid-item hero__grid-item--operation-colonist h5 text-uppercase text-center letter-spacing hero-padding">
         Colonists: <span>{{ .Site.Params.colonists }}</span>
       </li>
       <li class="button hero__grid-item hero__grid-item--operation-cta">

@@ -11,7 +11,7 @@
     <div class="tab-pattern__grid grid">
 
       <div
-        class="tab-pattern__tablist"
+        class="tab-pattern__tablist outline"
         aria-label="News"
         role="tablist"
         data-tablist
@@ -20,7 +20,7 @@
         {{ range $index, $posts := .Pages }}
 
           <button
-            class="unstyled-button panel-padding tab-pattern__tab grid"
+            class="unstyled-button panel-padding tab-pattern__tab text-uppercase border-bottom grid"
             role="tab"
             aria-controls="news-panel-{{ $index }}"
             aria-selected="{{ cond (eq $index 0) true false }}"
@@ -58,18 +58,18 @@
 
           <div>
 
-            <div class="tab-pattern__panel-header-wrap panel-padding">
+            <div class="bg-yellow border-bottom panel-padding">
               <h2 class="tab-pattern__panel-header">{{ .Title }}</h2>
             </div>
 
-            <div class="tab-pattern__panel-content panel-padding">
+            <div class="tab-pattern__panel-content outline panel-padding">
               {{ .Summary }}
             </div>
 
           </div>
 
           <a
-            class="tab-pattern__link button panel-padding"
+            class="tab-pattern__link button border panel-padding"
             href="{{ .Permalink }}"
             aria-label="Go to {{ .Title }}"
           >

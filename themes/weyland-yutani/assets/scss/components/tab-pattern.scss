@@ -11,7 +11,6 @@
   &__tablist {
     display: flex;
     flex-direction: column;
-    outline: var(--border);
   }
 
   &__tab {
@@ -19,8 +18,6 @@
     column-gap: var(--spacing-0);
     align-items: center;
     color: inherit;
-    border-bottom: var(--border);
-    text-transform: uppercase;
     line-height: 1;
 
     &[aria-selected="true"] {
@@ -40,11 +37,6 @@
     }
   }
 
-  &__panel-header-wrap {
-    background-color: var(--yellow);
-    border-bottom: var(--border);
-  }
-
   &__panel-header {
     color: var(--black);
     font-size: rem(16);
@@ -53,13 +45,8 @@
     letter-spacing: normal;
   }
 
-  &__panel-content {
-    outline: var(--border);
-  }
-
   &__link {
     display: inline-block;
     margin-top: var(--spacing-1);
-    border: var(--border);
   }
 }

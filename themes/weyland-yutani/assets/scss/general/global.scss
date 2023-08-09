@@ -72,7 +72,7 @@ body {
   font-weight: var(--weight-normal);
 }
 
-a {
+a:not([class]) {
   color: var(--white);
   letter-spacing: 3px;
   text-decoration: none;
@@ -83,7 +83,7 @@ a {
   }
 }
 
-a,
+a:not([class]),
 button {
   &::-moz-focus-inner {
     border: 0;

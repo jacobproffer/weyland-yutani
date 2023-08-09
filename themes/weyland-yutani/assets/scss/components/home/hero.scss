@@ -1,17 +1,12 @@
 .hero {
-  position: relative;
-  z-index: 1;
-
   &__headline {
     padding-top: #{create-fluid-value(135px, 270px)};
   }
 
   &__subheading {
-    display: block;
     padding-bottom: #{create-fluid-value(55px, 220px)};
     color: var(--gray);
     font-weight: var(--weight-normal);
-    text-transform: uppercase;
   }
 
   &__background {
@@ -30,14 +25,24 @@
     animation-iteration-count: 1;
   }
 
+  &__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    @include screen-below($desktop-sm) {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    @include screen-below($laptop-sm) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
   &__grid-item {
     order: 0;
     color: var(--white);
-    text-align: center;
     border-top: var(--border);
     border-left: var(--border);
     border-bottom: var(--border);
-    text-transform: uppercase;
 
     &--span2 {
       @include screen-below($tablet) {

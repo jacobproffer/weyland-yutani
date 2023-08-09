@@ -24,8 +24,8 @@
 
         {{ if isset .Params "salary" }}
 
-          <li>
-            <span class="letter-spacing">Salary</span>
+          <li class="text-center career__list-item">
+            <span class="career__span letter-spacing">Salary</span>
             ${{ .Params.salary }}
           </li>
 
@@ -33,8 +33,8 @@
 
         {{ if isset .Params "location" }}
 
-          <li>
-            <span class="letter-spacing">Location</span>
+          <li class="text-center career__list-item">
+            <span class="career__span text-uppercase letter-spacing">Location</span>
             {{ .Params.location }}
           </li>
 
@@ -44,7 +44,7 @@
 
       {{ .Content }}
 
-      <h2 class="h3" id="benefits">
+      <h2 class="career__headline h3" id="benefits">
         List of Benefits
       </h2>
 

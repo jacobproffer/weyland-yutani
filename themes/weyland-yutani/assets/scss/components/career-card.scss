@@ -1,0 +1,22 @@
+.career-card {
+  display: block;
+  height: 100%;
+  color: var(--gray);
+  text-decoration: none;
+
+  @include hover {
+    outline: 1px solid var(--yellow);
+    outline-offset: -1px;
+  }
+
+  &__headline {
+    color: var(--black);
+    font-size: rem(16);
+    font-weight: var(--weight-normal);
+    letter-spacing: normal;
+  }
+
+  &__summary {
+    letter-spacing: normal;
+  }
+}
