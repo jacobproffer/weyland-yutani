@@ -1,11 +1,8 @@
 .hero {
   position: relative;
   z-index: 1;
+  padding-top: #{create-fluid-value(135px, 270px)};
   text-align: center;
-
-  h1 {
-    padding-top: #{create-fluid-value(135px, 270px)};
-  }
 
   &__subheading {
     display: block;

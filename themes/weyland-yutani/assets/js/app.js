@@ -8,11 +8,11 @@ const fadeIns = document.querySelectorAll('.gsap-fade-in');
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.create({
-  trigger: 'main',
-  start: 'top top',
+  trigger: 'h1',
+  start: 'top top+=100',
   end: 'max',
-  onEnter: () => mainHeader.classList.add('pinned'),
-  onLeaveBack: () => mainHeader.classList.remove('unpinned'),
+  onEnter: () => mainHeader.classList.add('main-header--faded'),
+  onLeaveBack: () => mainHeader.classList.remove('main-header--faded'),
 });
 
 /**
