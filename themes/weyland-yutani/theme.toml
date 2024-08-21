@@ -5,7 +5,7 @@ description = "A Weyland-Yutani Hugo theme with careers and news post types."
 homepage = "https://weyland-yutani.proffer.dev/"
 tags = ["aliens", "news", "articles", "careers"]
 features = ["careers", "news"]
-min_version = "0.65"
+min_version = "0.132.1"
 
 [author]
   name = "Jacob Proffer"
