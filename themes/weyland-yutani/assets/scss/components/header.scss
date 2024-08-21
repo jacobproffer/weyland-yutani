@@ -1,0 +1,143 @@
+.main-header {
+  --header-background: rgba(0, 0, 0, 0);
+  --mobile-navigation-color: var(--white);
+  @include size(100%, auto);
+  position: fixed;
+  padding: var(--spacing-2) 0;
+  z-index: 2;
+  background-color: var(--header-background);
+
+  &--faded {
+    opacity: 0;
+    transition: opacity var(--transition-time) ease-in-out;
+    pointer-events: none;
+  }
+
+  &--navigation-open {
+    --header-background: rgba(0, 0, 0, 1);
+    height: 100%;
+  }
+
+  &__grid {
+    align-items: center;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+
+    @include screen-above($tablet) {
+      border-bottom: 2px solid var(--border);
+    }
+
+    @include screen-below($tablet) {
+      padding: var(--spacing-1) 0;
+    }
+  }
+
+  &__skip-link {
+    position: fixed;
+    top: -5em;
+    left: 50%;
+    z-index: 1;
+    width: max-content;
+    padding: var(--spacing-0) var(--spacing-1);
+    color: var(--white);
+    background-color: var(--black);
+    transform: translateX(-50%);
+    transition: top var(--transition-time) ease-in-out;
+
+    &:focus {
+      top: var(--spacing-0);
+    }
+  }
+
+  &__logo-wrap {
+    display: block;
+    font-weight: var(--weight-medium);
+    transition: color var(--transition-time) ease-in-out;
+
+    @include hover {
+      color: var(--orange);
+    }
+  }
+
+  &__navigation {
+    border-bottom: var(--border);
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: var(--spacing-3);
+
+    @include screen-below($tablet) {
+      display: none;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      row-gap: #{createFluidValue(30px, 60px)};
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--spacing-4);
+      }
+    }
+  }
+
+  &__nav-item {
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__nav-link {
+    display: block;
+    position: relative;
+    max-width: max-content;
+    padding: var(--spacing-0) 0 var(--spacing-3);
+    font-size: rem(14);
+
+    @include screen-below($tablet) {
+      padding: var(--spacing-2) 0;
+      margin: 0;
+      border-bottom: var(--border);
+    }
+
+    &::before {
+      @include size(100%, 1px);
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      background-color: transparent;
+      transition: background-color var(--animation-duration) ease-in-out;
+      content: '';
+    }
+
+    &[aria-current="page"] {
+      color: rgba(255, 255, 255, .5);
+
+      &::before {
+        background-color: var(--yellow);
+      }
+    }
+
+    @include hover {
+      &::before {
+        @include size(100%, 1px);
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        background-color: var(--yellow);
+        content: '';
+      }
+    }
+  }
+
+  &__navigation-toggle {
+    max-width: max-content;
+    padding: var(--spacing-0) var(--spacing-1);
+
+    @include screen-above($tablet) {
+      display: none;
+    }
+  }
+}
