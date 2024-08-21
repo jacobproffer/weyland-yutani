@@ -74,7 +74,7 @@ const triggerFadeInAnimation = (element) => {
     opacity: 1,
     y: 0,
     duration: 1,
-    ease: 'power1.out'
+    ease: 'sine.inOut',
   });
 };
 
@@ -107,3 +107,31 @@ const setupFadeInAnimation = (element) => {
 if (fadeIns.length > 0) {
   fadeIns.forEach(setupFadeInAnimation);
 }
+
+// Function to trigger the CRT effect
+const triggerCRTEffect = (element) => {
+  const timeline = gsap.timeline();
+
+  timeline
+    .set(element, {
+      opacity: 0,
+      filter: 'brightness(2) blur(10px)', // Bright flash and blur
+    })
+    .to(element, {
+      opacity: 1,
+      duration: 0.3,
+      ease: 'power4.out',
+    })
+    .to(element, {
+      filter: 'brightness(1) blur(0px)', // Remove brightness and blur
+      duration: 0.5,
+      ease: 'power1.out',
+    })
+    .set(element, { scaleX: 1, scaleY: 1 }); // Reset any transforms
+};
+
+// Example usage
+document.querySelectorAll('.crt-effect').forEach((element) => {
+  triggerCRTEffect(element);
+});
+
