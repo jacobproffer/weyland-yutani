@@ -1,115 +1,109 @@
-var body = document.querySelector("html, body");
-var hamburger = document.querySelector(".hamburger");
-var mainNav = document.querySelector(".main-nav");
-var mainHeader = document.querySelector(".main-header");
-var headerHeight = mainHeader.offsetHeight;
-var lazyImg = document.querySelectorAll("img");
-var missionGraphic = document.querySelector(".mission__graphic");
-var technologyItem = document.querySelectorAll(".technology__grid-item");
-var careerItem = document.querySelectorAll(".careers__item");
-var listItem = document.querySelectorAll(".list-article");
+const mainHeader = document.querySelector('[data-header]');
+const mainNavigation = document.querySelector('[data-navigation]');
+const mobileNavigationTrigger = document.querySelector('[data-navigation-toggle]');
+const mobileNavigation = document.querySelector('[data-navigation-list]');
+const fadeIns = document.querySelectorAll('.gsap-fade-in');
 
-var headroom = new Headroom(mainHeader, {
-  offset: headerHeight,
-  tolerance: { up: 10, down: 10 },
-  classes: {
-    pinned: "pinned",
-    unpinned: "unpinned",
-    top: "onTop",
-    bottom: "onBottom",
-    notTop: "scrolled"
-  },
-  onUnpin: function() {
-    if (mainHeader.classList.contains("open")) {
-      mainHeader.classList.remove("unpinned");
+// Register GSAP ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.create({
+  trigger: 'main',
+  start: 'top top',
+  end: 'max',
+  onEnter: () => mainHeader.classList.add('pinned'),
+  onLeaveBack: () => mainHeader.classList.remove('unpinned'),
+});
+
+/**
+ * Trap focus within navigation
+ */
+function navigationFocus() {
+  const focusableElements = mainNavigation.querySelectorAll('a[href], button');
+  const firstFocusableElement = focusableElements[0];
+  const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+  mainNavigation.addEventListener('keydown', function (e) {
+    if (e.target === firstFocusableElement && e.key === 'Tab' && e.shiftKey) {
+      e.preventDefault();
+      lastFocusableElement.focus();
+    } else if (e.target === lastFocusableElement && e.key === 'Tab' && !e.shiftKey) {
+      e.preventDefault();
+      firstFocusableElement.focus();
     }
-  },
-  onTop: function() {
-    mainHeader.classList.remove("pinned");
-  }
-});
-
-headroom.init();
-
-hamburger.addEventListener("click", function() {
-  mainNav.classList.toggle("nav-open");
-  this.classList.toggle("nav-open");
-  mainHeader.classList.toggle("open");
-
-  if (mainNav.classList.contains("nav-open")) {
-    this.setAttribute('aria-expanded', 'true');
-  } else {
-    this.setAttribute('aria-expanded', 'false');
-  }
-});
-
-var controller = new ScrollMagic.Controller();
-
-if (lazyImg) {
-  lazyImg.forEach(function (el) {
-    var LazyScene = new ScrollMagic.Scene({
-      triggerElement: el,
-      triggerHook: 1,
-      offset: -300,
-      duration: 0,
-      reverse: false
-    })
-      .on('enter', function () {
-        if (el.getAttribute('data-src')) {
-          el.src = el.getAttribute('data-src')
-        }
-        if (el.getAttribute('data-srcset')) {
-          el.setAttribute('srcset', el.getAttribute('data-srcset'))
-        }
-      })
-      .addTo(controller);
   });
 }
 
-if (missionGraphic) {
-  var missionTL = gsap.timeline();
+/**
+ * Close navigation if escape key is pressed
+ */
+function handleEscape() {
+  document.addEventListener('keyup', function (e) {
+    const escape = e.key;
 
-  missionTL.from(missionGraphic, {duration: 1.25, opacity: 0});
-
-  var missionTrigger = new ScrollMagic.Scene({
-    triggerElement: missionGraphic,
-    triggerHook: 0.8,
-    duration: 0,
-  }).setTween(missionTL).addTo(controller);
+    if (escape === 'Escape' && mobileNavigation.classList.contains('open')) {
+      mobileNavigationTrigger.setAttribute('aria-expanded', 'false');
+      mobileNavigationTrigger.focus();
+      mobileNavigation.classList.remove('open');
+      mainHeader.classList.remove('main-header--navigation-open');
+      mobileNavigationTrigger.innerHTML = "Open Menu";
+    }
+  });
 }
 
-if (technologyItem) {
-  var technologyTL = gsap.timeline();
+mobileNavigationTrigger.addEventListener("click", function () {
+  mainHeader.classList.toggle('main-header--navigation-open');
+  mobileNavigation.classList.toggle("open")
+  this.classList.toggle("nav-open");
 
-  technologyTL.from(technologyItem, {duration: 1.25, opacity: 0, stagger: 0.25});
+  navigationFocus();
+  handleEscape();
 
-  var technologyTrigger = new ScrollMagic.Scene({
-    triggerElement: technologyItem,
-    triggerHook: 0.8,
-    duration: 0,
-  }).setTween(technologyTL).addTo(controller);
-}
+  if (mobileNavigation.classList.contains('open')) {
+    this.setAttribute('aria-expanded', 'true');
+    this.innerHTML = "Close Menu";
+  } else {
+    this.setAttribute('aria-expanded', 'false');
+    this.innerHTML = "Open Menu";
+  }
+});
 
-if (careerItem) {
-  var careerTL = gsap.timeline();
+// Function to trigger the fade-in animation
+const triggerFadeInAnimation = (element) => {
+  gsap.to(element, {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: 'power1.out'
+  });
+};
 
-  careerTL.from(careerItem, {duration: 1.25, opacity: 0, stagger: 0.25});
+// Function to setup fade-in animations on scroll
+const setupFadeInAnimation = (element) => {
+  // Set initial state
+  gsap.set(element, { opacity: 0, y: 30 });
 
-  var careerTrigger = new ScrollMagic.Scene({
-    triggerElement: careerItem,
-    triggerHook: 0.8,
-    duration: 0,
-  }).setTween(careerTL).addTo(controller);
-}
+  // Create ScrollTrigger instance
+  const trigger = ScrollTrigger.create({
+    trigger: element,
+    start: 'top 90%',
+    end: 'bottom top',
+    once: true,
+    onEnter: () => triggerFadeInAnimation(element)
+  });
 
-if (listItem) {
-  var listTL = gsap.timeline();
+  // Handle focus for focusable child elements
+  const focusableChildren = element.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  focusableChildren.forEach((child) => {
+    child.addEventListener('focus', () => {
+      if (!trigger.isActive) {
+        triggerFadeInAnimation(element);
+      }
+    });
+  });
+};
 
-  listTL.from(listItem, {duration: 1.25, opacity: 0, stagger: 0.25});
-
-  var listTrigger = new ScrollMagic.Scene({
-    triggerElement: listItem,
-    triggerHook: 0.8,
-    duration: 0,
-  }).setTween(listTL).addTo(controller);
+// Initialize animations for fade-in elements
+if (fadeIns.length > 0) {
+  fadeIns.forEach(setupFadeInAnimation);
 }

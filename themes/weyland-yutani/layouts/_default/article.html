@@ -7,8 +7,9 @@
 
         <img
           class="lazy"
-          data-src="{{ index (.Params.images) 0 }}"
+          src="{{ index (.Params.images) 0 }}"
           alt="{{ .Params.thumbnailAlt }}"
+          loading="lazy"
         />
 
       {{ end }}

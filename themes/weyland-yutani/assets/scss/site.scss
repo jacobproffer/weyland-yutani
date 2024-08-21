@@ -12,13 +12,10 @@
 @import "general/buttons";
 @import "general/classes";
 
-// Layout
-
-@import "layout/header";
-@import "layout/footer";
-
 // Components
 
+@import "components/header";
+@import "components/footer";
 @import "components/grid";
 @import "components/container";
 @import "components/forms";

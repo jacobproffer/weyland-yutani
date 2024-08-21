@@ -1,45 +1,79 @@
-<header class="main-header">
-  <div class="container grid grid--header">
+<div
+  class="main-header"
+  data-header
+>
+  <div class="container">
 
-    <a
-      class="button main-header__skip-to-content"
-      href="#content"
-    >
-      Skip to Main Content
-    </a>
+    <div class="main-header__grid relative grid">
 
-    <a class="logo logo--header" href="/" aria-label="Go home">
-      <svg xmlns="http://www.w3.org/2000/svg" id="Logo" viewBox="0 0 305.2 78.4" aria-hidden="true">
-        <path d="M0 0v7.2l71 71h33.8l47.7-47.7 47.9 47.9H234l71.2-71.2V0h-43.4l-47.7 47.6-48-47.6h-26.9l-48 47.7L43.5 0z" class="st0"/>
-        <path d="M67.5 0v7.2L91.2 31l23.6-23.6-7.4-7.4zm170.3 0v7.2L214.1 31 190.5 7.4l7.4-7.4zM128.5 71.8v6.6h48.2v-6.6l-24.2-24.3z" class="st1"/>
-      </svg>
-    </a>
+      <header>
 
-    <button
-      class="main-header__button hamburger"
-      aria-expanded="false"
-      aria-controls="menu"
-    >
-      Menu
-    </button>
+        <a
+          class="main-header__skip-link button"
+          href="#content"
+        >
+          Skip to Main Content
+        </a>
 
-    <nav
-      class="main-nav"
-      id="menu"
-      aria-label="primary"
-    >
+        <a class="logo logo--header" href="/" aria-label="Go home">
+          <svg xmlns="http://www.w3.org/2000/svg" id="Logo" viewBox="0 0 305.2 78.4" aria-hidden="true">
+            <path d="M0 0v7.2l71 71h33.8l47.7-47.7 47.9 47.9H234l71.2-71.2V0h-43.4l-47.7 47.6-48-47.6h-26.9l-48 47.7L43.5 0z" class="st0"/>
+            <path d="M67.5 0v7.2L91.2 31l23.6-23.6-7.4-7.4zm170.3 0v7.2L214.1 31 190.5 7.4l7.4-7.4zM128.5 71.8v6.6h48.2v-6.6l-24.2-24.3z" class="st1"/>
+          </svg>
+        </a>
 
-      <ul class="unstyled-list">
+      </header>
 
-        {{ if .Site.Menus.main }}
+      <nav
+        class="main-header__navigation"
+        data-navigation
+        aria-label="primary"
+      >
 
-          {{ partial "navigation/main-navigation" . }}
+        <button
+          class="unstyled button button relative main-header__navigation-toggle"
+          aria-controls="navigation-list"
+          aria-expanded="false"
+          data-navigation-toggle
+        >
+          Open Menu
+        </button>
 
-        {{ end }}
+        <ul
+          class="unstyled-list main-header__nav-list"
+          id="navigation-list"
+          data-navigation-list
+        >
 
-      </ul>
+          {{ if .Site.Menus.main }}
 
-    </nav>
+            {{ $currentPage := . }}
+
+            {{ range .Site.Menus.main }}
+
+              <li class="main-header__nav-item">
+                <a
+                class="main-header__nav-link relative"
+                {{ if $currentPage.IsMenuCurrent "main" . }}
+                  aria-current="page"
+                {{ end }}
+                {{ if .URL }}
+                  href="{{ .URL }}"
+                {{ end }}
+                >
+                  {{ .Name }}
+                </a>
+              </li>
+
+            {{ end }}
+
+          {{ end }}
+
+        </ul>
+
+      </nav>
+
+    </div>
 
   </div>
-</header>
+</div>

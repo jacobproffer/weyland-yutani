@@ -5,8 +5,9 @@
     {{ if isset .Params "images" }}
 
       <img
-        data-src="{{ index (.Params.images) 0 }}"
+        src="{{ index (.Params.images) 0 }}"
         alt="{{ .Params.thumbnailAlt }}"
+        loading="lazy"
       />
 
     {{ end }}
