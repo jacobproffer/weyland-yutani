@@ -17,6 +17,15 @@
     background-color: var(--black);
   }
 
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: var(--black);
+    background-color: var(--gray);
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
   @include hover {
     color: var(--black);
     background-color: var(--gray);
