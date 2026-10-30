@@ -1,29 +1,25 @@
 <section class="technology" id="technology">
   <div class="container">
-
     <div class="center gsap-fade-in">
       <h2>Our Technology</h2>
     </div>
 
-    <ul class="unstyled-list grid grid--technology grid--one-col-mobile technology__grid gsap-fade-in">
+    <ul
+      class="unstyled-list grid grid--technology grid--one-col-mobile technology__grid gsap-fade-in"
+    >
+      {{ range hugo.Data.technologies }}
 
-      {{ range $.Site.Data.technologies }}
+      <li class="center">
+        <div class="technology__image">
+          <img src="{{ .image }}" alt="" loading="lazy" />
+        </div>
 
-        <li class="center">
+        <h3 class="technology__headline h4">{{ .title }}</h3>
 
-          <div class="technology__image">
-            <img src="{{ .image }}" alt="" loading="lazy">
-          </div>
-
-          <h3 class="technology__headline h4">{{ .title }}</h3>
-
-          <p class="technology__description">{{ .blurb }}</p>
-
-        </li>
+        <p class="technology__description">{{ .blurb }}</p>
+      </li>
 
       {{ end }}
-
     </ul>
-
   </div>
 </section>

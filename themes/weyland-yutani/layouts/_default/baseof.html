@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
+<!doctype html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  {{with
+  .Site.Language.Locale}}
+  xml:lang="{{.}}"
+  lang="{{.}}"
+  {{end}}
+>
   {{ partial "head.html" . }}
 
   <body class="animated fade-in">
-
     {{ partial "header.html" . }}
 
-    <main class="crt-effect" id="content">
-      {{ block "main" . }}{{ end }}
-    </main>
+    <main class="crt-effect" id="content">{{ block "main" . }}{{ end }}</main>
 
-    {{ partial "footer.html" . }}
-    {{ partial "scripts.html" . }}
-
+    {{ partial "footer.html" . }} {{ partial "scripts.html" . }}
   </body>
 </html>
