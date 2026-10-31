@@ -1,4 +1,4 @@
-enableRobotsTXTbasepageRef = "https://weyland-yutani.proffer.dev"
+baseURL = "https://weyland-yutani.proffer.dev"
 locale = "en-us"
 title = "Weyland-Yutani Corp"
 theme = "weyland-yutani"
