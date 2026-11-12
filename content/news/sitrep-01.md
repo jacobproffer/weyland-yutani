@@ -2,7 +2,7 @@
 title: "Sitrep #01"
 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sapiente? Cum debitis deserunt nesciunt minus repudiandae harum quisquam maiores deleniti."
 series: ["news"]
-images: ["/images/weyland-yutani-social.jpg"]
+images: ["/images/weyland-yutani-og.jpg"]
 date: 2019-09-20T02:45:34-04:00
 ---
 
