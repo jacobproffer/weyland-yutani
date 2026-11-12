@@ -10,7 +10,7 @@ enableRobotsTXT = true
   currentOperation = "Acheron"
   founded = "2157"
   colonists = "158"
-  images = ["/images/weyland-yutani-social.jpg"]
+  images = ["/images/weyland-yutani-og.jpg"]
 
 [taxonomies]
   series = "series"
